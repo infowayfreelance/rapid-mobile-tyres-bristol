@@ -104,10 +104,10 @@ export default function MobileTyreFittingPage() {
             <div className="relative mx-auto w-full max-w-lg">
               <div className="relative overflow-hidden rounded-3xl border border-zinc-800 shadow-2xl">
                 <Image
-                  src="/mobile-tyre-fitting-technician-bristol.webp"
+                  src="/mobile-tyre-fitting-bristol-hero.webp"
                   alt="Rapid Mobile Tyres technician fitting a tyre in Bristol"
-                  width={740}
-                  height={493}
+                  width={1600}
+                  height={900}
                   className="h-auto w-full"
                   preload
                 />
