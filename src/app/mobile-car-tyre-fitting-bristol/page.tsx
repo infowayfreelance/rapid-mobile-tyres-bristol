@@ -166,7 +166,7 @@ export default function MobileCarTyreFittingBristolPage() {
         <section className="relative overflow-hidden bg-zinc-950 text-zinc-50">
           <div className="absolute inset-0">
             <Image
-              src="/mobile-car-tyre-fitting-bmw-i3-bristol.webp"
+              src="/mobile-tyre-fitting-roadside-hero.webp"
               alt=""
               fill
               sizes="100vw"
@@ -182,15 +182,16 @@ export default function MobileCarTyreFittingBristolPage() {
                 Mobile Car Tyre Fitting
               </p>
               <h1 className="mt-4 text-4xl font-bold tracking-tight text-balance sm:text-5xl">
-                Mobile Car Tyre Fitting
+                Mobile Car Tyre Fitting in Bristol
               </h1>
               <p className="mt-6 text-lg leading-8 text-zinc-300">
-                New tyre fitted at your car — home, work, or roadside — within 45–60 minutes.
+                Flat at the roadside or a worn tyre on the drive — our technicians come to your
+                car with the right tyre and fit it on the spot, usually within 45–60 minutes.
               </p>
               <p className="mt-4 max-w-lg leading-7 text-zinc-400">
-                Whether you have a flat on the drive or a worn tyre you&apos;ve been putting off,
-                Rapid Mobile Tyres comes to your car with the right passenger tyre and fits
-                it on the spot. Our{" "}
+                Rapid Mobile Tyres brings a fully stocked van to wherever your car is parked —
+                home, work, or stopped safely at the roadside — and fits the correct passenger
+                tyre without you needing to drive anywhere. Our{" "}
                 <Link href="/mobile-tyre-fitting" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">
                   mobile tyre fitting service
                 </Link>{" "}
@@ -208,13 +209,13 @@ export default function MobileCarTyreFittingBristolPage() {
                   href={siteConfig.phoneHref}
                   className="flex h-12 items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500"
                 >
-                  Call Us: {siteConfig.phone}
+                  Get Roadside Help: {siteConfig.phone}
                 </a>
                 <Link
                   href="/contact"
                   className="flex h-12 items-center justify-center rounded-full border border-zinc-700 px-6 text-sm font-semibold text-zinc-200 transition-colors hover:border-zinc-500 hover:bg-zinc-900"
                 >
-                  Book Online
+                  Book a Callout Online
                 </Link>
               </div>
 
@@ -247,6 +248,45 @@ export default function MobileCarTyreFittingBristolPage() {
         />
 
         <StepList steps={steps} />
+
+        {/* Photo showcase */}
+        <section className="bg-white py-20 sm:py-28">
+          <div className="mx-auto max-w-7xl px-6 sm:px-10">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.15em] text-orange-600">
+                The mobile workshop
+              </p>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-zinc-950 sm:text-4xl">
+                A Fully Equipped Van, Right Outside Your Car
+              </h2>
+              <p className="mt-4 text-zinc-600">
+                Every van carries a tyre changer, balancer, and a wide range of car tyre stock —
+                so the job gets done properly, wherever your car is parked.
+              </p>
+            </div>
+
+            <div className="mt-14 grid gap-6 sm:grid-cols-2">
+              <div className="relative aspect-video overflow-hidden rounded-2xl border border-zinc-200">
+                <Image
+                  src="/mobile-tyre-fitting-image-1.webp"
+                  alt="Rapid Mobile Tyres technician fitting a new tyre to a wheel on a mobile tyre-changing machine"
+                  fill
+                  sizes="(min-width: 640px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative aspect-video overflow-hidden rounded-2xl border border-zinc-200">
+                <Image
+                  src="/mobile-tyre-fitting-image-2.webp"
+                  alt="Rapid Mobile Tyres technician checking a car's tyre pressure with a gauge"
+                  fill
+                  sizes="(min-width: 640px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
         <FeatureGrid
           eyebrow="Why choose us"
