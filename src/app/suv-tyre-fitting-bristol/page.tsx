@@ -162,32 +162,32 @@ export default function SuvTyreFittingBristolPage() {
     <>
       <Header />
       <main className="flex-1">
-        {/* Full-bleed photo hero */}
+        {/* Split hero */}
         <section className="relative overflow-hidden bg-zinc-950 text-zinc-50">
-          <div className="absolute inset-0">
-            <Image
-              src="/suv-tyre-fitting-volkswagen-tiguan-bristol.webp"
-              alt=""
-              fill
-              sizes="100vw"
-              className="object-cover opacity-40"
-              preload
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-zinc-950/30" />
-          </div>
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-40 -right-40 h-96 w-96 rounded-full bg-orange-600/20 blur-3xl"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-red-600/20 blur-3xl"
+          />
 
-          <div className="relative mx-auto max-w-7xl px-6 py-24 sm:px-10 sm:py-32">
-            <div className="max-w-xl">
-              <p className="inline-flex items-center rounded-full border border-orange-500/40 bg-orange-500/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.15em] text-orange-500">
-                Mobile SUV Tyre Fitting
+          <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 sm:px-10 lg:grid-cols-2 lg:items-center lg:py-28">
+            <div>
+              <p className="mb-4 inline-flex items-center rounded-full border border-orange-500/40 bg-orange-500/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.15em] text-orange-500">
+                24/7 Mobile SUV Tyre Fitting
               </p>
-              <h1 className="mt-4 text-4xl font-bold tracking-tight text-balance sm:text-5xl">
-                SUV Tyre Fitting
+
+              <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl">
+                Mobile SUV Tyre Fitting in Bristol
               </h1>
-              <p className="mt-6 text-lg leading-8 text-zinc-300">
+
+              <p className="mt-3 text-lg font-medium text-zinc-200">
                 New SUV or 4x4 tyre fitted at your vehicle — home, work, or roadside — within 45–60 minutes.
               </p>
-              <p className="mt-4 max-w-lg leading-7 text-zinc-400">
+
+              <p className="mt-4 max-w-xl leading-7 text-zinc-400">
                 SUVs and 4x4s need the right tyre size, the correct torque settings, and a van that
                 actually carries stock for larger profiles. Rapid Mobile Tyres arrives
                 prepared — with the tyre for your vehicle already loaded. Our{" "}
@@ -202,12 +202,39 @@ export default function SuvTyreFittingBristolPage() {
                 .
               </p>
 
+              <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+                {[
+                  "No towing or garage queues",
+                  "Same-day and emergency slots, 24/7",
+                  "Fully-equipped mobile workshop on every van",
+                  "Fitted at your home, workplace, or roadside",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm text-zinc-300">
+                    <svg
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-orange-500"
+                      aria-hidden
+                    >
+                      <path
+                        d="M4 10.5l3.5 3.5L16 6"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
                   href={siteConfig.phoneHref}
                   className="flex h-12 items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500"
                 >
-                  Call Us: {siteConfig.phone}
+                  Emergency Call: {siteConfig.phone}
                 </a>
                 <Link
                   href="/contact"
@@ -220,6 +247,23 @@ export default function SuvTyreFittingBristolPage() {
               <p className="mt-6 inline-flex items-center rounded-full border border-zinc-700 bg-zinc-900/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-orange-400">
                 Monday–Sunday: 24 Hours
               </p>
+            </div>
+
+            <div className="relative mx-auto w-full max-w-lg">
+              <div className="relative overflow-hidden rounded-3xl border border-zinc-800 shadow-2xl">
+                <Image
+                  src="/suv-tyre-fitting-service-hero.webp"
+                  alt="Rapid Mobile Tyres technician fitting a tyre to a jacked-up SUV on a driveway"
+                  width={1600}
+                  height={900}
+                  className="h-auto w-full"
+                  preload
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-zinc-800 bg-zinc-900 px-6 py-4 shadow-xl sm:block">
+                <p className="text-2xl font-bold text-orange-500">45-60 min</p>
+                <p className="text-xs text-zinc-400">Average arrival time</p>
+              </div>
             </div>
           </div>
         </section>
@@ -246,6 +290,45 @@ export default function SuvTyreFittingBristolPage() {
         />
 
         <StepList steps={steps} />
+
+        {/* Photo showcase */}
+        <section className="bg-white py-20 sm:py-28">
+          <div className="mx-auto max-w-7xl px-6 sm:px-10">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.15em] text-orange-600">
+                The mobile workshop
+              </p>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-zinc-950 sm:text-4xl">
+                Equipped for Larger Tyres, Right On Your Driveway
+              </h2>
+              <p className="mt-4 text-zinc-600">
+                Every van carries the jack stands, torque tools, and SUV-spec tyre stock needed
+                to handle heavier vehicles properly, wherever your SUV is parked.
+              </p>
+            </div>
+
+            <div className="mt-14 grid gap-6 sm:grid-cols-2">
+              <div className="relative aspect-video overflow-hidden rounded-2xl border border-zinc-200">
+                <Image
+                  src="/suv-tyre-fitting-technician-service.webp"
+                  alt="Rapid Mobile Tyres technician using an impact wrench to fit a wheel on a jacked-up SUV"
+                  fill
+                  sizes="(min-width: 640px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative aspect-video overflow-hidden rounded-2xl border border-zinc-200">
+                <Image
+                  src="/suv-wheel-replacement-service.webp"
+                  alt="Rapid Mobile Tyres technician bringing a replacement wheel to an SUV on a driveway"
+                  fill
+                  sizes="(min-width: 640px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
         <FeatureGrid
           eyebrow="Why choose us"
