@@ -148,7 +148,7 @@ export default function ContactForm() {
             type="submit"
             className="flex h-12 w-full items-center justify-center rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500 sm:w-auto"
           >
-            Send Message
+            Open Email to Request a Callback
           </button>
         </form>
       </div>

@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { areasServed } from "@/lib/data";
+import { areasServed, areaSlug } from "@/lib/data";
 
 function areaPath(name: string): string {
-  return `/mobile-tyre-fitting-${name.toLowerCase().replace(/\s+/g, "-")}`;
+  return `/mobile-tyre-fitting-${areaSlug(name)}`;
 }
 
 export default function AreasWeServe() {

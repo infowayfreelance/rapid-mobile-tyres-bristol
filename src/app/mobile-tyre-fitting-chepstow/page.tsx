@@ -651,7 +651,7 @@ export default function ChepstowPage() {
                 href="/contact"
                 className="flex h-12 w-full items-center justify-center rounded-full border border-zinc-700 px-6 text-sm font-semibold text-zinc-200 transition-colors hover:border-zinc-500 hover:bg-zinc-900 sm:w-auto"
               >
-                Book Online
+                Request a Callback
               </Link>
             </div>
           </div>

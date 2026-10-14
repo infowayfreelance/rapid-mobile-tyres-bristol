@@ -144,14 +144,6 @@ const webSiteSchema = {
   "@type": "WebSite",
   name: siteConfig.name,
   url: "https://rapid-tyres.com",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: "https://rapid-tyres.com/?s={search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
-  },
 };
 
 export default function RootLayout({

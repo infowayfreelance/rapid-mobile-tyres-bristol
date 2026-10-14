@@ -95,7 +95,7 @@ export default function MobileTyreFittingPage() {
                   href="/contact"
                   className="flex h-12 items-center justify-center rounded-full border border-zinc-700 px-6 text-sm font-semibold text-zinc-200 transition-colors hover:border-zinc-500 hover:bg-zinc-900"
                 >
-                  Book Online
+                  Request a Callback
                 </Link>
               </div>
 
@@ -205,8 +205,9 @@ export default function MobileTyreFittingPage() {
                 Ready for fast, professional tyre fitting?
               </h2>
               <p className="mt-4 max-w-md text-zinc-400">
-                Call now to book a callout — our nearest technician will be with you in 45-60 minutes,
-                anywhere in the South West and surrounding areas.
+                Call now to book a callout. Our usual arrival time is around 45-60 minutes, depending
+                on your location, traffic, technician availability and tyre availability, anywhere in
+                the South West and surrounding areas.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a

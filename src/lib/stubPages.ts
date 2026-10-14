@@ -7,6 +7,17 @@ function titleCase(slug: string) {
     .join(" ");
 }
 
+// Corrects display spelling where a naive title-case of the URL slug would
+// be wrong (e.g. the route /mobile-tyre-fitting-bridgewater is unchanged,
+// but the town's correct spelling is "Bridgwater", not "Bridgewater").
+const TOWN_DISPLAY_NAME_OVERRIDES: Record<string, string> = {
+  bridgewater: "Bridgwater",
+};
+
+function townDisplayName(slug: string): string {
+  return TOWN_DISPLAY_NAME_OVERRIDES[slug] ?? titleCase(slug);
+}
+
 export type StubKind = "location" | "blog" | "category" | "service" | "legal" | "info";
 
 export interface StubPage {
@@ -53,12 +64,12 @@ const suburbs = [
 export const locationPages: StubPage[] = [
   ...mainTowns.map((t) => ({
     path: `mobile-tyre-fitting-${t}`,
-    title: `Mobile Tyre Fitting in ${titleCase(t)}`,
+    title: `Mobile Tyre Fitting in ${townDisplayName(t)}`,
     kind: "location" as const,
   })),
   ...suburbs.map((t) => ({
     path: `mobile-tyre-fitting-${t}`,
-    title: `Mobile Tyre Fitting in ${titleCase(t)}`,
+    title: `Mobile Tyre Fitting in ${townDisplayName(t)}`,
     kind: "location" as const,
   })),
   {
@@ -140,6 +151,11 @@ const blogImages: Record<string, string> = {
   "safety-first-the-importance-of-timely-tyre-replacements":
     "/worn-cracked-tyre-tread-closeup.webp",
 };
+
+// Slugs with a complete, dedicated article page — used by the sitemap so
+// only finished, indexable articles are listed (not the placeholder stubs
+// still served by the catch-all route).
+export const publishedBlogSlugs: string[] = [...dedicatedBlogSlugs];
 
 export const blogPosts: StubPage[] = blogSlugs.map((s) => ({
   path: s,

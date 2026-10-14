@@ -434,7 +434,7 @@ export const testimonials = [
 
 export const areasServed = [
   "Bristol",
-  "Bridgewater",
+  "Bridgwater",
   "Bath",
   "Chepstow",
   "Gloucestershire",
@@ -442,6 +442,18 @@ export const areasServed = [
   "Newport",
   "Weston Super Mare",
 ];
+
+// Maps a display name to its URL slug where the two differ (e.g. the
+// Somerset town's correct display spelling "Bridgwater" vs. its existing,
+// unchanged route /mobile-tyre-fitting-bridgewater). Area names not listed
+// here fall back to a plain lowercase/hyphenate of the name.
+const AREA_SLUG_OVERRIDES: Record<string, string> = {
+  Bridgwater: "bridgewater",
+};
+
+export function areaSlug(name: string): string {
+  return AREA_SLUG_OVERRIDES[name] ?? name.toLowerCase().replace(/\s+/g, "-");
+}
 
 export const servicesPageItems = [
   {
@@ -516,7 +528,7 @@ export const servicesFaqs = [
   {
     question: "How quickly can you get to me?",
     answer:
-      `We aim to reach you within 45-60 minutes across our service area including Bristol, Bath, Newport, and Weston-Super-Mare. For exact ETAs call us directly on ${siteConfig.phone}.`,
+      `Our usual arrival time is around 45-60 minutes across our service area including Bristol, Bath, Newport, and Weston-Super-Mare, depending on your location, traffic, technician availability and tyre availability. For exact ETAs call us directly on ${siteConfig.phone}.`,
   },
   {
     question: "How do I find the tyre size for my vehicle?",
@@ -526,7 +538,7 @@ export const servicesFaqs = [
   {
     question: "Can I book mobile tyre fitting for a company fleet or van?",
     answer:
-      `Yes, we operate 7 days a week including bank holidays. Whether it's a Sunday evening or a bank holiday, call us on ${siteConfig.phone} and we'll be with you within 45-60 minutes.`,
+      `Yes, we operate 7 days a week including bank holidays. Whether it's a Sunday evening or a bank holiday, call us on ${siteConfig.phone} and we'll usually be with you within 45-60 minutes, depending on your location and technician availability.`,
   },
   {
     question: "Are mobile tyre fitters available on weekends and holidays?",
@@ -603,9 +615,9 @@ export const areasWeCoverDetails = [
       "Our home turf — fast callouts across the city centre and all surrounding suburbs, day or night.",
   },
   {
-    name: "Bridgewater",
+    name: "Bridgwater",
     description:
-      "Emergency and scheduled mobile tyre fitting for Bridgewater and the wider Sedgemoor area.",
+      "Emergency and scheduled mobile tyre fitting for Bridgwater and the wider Sedgemoor area.",
   },
   {
     name: "Bath",
@@ -660,14 +672,14 @@ export const contactMethods = [
 ];
 
 export const mobileTyreFittingPage = {
-  tagline: "Flat tyre? We'll come to you within 30-60 minutes to fit a new one.",
+  tagline: "Flat tyre? We'll usually come to you within 45-60 minutes to fit a new one.",
   openingHours: "Monday–Sunday: 24 Hours",
   intro:
     "A flat tyre or the need for a new one can be annoying, especially if you're in a hurry. Thanks to Rapid Mobile Tyres, you don't have to waste hours at the garage — we come to you to fix your tyres. Our professional mobile tyre fitting service will get you back on the road quickly and safely, whether at home, at work, or stuck on the side of the road. With emergency help available 24 hours a day, seven days a week, you can be sure that we'll be there for you whenever you need us.",
   steps: [
     {
-      title: "Book an Appointment",
-      description: "Call us or schedule online to arrange a convenient time and location for your repair.",
+      title: "Get in Touch",
+      description: "Call us or request a callback to arrange a convenient time and location for your repair.",
     },
     {
       title: "We Come to You",
@@ -737,7 +749,7 @@ export const mobileTyreFittingPage = {
     {
       question: "How quickly do you respond to a call out?",
       answer:
-        "We usually reach most areas within about an hour, depending on traffic and weather.",
+        "Our usual arrival time is around 45-60 minutes, depending on your location, traffic, technician availability and tyre availability.",
     },
     {
       question: "What sorts of payments do you accept?",
@@ -758,9 +770,9 @@ export const fuelDeliveryPage = {
     "Running out of fuel can be disruptive, particularly if you find yourself on a busy road or somewhere unfamiliar. Even if you're caught on the motorway, in the middle of nowhere, or just running late, our team can bring the fuel you need straight to your car — so you never have to worry about running out again.",
   steps: [
     {
-      title: "Call or Book Online",
+      title: "Call or Request a Callback",
       description:
-        "Phone us or schedule our service online. Available 24/7, our team will accept your request and send a fuel delivery vehicle to your address.",
+        "Phone us or request a callback online. Available 24/7, our team will accept your request and send a fuel delivery vehicle to your address.",
     },
     {
       title: "Share Your Location",
@@ -787,7 +799,7 @@ export const fuelDeliveryPage = {
     {
       title: "Convenient",
       description:
-        "A brief phone call or online booking is all it takes — we take care of everything else.",
+        "A brief phone call or a quick online enquiry is all it takes — we take care of everything else.",
     },
   ],
   faqs: [
@@ -830,7 +842,8 @@ export const jumpStartPage = {
     },
     {
       title: "We come to you",
-      description: "A technician arrives with jump-start equipment, usually within 30-60 minutes.",
+      description:
+        "A technician arrives with jump-start equipment, usually within 30-60 minutes, depending on your location, traffic and technician availability.",
     },
     {
       title: "Back on the road",
@@ -929,7 +942,7 @@ export const jumpStartPage = {
     {
       question: "How long does it take to get a jump start?",
       answer:
-        "We aim to reach you within 30-60 minutes of your call, depending on your location. The jump-start itself takes just a few minutes once we arrive.",
+        "Our usual arrival time is around 30-60 minutes, depending on your location, traffic and technician availability. The jump-start itself takes just a few minutes once we arrive.",
     },
     {
       question: "What if my battery is completely dead?",
