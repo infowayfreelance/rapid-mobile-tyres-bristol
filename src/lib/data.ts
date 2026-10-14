@@ -516,7 +516,7 @@ export const servicesFaqs = [
   {
     question: "How quickly can you get to me?",
     answer:
-      `We aim to reach you within 45-60 minutes across our service area including Bristol, Bath, Newport, and Weston-Super-Mare. For exact ETAs call us directly on ${siteConfig.phone}.`,
+      `Our usual arrival time is around 45-60 minutes across our service area including Bristol, Bath, Newport, and Weston-Super-Mare, depending on your location, traffic, technician availability and tyre availability. For exact ETAs call us directly on ${siteConfig.phone}.`,
   },
   {
     question: "How do I find the tyre size for my vehicle?",
@@ -526,7 +526,7 @@ export const servicesFaqs = [
   {
     question: "Can I book mobile tyre fitting for a company fleet or van?",
     answer:
-      `Yes, we operate 7 days a week including bank holidays. Whether it's a Sunday evening or a bank holiday, call us on ${siteConfig.phone} and we'll be with you within 45-60 minutes.`,
+      `Yes, we operate 7 days a week including bank holidays. Whether it's a Sunday evening or a bank holiday, call us on ${siteConfig.phone} and we'll usually be with you within 45-60 minutes, depending on your location and technician availability.`,
   },
   {
     question: "Are mobile tyre fitters available on weekends and holidays?",
@@ -660,7 +660,7 @@ export const contactMethods = [
 ];
 
 export const mobileTyreFittingPage = {
-  tagline: "Flat tyre? We'll come to you within 30-60 minutes to fit a new one.",
+  tagline: "Flat tyre? We'll usually come to you within 45-60 minutes to fit a new one.",
   openingHours: "Monday–Sunday: 24 Hours",
   intro:
     "A flat tyre or the need for a new one can be annoying, especially if you're in a hurry. Thanks to Rapid Mobile Tyres, you don't have to waste hours at the garage — we come to you to fix your tyres. Our professional mobile tyre fitting service will get you back on the road quickly and safely, whether at home, at work, or stuck on the side of the road. With emergency help available 24 hours a day, seven days a week, you can be sure that we'll be there for you whenever you need us.",
@@ -737,7 +737,7 @@ export const mobileTyreFittingPage = {
     {
       question: "How quickly do you respond to a call out?",
       answer:
-        "We usually reach most areas within about an hour, depending on traffic and weather.",
+        "Our usual arrival time is around 45-60 minutes, depending on your location, traffic, technician availability and tyre availability.",
     },
     {
       question: "What sorts of payments do you accept?",
@@ -830,7 +830,8 @@ export const jumpStartPage = {
     },
     {
       title: "We come to you",
-      description: "A technician arrives with jump-start equipment, usually within 30-60 minutes.",
+      description:
+        "A technician arrives with jump-start equipment, usually within 30-60 minutes, depending on your location, traffic and technician availability.",
     },
     {
       title: "Back on the road",
@@ -929,7 +930,7 @@ export const jumpStartPage = {
     {
       question: "How long does it take to get a jump start?",
       answer:
-        "We aim to reach you within 30-60 minutes of your call, depending on your location. The jump-start itself takes just a few minutes once we arrive.",
+        "Our usual arrival time is around 30-60 minutes, depending on your location, traffic and technician availability. The jump-start itself takes just a few minutes once we arrive.",
     },
     {
       question: "What if my battery is completely dead?",

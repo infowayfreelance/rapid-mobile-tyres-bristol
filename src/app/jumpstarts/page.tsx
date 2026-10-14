@@ -263,8 +263,8 @@ export default function JumpstartsPage() {
               Stranded with a dead battery?
             </h2>
             <p className="mt-4 text-zinc-300">
-              Call now — our nearest technician will be with you in 30-60 minutes, anywhere in the South West
-              and surrounding areas.
+              Call now. Our usual arrival time is around 30-60 minutes, depending on your location,
+              traffic and technician availability, anywhere in the South West and surrounding areas.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
