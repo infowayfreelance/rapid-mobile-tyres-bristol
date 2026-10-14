@@ -125,7 +125,7 @@ export default function ServicesPage() {
                 href="/contact"
                 className="flex h-12 items-center justify-center rounded-full border border-zinc-700 px-6 text-sm font-semibold text-zinc-200 transition-colors hover:border-zinc-500 hover:bg-zinc-900"
               >
-                Book Online
+                Request a Callback
               </Link>
             </div>
           </div>
@@ -220,7 +220,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              {["Bristol", "Bath", "Newport", "Weston-Super-Mare", "Chepstow", "Gloucestershire", "Bridgewater", "Magor"].map(
+              {["Bristol", "Bath", "Newport", "Weston-Super-Mare", "Chepstow", "Gloucestershire", "Bridgwater", "Magor"].map(
                 (area) => (
                   <div
                     key={area}
@@ -267,7 +267,7 @@ export default function ServicesPage() {
                 href="/contact"
                 className="flex h-12 w-full items-center justify-center rounded-full border border-zinc-700 px-6 text-sm font-semibold text-zinc-200 transition-colors hover:border-zinc-500 hover:bg-zinc-900 sm:w-auto"
               >
-                Book Online
+                Request a Callback
               </Link>
             </div>
           </div>
