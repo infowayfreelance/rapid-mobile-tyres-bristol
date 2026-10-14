@@ -78,7 +78,7 @@ export default function FuelDeliveryPage() {
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-zinc-800 bg-zinc-900 px-6 py-4 shadow-xl sm:block">
-                <p className="text-2xl font-bold text-orange-500">45 min</p>
+                <p className="text-2xl font-bold text-orange-500">45-60 min</p>
                 <p className="text-xs text-zinc-400">Average arrival time</p>
               </div>
             </div>
@@ -175,7 +175,7 @@ export default function FuelDeliveryPage() {
                 <p className="text-xl font-bold">Stranded right now?</p>
                 <p className="mt-2 text-white/90">
                   Pull over safely, switch on your hazard lights, and call us immediately. Our
-                  technician will arrive with petrol or diesel — usually within 45 minutes.
+                  technician will arrive with petrol or diesel — usually within 45-60 minutes.
                 </p>
               </div>
               <a
@@ -209,7 +209,7 @@ export default function FuelDeliveryPage() {
             </h2>
             <p className="mt-4 text-zinc-300">
               We&apos;ll bring petrol or diesel straight to you, anywhere in the South West and surrounding
-              areas — usually within 45 minutes.
+              areas — usually within 45-60 minutes.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a

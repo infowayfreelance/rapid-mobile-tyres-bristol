@@ -75,7 +75,7 @@ const allServices = [
     title: "Jump Start",
     tagline: "Dead battery? No problem.",
     description:
-      "Stranded with a flat battery? Our technicians arrive with full jump-start equipment and usually get your engine running again within 30–60 minutes, depending on your location.",
+      "Stranded with a flat battery? Our technicians arrive with full jump-start equipment and usually get your engine running again within 45–60 minutes, depending on your location.",
     href: "/jumpstarts",
     image: "/jump-start-service-dead-battery-bristol.webp",
     badge: null,

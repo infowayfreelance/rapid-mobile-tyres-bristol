@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const stats = [
   { value: "24/7", label: "Available, every day" },
-  { value: "30-60 min", label: "Average arrival time" },
+  { value: "45-60 min", label: "Average arrival time" },
   { value: "Expert", label: "Trained technicians" },
   { value: "5★", label: "Rated by customers" },
 ];
@@ -47,7 +47,7 @@ export default function JumpstartsPage() {
               </p>
 
               <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl">
-                Dead Battery? We&apos;re There in 30-60 Minutes.
+                Dead Battery? We&apos;re There in 45-60 Minutes.
               </h1>
 
               <p className="mt-3 text-lg font-medium text-zinc-200">{jumpStartPage.tagline}</p>
@@ -113,7 +113,7 @@ export default function JumpstartsPage() {
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-zinc-800 bg-zinc-900 px-6 py-4 shadow-xl sm:block">
-                <p className="text-2xl font-bold text-orange-500">30-60 min</p>
+                <p className="text-2xl font-bold text-orange-500">45-60 min</p>
                 <p className="text-xs text-zinc-400">Average arrival time</p>
               </div>
             </div>
@@ -263,7 +263,7 @@ export default function JumpstartsPage() {
               Stranded with a dead battery?
             </h2>
             <p className="mt-4 text-zinc-300">
-              Call now. Our usual arrival time is around 30-60 minutes, depending on your location,
+              Call now. Our usual arrival time is around 45-60 minutes, depending on your location,
               traffic and technician availability, anywhere in the South West and surrounding areas.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">

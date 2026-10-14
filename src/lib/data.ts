@@ -806,7 +806,7 @@ export const fuelDeliveryPage = {
     {
       question: "How quickly can I get fuel delivered?",
       answer:
-        "We aim to deliver fuel to your location within 45 minutes of your request, so you're back on the road as quickly as possible.",
+        "We aim to deliver fuel to your location within 45-60 minutes of your request, so you're back on the road as quickly as possible.",
     },
     {
       question: "What types of fuel do you deliver?",
@@ -843,7 +843,7 @@ export const jumpStartPage = {
     {
       title: "We come to you",
       description:
-        "A technician arrives with jump-start equipment, usually within 30-60 minutes, depending on your location, traffic and technician availability.",
+        "A technician arrives with jump-start equipment, usually within 45-60 minutes, depending on your location, traffic and technician availability.",
     },
     {
       title: "Back on the road",
@@ -942,7 +942,7 @@ export const jumpStartPage = {
     {
       question: "How long does it take to get a jump start?",
       answer:
-        "Our usual arrival time is around 30-60 minutes, depending on your location, traffic and technician availability. The jump-start itself takes just a few minutes once we arrive.",
+        "Our usual arrival time is around 45-60 minutes, depending on your location, traffic and technician availability. The jump-start itself takes just a few minutes once we arrive.",
     },
     {
       question: "What if my battery is completely dead?",
