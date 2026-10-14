@@ -14,7 +14,7 @@ import TyreBrandStrip from "@/components/TyreBrandStrip";
 export const metadata: Metadata = {
   title: "Mobile Tyre Fitting Bristol | 24/7 Emergency Replacement",
   description:
-    "24/7 mobile tyre fitting in Bristol for flat or damaged tyres. Get fast tyre replacement at your location.",
+    "Trusted mobile tyre fitters in Bristol, available 24/7. Flat tyre repair and replacement at home, work or roadside — usual arrival 45-60 minutes. Call now.",
   alternates: {
     canonical: "https://rapid-tyres.com",
   },
