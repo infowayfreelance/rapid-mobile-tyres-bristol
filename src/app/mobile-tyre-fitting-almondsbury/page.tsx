@@ -8,13 +8,72 @@ import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
 import { siteConfig } from "@/lib/data";
 
+const PAGE_URL = "https://rapid-tyres.com/mobile-tyre-fitting-almondsbury";
+const PAGE_TITLE = "Mobile Tyre Fitting Almondsbury | 24/7 Tyre Service";
+const PAGE_DESCRIPTION =
+  "Mobile tyre fitting in Almondsbury for flat or damaged tyres. Get convenient tyre help directly at your location.";
+
 export const metadata: Metadata = {
-  title: "Mobile Tyre Fitting Almondsbury | 24/7 Tyre Service",
-  description:
-    "Mobile tyre fitting in Almondsbury for flat or damaged tyres. Get convenient tyre help directly at your location.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   alternates: {
-    canonical: "https://rapid-tyres.com/mobile-tyre-fitting-almondsbury",
+    canonical: PAGE_URL,
   },
+  openGraph: {
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    type: "website",
+  },
+};
+
+// Reuses the same business identity already defined in src/app/layout.tsx's
+// site-wide LocalBusiness (AutoRepair) schema — no new business details.
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Mobile Tyre Fitting in Almondsbury",
+  description: PAGE_DESCRIPTION,
+  serviceType: "Mobile tyre fitting",
+  provider: {
+    "@type": "AutoRepair",
+    name: siteConfig.name,
+    telephone: "+447494247246",
+    url: "https://rapid-tyres.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Ryeleaze, Shirehampton",
+      addressLocality: "Bristol",
+      postalCode: "BS11 9FN",
+      addressCountry: "GB",
+    },
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "Almondsbury, South Gloucestershire",
+  },
+  url: PAGE_URL,
+};
+
+// Matches the page's actual (flat, single-level) URL hierarchy — this page
+// has no visible on-page breadcrumb trail, so no intermediate level is added.
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://rapid-tyres.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Mobile Tyre Fitting in Almondsbury",
+      item: PAGE_URL,
+    },
+  ],
 };
 
 const stats = [
@@ -149,6 +208,21 @@ const faqs = [
   },
 ];
 
+// Mirrors the visible FAQ list above exactly — no question or answer here
+// differs from what Faq renders on the page.
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 const areasServed = [
   { name: "Hortham", href: null },
   { name: "Aztec West", href: null },
@@ -221,13 +295,31 @@ const locationPinSvg = (
 export default function Page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema).replace(/</g, "\\u003c"),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c"),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Header />
       <main>
         {/* Hero */}
         <section className="relative bg-zinc-900 text-white overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/mobile-tyre-fitting-technician-bristol.webp"
+              src="/technician-arriving-callout-almondsbury.webp"
               alt=""
               fill
               sizes="100vw"
@@ -381,8 +473,8 @@ export default function Page() {
               <div className="relative">
                 <div className="overflow-hidden rounded-2xl ring-1 ring-zinc-100 shadow-sm">
                   <Image
-                    src="/mobile-tyre-fitting-technician-bristol.webp"
-                    alt="Mobile tyre fitting technician"
+                    src="/car-wheel-chock-preparation-almondsbury.webp"
+                    alt="Car wheel secured with safety chocks ready for mobile tyre fitting in Almondsbury"
                     width={600}
                     height={450}
                     className="w-full object-cover"
@@ -505,7 +597,7 @@ export default function Page() {
               </p>
               <a
                 href={siteConfig.phoneHref}
-                className="mt-4 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-2.5 text-sm font-semibold text-orange-600 hover:bg-orange-50 transition-colors"
+                className="mt-4 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-orange-600 hover:bg-orange-50 transition-colors"
               >
                 {siteConfig.phone}
               </a>
@@ -544,7 +636,7 @@ export default function Page() {
         <section className="relative bg-zinc-900 py-20 text-white overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/van-tyre-fitting-road-service-bristol.webp"
+              src="/mobile-tyre-van-equipment-almondsbury.webp"
               alt=""
               fill
               sizes="100vw"
@@ -831,7 +923,7 @@ export default function Page() {
         <section className="relative bg-zinc-900 py-20 text-white overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/mobile-tyre-fitting-technician-bristol.webp"
+              src="/technician-arriving-callout-almondsbury.webp"
               alt=""
               fill
               sizes="100vw"
