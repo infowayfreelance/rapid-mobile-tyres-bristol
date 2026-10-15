@@ -473,10 +473,10 @@ export default function Page() {
               <div className="relative">
                 <div className="overflow-hidden rounded-2xl ring-1 ring-zinc-100 shadow-sm">
                   <Image
-                    src="/technician-arriving-callout-almondsbury.webp"
-                    alt="Rapid Mobile Tyres technician arriving for a mobile tyre fitting callout in Almondsbury"
+                    src="/car-wheel-chock-preparation-almondsbury.webp"
+                    alt="Car wheel secured with safety chocks ready for mobile tyre fitting in Almondsbury"
                     width={600}
-                    height={338}
+                    height={450}
                     className="w-full object-cover"
                   />
                 </div>
