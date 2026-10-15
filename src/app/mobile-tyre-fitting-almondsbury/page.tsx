@@ -89,21 +89,21 @@ const vehicleServices = [
     href: "/mobile-car-tyre-fitting-bristol",
     description:
       "Our mobile car tyre fitting in Almondsbury is available for many common hatchbacks, saloons, estates and family cars. Whether your tyre fails unexpectedly or simply needs replacing because of wear, fitting can be arranged at a suitable home, workplace or roadside location.",
-    image: "/mobile-car-tyre-fitting-bmw-i3-bristol.webp",
+    image: "/car-tyre-change-wheel-chocks-almondsbury.webp",
   },
   {
     title: "Mobile Van Tyre Fitting",
     href: "/mobile-van-tyre-fitting-bristol",
     description:
       "Almondsbury's proximity to the A38, M5 and major employment areas means vans are common on local roads. Our mobile van tyre fitting in Almondsbury brings replacement tyres directly to suitable light commercial vehicles. Because vans may require specific load-rated tyres, provide the complete tyre size and load index whenever possible.",
-    image: "/van-tyre-fitting-road-service-bristol.webp",
+    image: "/mobile-tyre-van-equipment-almondsbury.webp",
   },
   {
     title: "SUV & 4x4 Tyre Fitting",
     href: "/suv-tyre-fitting-bristol",
     description:
       "SUVs and 4x4s can use larger tyre sizes and different load specifications from standard passenger vehicles. We provide SUV tyre fitting in Almondsbury for suitable vehicles and tyre specifications, subject to current availability.",
-    image: "/suv-tyre-fitting-volkswagen-tiguan-bristol.webp",
+    image: "/mobile-tyre-tread-inspection-almondsbury.webp",
   },
 ];
 
@@ -319,7 +319,7 @@ export default function Page() {
         <section className="relative bg-zinc-900 text-white overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/mobile-tyre-fitting-technician-bristol.webp"
+              src="/technician-arriving-callout-almondsbury.webp"
               alt=""
               fill
               sizes="100vw"
@@ -473,10 +473,10 @@ export default function Page() {
               <div className="relative">
                 <div className="overflow-hidden rounded-2xl ring-1 ring-zinc-100 shadow-sm">
                   <Image
-                    src="/mobile-tyre-fitting-technician-bristol.webp"
-                    alt="Mobile tyre fitting technician replacing a tyre in Almondsbury"
+                    src="/technician-arriving-callout-almondsbury.webp"
+                    alt="Rapid Mobile Tyres technician arriving for a mobile tyre fitting callout in Almondsbury"
                     width={600}
-                    height={450}
+                    height={338}
                     className="w-full object-cover"
                   />
                 </div>
@@ -636,7 +636,7 @@ export default function Page() {
         <section className="relative bg-zinc-900 py-20 text-white overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/van-tyre-fitting-road-service-bristol.webp"
+              src="/mobile-tyre-van-equipment-almondsbury.webp"
               alt=""
               fill
               sizes="100vw"
@@ -923,7 +923,7 @@ export default function Page() {
         <section className="relative bg-zinc-900 py-20 text-white overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/mobile-tyre-fitting-technician-bristol.webp"
+              src="/technician-arriving-callout-almondsbury.webp"
               alt=""
               fill
               sizes="100vw"
