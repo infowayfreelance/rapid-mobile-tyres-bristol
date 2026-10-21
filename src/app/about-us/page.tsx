@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Header from "@/components/Header";
 import AboutHero from "@/components/AboutHero";
 import WhoWeAre from "@/components/WhoWeAre";
@@ -36,6 +37,13 @@ export default function AboutUsPage() {
             <p className="mt-4 text-zinc-600">
               From tread depth to final fitting, our technicians check the details that keep
               you safe on the road.
+            </p>
+            <p className="mt-3 text-sm text-zinc-500">
+              Head back to{" "}
+              <Link href="/" className="text-orange-600 hover:underline">
+                our homepage
+              </Link>{" "}
+              to see our full 24/7 service area.
             </p>
 
             <div className="mt-10 overflow-hidden rounded-3xl border border-zinc-200">

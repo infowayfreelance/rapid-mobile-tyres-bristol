@@ -186,7 +186,11 @@ export default function TyreReplacementAtHomeBristolPage() {
 
               <p className="mt-4 max-w-xl leading-7 text-zinc-400">
                 Getting a tyre replaced should not mean taking half a day off work to sit in a
-                waiting room. Rapid Mobile Tyres sends a fully equipped technician to your
+                waiting room.{" "}
+                <Link href="/" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">
+                  Rapid Mobile Tyres
+                </Link>{" "}
+                sends a fully equipped technician to your
                 home address with the right tyre on the van. Our{" "}
                 <Link href="/mobile-tyre-fitting" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">
                   mobile tyre fitting service

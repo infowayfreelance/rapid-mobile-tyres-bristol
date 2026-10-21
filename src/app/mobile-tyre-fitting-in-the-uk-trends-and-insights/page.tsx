@@ -233,8 +233,11 @@ export default function MobileTyreFittingUkTrendsPage() {
                 Need Mobile Tyre Fitting Today?
               </h2>
               <p className="mx-auto mt-3 max-w-xl text-zinc-300">
-                Rapid Mobile Tyres provides 24/7 mobile tyre fitting across Bristol and the South
-                West. Call now or request a callback and we&apos;ll come to you.
+                Rapid Mobile Tyres provides{" "}
+                <Link href="/" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">
+                  24/7 mobile tyre fitting across Bristol
+                </Link>{" "}
+                and the South West. Call now or request a callback and we&apos;ll come to you.
               </p>
               <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
