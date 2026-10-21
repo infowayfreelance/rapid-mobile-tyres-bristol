@@ -62,6 +62,14 @@ export default function MobileTyreFittingPage() {
 
               <p className="mt-4 max-w-xl leading-7 text-zinc-400">{mobileTyreFittingPage.intro}</p>
 
+              <p className="mt-4 max-w-xl text-sm text-zinc-500">
+                Part of the{" "}
+                <Link href="/" className="text-orange-400 hover:underline">
+                  Rapid Mobile Tyres Bristol
+                </Link>{" "}
+                network of 24/7 roadside and home tyre services.
+              </p>
+
               <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                 {mobileTyreFittingPage.benefits.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-zinc-300">

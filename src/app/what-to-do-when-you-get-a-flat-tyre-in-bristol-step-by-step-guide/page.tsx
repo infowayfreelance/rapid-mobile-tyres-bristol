@@ -336,7 +336,10 @@ export default function FlatTyreBristolGuidePage() {
                       ))}
                     </ul>
                     <p className="mt-2 leading-7 text-zinc-600">
-                      Rapid Mobile Tyres provides{" "}
+                      <Link href="/" className="text-orange-500 hover:underline">
+                        Rapid Mobile Tyres
+                      </Link>{" "}
+                      provides{" "}
                       <Link href="/emergency-mobile-tyre-fitting-bristol" className="text-orange-500 hover:underline">
                         emergency mobile tyre fitting
                       </Link>{" "}

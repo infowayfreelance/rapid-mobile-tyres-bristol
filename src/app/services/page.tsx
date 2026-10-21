@@ -114,6 +114,13 @@ export default function ServicesPage() {
               our fully-equipped mobile units come straight to you, anywhere in Bristol and beyond,
               around the clock.
             </p>
+            <p className="mx-auto mt-3 max-w-2xl text-sm text-zinc-500">
+              See why{" "}
+              <Link href="/" className="text-orange-400 hover:underline">
+                Rapid Mobile Tyres
+              </Link>{" "}
+              is Bristol&apos;s trusted 24/7 mobile tyre and roadside team.
+            </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
                 href={siteConfig.phoneHref}

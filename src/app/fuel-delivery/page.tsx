@@ -46,6 +46,14 @@ export default function FuelDeliveryPage() {
 
               <p className="mt-4 max-w-xl leading-7 text-zinc-400">{fuelDeliveryPage.intro}</p>
 
+              <p className="mt-4 max-w-xl text-sm text-zinc-500">
+                One of the roadside services offered by{" "}
+                <Link href="/" className="text-orange-400 hover:underline">
+                  Rapid Mobile Tyres Bristol
+                </Link>
+                .
+              </p>
+
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
                   href={siteConfig.phoneHref}
