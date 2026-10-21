@@ -137,6 +137,14 @@ const localBusinessSchema = {
   },
   sameAs: ["https://www.facebook.com/rapidmobiletyresltd"],
   image: "https://rapid-tyres.com/rapid-mobile-tyres-open-graph.webp",
+  // Matches the Google rating and review count already shown on the
+  // homepage (src/components/Hero.tsx) — not a separate/invented figure.
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    reviewCount: "311",
+    bestRating: "5",
+  },
 };
 
 const webSiteSchema = {

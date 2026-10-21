@@ -10,9 +10,9 @@ import Faq from "@/components/Faq";
 import { siteConfig, mobileTyreFittingPage } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Mobile Tyre Fitting Service Bristol | Flat & Damaged Tyres",
+  title: "Mobile Tyre Fitting Service Bristol | Highly Rated, 24/7",
   description:
-    "24/7 mobile tyre fitting service across Bristol and the South West for flat, worn or damaged tyres. Replacement tyres fitted at your home, work or roadside.",
+    "24/7 mobile tyre fitting across Bristol and the South West for flat, worn or damaged tyres — highly rated, fairly priced, fitted at home, work or roadside.",
   alternates: {
     canonical: "https://rapid-tyres.com/mobile-tyre-fitting",
   },
