@@ -135,7 +135,7 @@ const faqs = [
   {
     question: "Do you cover Chew Magna?",
     answer:
-      "Chew Magna is a neighbouring Chew Valley location and has its own dedicated Rapid Tyres service-area page. If you are outside Chew Stoke itself, provide your exact postcode so current technician availability can be confirmed.",
+      "Chew Magna is a neighbouring Chew Valley location and has its own dedicated Rapid Mobile Tyres service-area page. If you are outside Chew Stoke itself, provide your exact postcode so current technician availability can be confirmed.",
   },
   {
     question: "Can I arrange mobile tyre replacement before the tyre becomes completely flat?",
