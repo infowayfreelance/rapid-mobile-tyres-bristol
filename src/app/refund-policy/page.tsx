@@ -44,7 +44,7 @@ export default function RefundPolicyPage() {
               {refundPolicy.note}
             </p>
 
-            <p className="mt-8 text-sm font-medium text-zinc-800">Thank you for choosing Rapid Mobile Tyres Ltd.</p>
+            <p className="mt-8 text-sm font-medium text-zinc-800">Thank you for choosing Rapid Mobile Tyres Bristol.</p>
           </div>
         </section>
         <CallToAction />
