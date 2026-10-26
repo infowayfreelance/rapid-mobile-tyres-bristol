@@ -125,6 +125,7 @@ const dedicatedBlogSlugs = new Set([
   "safety-first-the-importance-of-timely-tyre-replacements",
   "how-to-read-your-tyre-sidewall-markings",
   "what-are-silent-tyres",
+  "mobile-tyre-repair-services-convenience-at-your-doorstep",
 ]);
 
 const blogImages: Record<string, string> = {
@@ -156,6 +157,8 @@ const blogImages: Record<string, string> = {
     "/tyre-sidewall-markings-numbered-diagram.webp",
   "what-are-silent-tyres":
     "/standard-vs-foam-lined-silent-tyre-comparison.webp",
+  "mobile-tyre-repair-services-convenience-at-your-doorstep":
+    "/technician-fitting-plug-patch-tyre-repair.webp",
 };
 
 // Slugs with a complete, dedicated article page — used by the sitemap so
