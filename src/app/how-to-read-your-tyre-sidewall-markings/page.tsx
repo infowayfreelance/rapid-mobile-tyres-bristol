@@ -226,39 +226,38 @@ export default function TyreSidewallMarkingsPage() {
               </p>
             </div>
 
-            <div className="relative mt-6 overflow-hidden rounded-2xl bg-white p-4 shadow-sm ring-1 ring-zinc-100 sm:p-6">
-              <div className="relative aspect-square w-full">
-                <Image
-                  src="/tyre-sidewall-markings-numbered-diagram.webp"
-                  alt="Numbered diagram of a Michelin tyre sidewall showing 22 common markings"
-                  fill
-                  sizes="(min-width: 768px) 768px, 100vw"
-                  className="object-contain"
-                  preload
-                />
+            <div className="mt-6 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-zinc-100 sm:p-8">
+              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100 text-orange-600">
+                <svg viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5" aria-hidden>
+                  <path
+                    fillRule="evenodd"
+                    d="M2 4.25A2.25 2.25 0 014.25 2h11.5A2.25 2.25 0 0118 4.25v11.5A2.25 2.25 0 0115.75 18H4.25A2.25 2.25 0 012 15.75V4.25zM5 6a1 1 0 000 2h10a1 1 0 100-2H5zm0 4a1 1 0 100 2h10a1 1 0 100-2H5zm0 4a1 1 0 100 2h5a1 1 0 100-2H5z"
+                    clipRule="evenodd"
+                  />
+                </svg>
               </div>
-            </div>
+              <h2 className="mb-3 text-xl font-bold text-zinc-900">
+                Quick Guide to the Numbered Markings
+              </h2>
+              <p className="leading-7 text-zinc-600">
+                Use the numbered picture alongside the list to find each marking. You do not need
+                to memorise all 22 — the important part is knowing which ones matter for the job
+                you are trying to do.
+              </p>
 
-            <div className="mt-6 space-y-6">
-              {/* quick guide */}
-              <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-zinc-100">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100 text-orange-600">
-                  <svg viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5" aria-hidden>
-                    <path
-                      fillRule="evenodd"
-                      d="M2 4.25A2.25 2.25 0 014.25 2h11.5A2.25 2.25 0 0118 4.25v11.5A2.25 2.25 0 0115.75 18H4.25A2.25 2.25 0 012 15.75V4.25zM5 6a1 1 0 000 2h10a1 1 0 100-2H5zm0 4a1 1 0 100 2h10a1 1 0 100-2H5zm0 4a1 1 0 100 2h5a1 1 0 100-2H5z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+              <div className="mt-6 grid gap-8 lg:grid-cols-2 lg:items-start">
+                <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-xl ring-1 ring-zinc-100 lg:sticky lg:top-24">
+                  <Image
+                    src="/tyre-sidewall-markings-numbered-diagram.webp"
+                    alt="Numbered diagram of a Michelin tyre sidewall showing 22 common markings"
+                    fill
+                    sizes="(min-width: 1024px) 480px, (min-width: 768px) 672px, 100vw"
+                    className="object-contain"
+                    preload
+                  />
                 </div>
-                <h2 className="mb-3 text-xl font-bold text-zinc-900">
-                  Quick Guide to the Numbered Markings
-                </h2>
-                <p className="leading-7 text-zinc-600">
-                  Use the picture above to find each marking. You do not need to memorise all 22 —
-                  the important part is knowing which ones matter for the job you are trying to do.
-                </p>
-                <div className="mt-5 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+
+                <div className="space-y-3">
                   {quickGuide.map((item) => (
                     <div key={item.n} className="flex items-start gap-3">
                       <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-500 text-xs font-bold text-white">
@@ -272,7 +271,9 @@ export default function TyreSidewallMarkingsPage() {
                   ))}
                 </div>
               </div>
+            </div>
 
+            <div className="mt-6 space-y-6">
               {/* most important code */}
               <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-zinc-100">
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100 text-orange-600">
