@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/data";
 
 const PAGE_URL = "https://rapid-tyres.com/safety-first-the-importance-of-timely-tyre-replacements";
 const OG_IMAGE = "https://rapid-tyres.com/worn-cracked-tyre-tread-closeup.webp";
-const TITLE = "When to Replace Tyres: UK Safety Guide | Rapid Tyres";
+const TITLE = "When to Replace Tyres: UK Safety Guide | Rapid Mobile Tyres";
 const DESCRIPTION =
   "Learn when to replace tyres, how to check tread depth, spot tyre damage, use the 20p test, and stay safe on UK roads with this simple guide.";
 

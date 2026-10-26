@@ -123,6 +123,7 @@ const dedicatedBlogSlugs = new Set([
   "the-importance-of-regular-adas-calibration",
   "what-you-need-to-know-about-your-cars-alternator",
   "safety-first-the-importance-of-timely-tyre-replacements",
+  "how-to-read-your-tyre-sidewall-markings",
 ]);
 
 const blogImages: Record<string, string> = {
@@ -150,6 +151,8 @@ const blogImages: Record<string, string> = {
     "/car-running-after-mobile-jump-start.webp",
   "safety-first-the-importance-of-timely-tyre-replacements":
     "/worn-cracked-tyre-tread-closeup.webp",
+  "how-to-read-your-tyre-sidewall-markings":
+    "/tyre-sidewall-markings-numbered-diagram.webp",
 };
 
 // Slugs with a complete, dedicated article page — used by the sitemap so
