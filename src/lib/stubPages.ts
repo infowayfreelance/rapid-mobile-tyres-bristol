@@ -130,6 +130,7 @@ const dedicatedBlogSlugs = new Set([
   "emergency-tyre-fitting-getting-back-on-the-road-quickly",
   "how-climate-change-is-changing-car-design",
   "the-benefits-of-24-hour-mobile-tyre-fitting-services",
+  "emergency-tyres-24-7",
 ]);
 
 const blogImages: Record<string, string> = {
@@ -171,6 +172,8 @@ const blogImages: Record<string, string> = {
     "/infrared-thermometer-check-electric-car.webp",
   "the-benefits-of-24-hour-mobile-tyre-fitting-services":
     "/technician-inspecting-flat-tyre-night-driveway.webp",
+  "emergency-tyres-24-7":
+    "/woman-checking-car-boot-night-car-park.webp",
 };
 
 // Slugs with a complete, dedicated article page — used by the sitemap so
