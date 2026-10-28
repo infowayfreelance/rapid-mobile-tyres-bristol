@@ -133,6 +133,7 @@ const dedicatedBlogSlugs = new Set([
   "emergency-tyres-24-7",
   "flat-tyre-puncture-repair",
   "how-to-choose-the-right-tyres-for-your-car-a-complete-guide",
+  "urgently-need-a-new-tyre-call-rapid-mobile-tyres-24-hour-emergency-mobile-tyres",
 ]);
 
 const blogImages: Record<string, string> = {
@@ -180,6 +181,8 @@ const blogImages: Record<string, string> = {
     "/flat-tyre-car-driveway-wide.webp",
   "how-to-choose-the-right-tyres-for-your-car-a-complete-guide":
     "/customer-choosing-tyres-with-fitter-shop.webp",
+  "urgently-need-a-new-tyre-call-rapid-mobile-tyres-24-hour-emergency-mobile-tyres":
+    "/technician-walking-to-van-night-carpark-rain.webp",
 };
 
 // Slugs with a complete, dedicated article page — used by the sitemap so
