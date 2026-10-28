@@ -131,6 +131,7 @@ const dedicatedBlogSlugs = new Set([
   "how-climate-change-is-changing-car-design",
   "the-benefits-of-24-hour-mobile-tyre-fitting-services",
   "emergency-tyres-24-7",
+  "flat-tyre-puncture-repair",
 ]);
 
 const blogImages: Record<string, string> = {
@@ -174,6 +175,8 @@ const blogImages: Record<string, string> = {
     "/technician-inspecting-flat-tyre-night-driveway.webp",
   "emergency-tyres-24-7":
     "/woman-checking-car-boot-night-car-park.webp",
+  "flat-tyre-puncture-repair":
+    "/flat-tyre-car-driveway-wide.webp",
 };
 
 // Slugs with a complete, dedicated article page — used by the sitemap so
