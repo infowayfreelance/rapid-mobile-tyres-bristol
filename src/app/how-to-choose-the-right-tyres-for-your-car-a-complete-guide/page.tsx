@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { siteConfig } from "@/lib/data";
 
 const PAGE_URL =
-  "https://rapid-tyres.com/how-to-choose-the-right-tyres-for-your-car-a-complete-guide-2";
+  "https://rapid-tyres.com/how-to-choose-the-right-tyres-for-your-car-a-complete-guide";
 const OG_IMAGE = "https://rapid-tyres.com/customer-choosing-tyres-with-fitter-shop.webp";
 const TITLE = "How to Choose the Right Tyres for Your Car | Rapid";
 const DESCRIPTION =

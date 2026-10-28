@@ -101,7 +101,7 @@ const blogSlugs = [
   "the-benefits-of-24-hour-mobile-tyre-fitting-services",
   "emergency-tyres-24-7",
   "flat-tyre-puncture-repair",
-  "how-to-choose-the-right-tyres-for-your-car-a-complete-guide-2",
+  "how-to-choose-the-right-tyres-for-your-car-a-complete-guide",
   "urgently-need-a-new-tyre-call-rapid-mobile-tyres-24-hour-emergency-mobile-tyres",
   "how-much-does-mobile-tyre-fitting-cost-in-bristol-2026-honest-price-guide",
   "cheapest-tyres-in-bristol-2",
@@ -132,7 +132,7 @@ const dedicatedBlogSlugs = new Set([
   "the-benefits-of-24-hour-mobile-tyre-fitting-services",
   "emergency-tyres-24-7",
   "flat-tyre-puncture-repair",
-  "how-to-choose-the-right-tyres-for-your-car-a-complete-guide-2",
+  "how-to-choose-the-right-tyres-for-your-car-a-complete-guide",
 ]);
 
 const blogImages: Record<string, string> = {
@@ -178,7 +178,7 @@ const blogImages: Record<string, string> = {
     "/woman-checking-car-boot-night-car-park.webp",
   "flat-tyre-puncture-repair":
     "/flat-tyre-car-driveway-wide.webp",
-  "how-to-choose-the-right-tyres-for-your-car-a-complete-guide-2":
+  "how-to-choose-the-right-tyres-for-your-car-a-complete-guide":
     "/customer-choosing-tyres-with-fitter-shop.webp",
 };
 
