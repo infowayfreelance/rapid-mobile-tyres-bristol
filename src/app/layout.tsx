@@ -4,7 +4,6 @@ import Script from "next/script";
 import "./globals.css";
 import FloatingButtons from "@/components/FloatingButtons";
 import CookieBanner from "@/components/CookieBanner";
-import PhoneNumberGuard from "@/components/PhoneNumberGuard";
 import { siteConfig } from "@/lib/data";
 
 const GTM_ID = "GTM-MXDN8DVC";
@@ -45,7 +44,7 @@ const localBusinessSchema = {
   "@type": "AutoRepair",
   name: siteConfig.name,
   url: "https://rapid-tyres.com",
-  telephone: "+447494247246",
+  telephone: "+441172055494",
   email: siteConfig.email,
   address: {
     "@type": "PostalAddress",
@@ -198,7 +197,6 @@ export default function RootLayout({
         {children}
         <FloatingButtons />
         <CookieBanner />
-        <PhoneNumberGuard />
       </body>
     </html>
   );
