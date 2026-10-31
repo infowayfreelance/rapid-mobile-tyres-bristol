@@ -432,7 +432,7 @@ export default function CookiePolicyPage() {
                     <li>
                       <span className="font-semibold text-zinc-800">Phone: </span>
                       <a href={siteConfig.phoneHref} className="text-orange-600 hover:underline">
-                        07494 247246
+                        0117 205 5494
                       </a>
                     </li>
                     <li>
