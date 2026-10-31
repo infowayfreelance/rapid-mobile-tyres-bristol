@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Rapid Mobile Tyres Bristol",
-  phone: "07494 247246",
-  phoneHref: "tel:+447494247246",
-  whatsappHref: "https://wa.me/447494247246",
+  phone: "0117 205 5494",
+  phoneHref: "tel:+441172055494",
+  whatsappHref: "/contact",
   email: "info@rapid-tyres.com",
   address: "Ryeleaze, Shirehampton, Bristol BS11 9FN, United Kingdom",
   facebook: "https://www.facebook.com/rapidmobiletyresltd",
