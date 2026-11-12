@@ -53,10 +53,10 @@ export default function JumpstartsPage() {
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href={07494 247246Href}
+                  href="tel:+447494247246"
                   className="flex h-12 items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500"
                 >
-                  Emergency Call: {07494 247246}
+                  Emergency Call: 07494 247246
                 </a>
                 <Link
                   href="/contact"
@@ -173,10 +173,10 @@ export default function JumpstartsPage() {
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
-                href={07494 247246Href}
+                href="tel:+447494247246"
                 className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500 sm:w-auto"
               >
-                Call {07494 247246}
+                Call 07494 247246
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
