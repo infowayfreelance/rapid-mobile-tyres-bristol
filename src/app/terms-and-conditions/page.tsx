@@ -46,7 +46,7 @@ export default function TermsAndConditionsPage() {
                 <div className="mt-4 space-y-4 text-sm leading-7 text-zinc-600">
                   <p>
                     Rapid Mobile Tyres Bristol is a mobile tyre fitting
-                    and roadside assistance company operating across Bristol and the wider
+                    and roadside assistance business operating across Bristol and the wider
                     South West of England.
                   </p>
                   <p>
