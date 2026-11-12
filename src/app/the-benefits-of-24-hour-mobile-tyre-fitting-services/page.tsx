@@ -95,7 +95,7 @@ const askTable = [
 const faqs = [
   {
     question: "Is 24 hour mobile tyre fitting really available at night?",
-    answer: `Yes. Rapid works 24 hours a day, 7 days a week, and you call Rapid directly on $07494 247246.`,
+    answer: `Yes. Rapid works 24 hours a day, 7 days a week, and you call Rapid directly on 07494 247246.`,
   },
   {
     question: "How fast can a 24 hour mobile tyre fitter arrive?",
