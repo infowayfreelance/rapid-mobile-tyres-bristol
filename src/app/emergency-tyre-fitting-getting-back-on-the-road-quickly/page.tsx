@@ -54,12 +54,12 @@ const whoToCallTable = [
   },
   {
     where: "Ordinary road, parked safely",
-    first: `Rapid on $07494 247246`,
+    first: `Rapid on 07494 247246`,
     then: "Wait somewhere safe, away from traffic",
   },
   {
     where: "Home or workplace",
-    first: `Rapid on $07494 247246`,
+    first: `Rapid on 07494 247246`,
     then: "Ask for a live arrival time",
   },
 ];
