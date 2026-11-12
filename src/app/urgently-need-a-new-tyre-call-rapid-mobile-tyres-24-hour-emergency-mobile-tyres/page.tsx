@@ -121,7 +121,7 @@ const driveOrCallTable = [
 ];
 
 const firstHourSteps = [
-  { title: "Call", body: `Call or WhatsApp $07494 247246. You call Rapid directly.` },
+  { title: "Call", body: `Call or WhatsApp 07494 247246. You call Rapid directly.` },
   { title: "Choose", body: "Rapid asks for your tyre size, and you choose the brand or range on the call." },
   { title: "Fit", body: "Rapid says most single car tyre replacements take 20 to 30 minutes from arrival." },
   { title: "Finish", body: "The technician tightens the wheel nuts to specification and checks all four tyre pressures." },
