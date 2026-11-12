@@ -217,13 +217,13 @@ export default function Page() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href={siteConfig.phoneHref}
+                  href="tel:+447494247246"
                   className="inline-flex items-center gap-2 rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white shadow-lg hover:bg-orange-600 transition-colors"
                 >
                   <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden>
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
-                  {siteConfig.phone}
+                  07494 247246
                 </a>
                 <a
                   href={`mailto:${siteConfig.email}`}
@@ -481,13 +481,13 @@ export default function Page() {
                 Not sure which service you need? Call us and we&apos;ll help.
               </p>
               <a
-                href={siteConfig.phoneHref}
+                href="tel:+447494247246"
                 className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-base font-semibold text-orange-600 hover:bg-orange-50 transition-colors"
               >
                 <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden>
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                {siteConfig.phone}
+                07494 247246
               </a>
             </div>
           </div>
@@ -598,7 +598,7 @@ export default function Page() {
                   before the mobile unit travels to your location.
                 </p>
                 <a
-                  href={siteConfig.phoneHref}
+                  href="tel:+447494247246"
                   className="inline-flex items-center gap-2 rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white hover:bg-orange-600 transition-colors"
                 >
                   <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden>
@@ -912,13 +912,13 @@ export default function Page() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href={siteConfig.phoneHref}
+                href="tel:+447494247246"
                 className="inline-flex items-center gap-2 rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white shadow-lg hover:bg-orange-600 transition-colors"
               >
                 <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden>
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                {siteConfig.phone}
+                07494 247246
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
