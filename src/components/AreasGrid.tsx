@@ -56,10 +56,10 @@ export default function AreasGrid() {
         <p className="mt-12 text-center text-sm text-zinc-600">
           Don&apos;t see your area listed? Call us on{" "}
           <a
-            href={siteConfig.phoneHref}
+            href="tel:+447494247246"
             className="font-semibold text-orange-600 hover:text-orange-500"
           >
-            {siteConfig.phone}
+            07494 247246
           </a>{" "}
           — we may still be able to help.
         </p>

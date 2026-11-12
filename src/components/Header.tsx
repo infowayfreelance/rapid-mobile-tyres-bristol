@@ -115,10 +115,10 @@ export default function Header() {
 
         <div className="hidden items-center gap-4 lg:flex">
           <a
-            href={siteConfig.phoneHref}
+            href="tel:+447494247246"
             className="flex h-11 items-center justify-center gap-2 rounded-full bg-orange-600 px-5 text-sm font-semibold text-white transition-colors hover:bg-orange-500"
           >
-            Emergency Call: {siteConfig.phone}
+            Emergency Call: 07494 247246
           </a>
         </div>
 
@@ -164,10 +164,10 @@ export default function Header() {
             ))}
           </nav>
           <a
-            href={siteConfig.phoneHref}
+            href="tel:+447494247246"
             className="mt-4 flex h-11 w-full items-center justify-center gap-2 rounded-full bg-orange-600 text-sm font-semibold text-white"
           >
-            Emergency Call: {siteConfig.phone}
+            Emergency Call: 07494 247246
           </a>
         </div>
       )}

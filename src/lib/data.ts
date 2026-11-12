@@ -1,7 +1,5 @@
 export const siteConfig = {
   name: "Rapid Mobile Tyres Bristol",
-  phone: "07494 247246",
-  phoneHref: "tel:+447494247246",
   whatsappHref: "/contact",
   email: "info@rapid-tyres.com",
   address: "Ryeleaze, Shirehampton, Bristol BS11 9FN, United Kingdom",
@@ -511,7 +509,7 @@ export const tyreBrands = {
     "We carry a wide range of tyres to suit every budget and vehicle — from premium European brands through to quality budget options. Tell us your vehicle make, model, and tyre size when you call and we'll recommend the best fit.",
   premium: ["Michelin", "Continental", "Pirelli", "Bridgestone", "Goodyear", "Dunlop"],
   budget: ["Nexen", "Falken", "Avon", "Kumho", "Nankang"],
-  note: `All tyres are fitted on-site at your home, workplace, or roadside across Bristol and the South West. Call ${siteConfig.phone} for availability and pricing.`,
+  note: `All tyres are fitted on-site at your home, workplace, or roadside across Bristol and the South West. Call 07494 247246 for availability and pricing.`,
 };
 
 export const servicesFaqs = [
@@ -528,7 +526,7 @@ export const servicesFaqs = [
   {
     question: "How quickly can you get to me?",
     answer:
-      `Our usual arrival time is around 45-60 minutes across our service area including Bristol, Bath, Newport, and Weston-Super-Mare, depending on your location, traffic, technician availability and tyre availability. For exact ETAs call us directly on ${siteConfig.phone}.`,
+      `Our usual arrival time is around 45-60 minutes across our service area including Bristol, Bath, Newport, and Weston-Super-Mare, depending on your location, traffic, technician availability and tyre availability. For exact ETAs call us directly on 07494 247246.`,
   },
   {
     question: "How do I find the tyre size for my vehicle?",
@@ -538,7 +536,7 @@ export const servicesFaqs = [
   {
     question: "Can I book mobile tyre fitting for a company fleet or van?",
     answer:
-      `Yes, we operate 7 days a week including bank holidays. Whether it's a Sunday evening or a bank holiday, call us on ${siteConfig.phone} and we'll usually be with you within 45-60 minutes, depending on your location and technician availability.`,
+      `Yes, we operate 7 days a week including bank holidays. Whether it's a Sunday evening or a bank holiday, call us on 07494 247246 and we'll usually be with you within 45-60 minutes, depending on your location and technician availability.`,
   },
   {
     question: "Are mobile tyre fitters available on weekends and holidays?",
@@ -558,7 +556,7 @@ export const servicesFaqs = [
   {
     question: "Do you cover emergency callouts?",
     answer:
-      `Yes, emergency callouts are our speciality. We also offer jump start and fuel delivery services so one call covers most roadside emergencies. Available 24/7 — call ${siteConfig.phone}.`,
+      `Yes, emergency callouts are our speciality. We also offer jump start and fuel delivery services so one call covers most roadside emergencies. Available 24/7 — call 07494 247246.`,
   },
 ];
 
@@ -653,8 +651,8 @@ export const areasWeCoverDetails = [
 export const contactMethods = [
   {
     title: "Call Us",
-    value: siteConfig.phone,
-    href: siteConfig.phoneHref,
+    value: "07494 247246",
+    href: "tel:+447494247246",
     description: "Available 24/7 for emergency and scheduled callouts.",
   },
   {

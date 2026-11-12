@@ -121,7 +121,7 @@ const driveOrCallTable = [
 ];
 
 const firstHourSteps = [
-  { title: "Call", body: `Call or WhatsApp ${siteConfig.phone}. You call Rapid directly.` },
+  { title: "Call", body: `Call or WhatsApp 07494 247246. You call Rapid directly.` },
   { title: "Choose", body: "Rapid asks for your tyre size, and you choose the brand or range on the call." },
   { title: "Fit", body: "Rapid says most single car tyre replacements take 20 to 30 minutes from arrival." },
   { title: "Finish", body: "The technician tightens the wheel nuts to specification and checks all four tyre pressures." },
@@ -688,8 +688,8 @@ export default function UrgentlyNeedANewTyrePage() {
                 </p>
                 <p className="mt-4 leading-7 text-zinc-600">
                   Searching for emergency mobile tyres near me? Call or WhatsApp{" "}
-                  <a href={siteConfig.phoneHref} className="text-orange-500 hover:underline">
-                    {siteConfig.phone}
+                  <a href="tel:+447494247246" className="text-orange-500 hover:underline">
+                    07494 247246
                   </a>
                   , email{" "}
                   <a href={`mailto:${siteConfig.email}`} className="text-orange-500 hover:underline">
@@ -727,10 +727,10 @@ export default function UrgentlyNeedANewTyrePage() {
               </p>
               <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
-                  href={siteConfig.phoneHref}
+                  href="tel:+447494247246"
                   className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500 sm:w-auto"
                 >
-                  Call {siteConfig.phone}
+                  Call 07494 247246
                 </a>
                 <Link
                   href="/contact"

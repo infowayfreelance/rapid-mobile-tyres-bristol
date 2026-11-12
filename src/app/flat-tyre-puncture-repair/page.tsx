@@ -636,8 +636,8 @@ export default function FlatTyrePunctureRepairPage() {
                 </p>
                 <p className="mt-4 leading-7 text-zinc-600">
                   Searching for puncture repair near me? Call or WhatsApp{" "}
-                  <a href={siteConfig.phoneHref} className="text-orange-500 hover:underline">
-                    {siteConfig.phone}
+                  <a href="tel:+447494247246" className="text-orange-500 hover:underline">
+                    07494 247246
                   </a>
                   , email{" "}
                   <a href={`mailto:${siteConfig.email}`} className="text-orange-500 hover:underline">
@@ -675,10 +675,10 @@ export default function FlatTyrePunctureRepairPage() {
               </p>
               <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
-                  href={siteConfig.phoneHref}
+                  href="tel:+447494247246"
                   className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500 sm:w-auto"
                 >
-                  Call {siteConfig.phone}
+                  Call 07494 247246
                 </a>
                 <Link
                   href="/contact"

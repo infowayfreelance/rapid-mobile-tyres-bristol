@@ -50,7 +50,7 @@ const garageVsMobileTable = [
 const benefits = [
   {
     title: "Help at any hour",
-    body: "Rapid takes calls and sends a technician 24/7, including bank holidays. You call Rapid directly on " + siteConfig.phone + ".",
+    body: "Rapid takes calls and sends a technician 24/7, including bank holidays. You call Rapid directly on 07494 247246.",
   },
   {
     title: "No driving on a damaged tyre",
@@ -95,7 +95,7 @@ const askTable = [
 const faqs = [
   {
     question: "Is 24 hour mobile tyre fitting really available at night?",
-    answer: `Yes. Rapid works 24 hours a day, 7 days a week, and you call Rapid directly on ${siteConfig.phone}.`,
+    answer: `Yes. Rapid works 24 hours a day, 7 days a week, and you call Rapid directly on 07494 247246.`,
   },
   {
     question: "How fast can a 24 hour mobile tyre fitter arrive?",
@@ -623,8 +623,8 @@ export default function TwentyFourHourMobileTyreFittingPage() {
                 </p>
                 <p className="mt-4 leading-7 text-zinc-600">
                   Searching for 24 hour mobile tyre fitting near me? Call or WhatsApp{" "}
-                  <a href={siteConfig.phoneHref} className="text-orange-500 hover:underline">
-                    {siteConfig.phone}
+                  <a href="tel:+447494247246" className="text-orange-500 hover:underline">
+                    07494 247246
                   </a>
                   , email{" "}
                   <a href={`mailto:${siteConfig.email}`} className="text-orange-500 hover:underline">
@@ -664,10 +664,10 @@ export default function TwentyFourHourMobileTyreFittingPage() {
               </p>
               <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
-                  href={siteConfig.phoneHref}
+                  href="tel:+447494247246"
                   className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500 sm:w-auto"
                 >
-                  Call {siteConfig.phone}
+                  Call 07494 247246
                 </a>
                 <Link
                   href="/contact"

@@ -130,7 +130,7 @@ const faqs = [
   {
     question: "How quickly can you get to me for car tyre fitting?",
     answer:
-      `We aim to reach you within 45–60 minutes anywhere in the South West and surrounding areas. For a real-time estimate, call us on ${siteConfig.phone}.`,
+      `We aim to reach you within 45–60 minutes anywhere in the South West and surrounding areas. For a real-time estimate, call us on 07494 247246.`,
   },
   {
     question: "What car tyre sizes do you carry?",
@@ -150,7 +150,7 @@ const faqs = [
   {
     question: "How much does mobile car tyre fitting cost?",
     answer:
-      "Our pricing is transparent and quoted upfront before any work starts. The cost depends on the tyre size and brand you choose. Call us on " + siteConfig.phone + " for an immediate quote.",
+      "Our pricing is transparent and quoted upfront before any work starts. The cost depends on the tyre size and brand you choose. Call us on 07494 247246 for an immediate quote.",
   },
 ];
 
@@ -234,10 +234,10 @@ export default function MobileCarTyreFittingBristolPage() {
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href={siteConfig.phoneHref}
+                  href="tel:+447494247246"
                   className="flex h-12 items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500"
                 >
-                  Emergency Call: {siteConfig.phone}
+                  Emergency Call: 07494 247246
                 </a>
                 <Link
                   href="/contact"
@@ -455,10 +455,10 @@ export default function MobileCarTyreFittingBristolPage() {
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
-                href={siteConfig.phoneHref}
+                href="tel:+447494247246"
                 className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500 sm:w-auto"
               >
-                Call {siteConfig.phone}
+                Call 07494 247246
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
