@@ -130,7 +130,7 @@ const faqs = [
   {
     question: "How quickly can you get to me for car tyre fitting?",
     answer:
-      `We aim to reach you within 45–60 minutes anywhere in the South West and surrounding areas. For a real-time estimate, call us on $07494 247246.`,
+      `We aim to reach you within 45–60 minutes anywhere in the South West and surrounding areas. For a real-time estimate, call us on 07494 247246.`,
   },
   {
     question: "What car tyre sizes do you carry?",
