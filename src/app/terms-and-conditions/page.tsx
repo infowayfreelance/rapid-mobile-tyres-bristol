@@ -55,8 +55,8 @@ export default function TermsAndConditionsPage() {
                   </p>
                   <p>
                     <span className="font-semibold text-zinc-800">Phone: </span>
-                    <a href={siteConfig.phoneHref} className="text-orange-600 hover:underline">
-                      {siteConfig.phone}
+                    <a href="tel:+447494247246" className="text-orange-600 hover:underline">
+                      07494 247246
                     </a>
                   </p>
                   <p>
@@ -512,8 +512,8 @@ export default function TermsAndConditionsPage() {
                   <ul className="space-y-2 pl-2">
                     <li>
                       <span className="font-semibold text-zinc-800">Phone: </span>
-                      <a href={siteConfig.phoneHref} className="text-orange-600 hover:underline">
-                        {siteConfig.phone}
+                      <a href="tel:+447494247246" className="text-orange-600 hover:underline">
+                        07494 247246
                       </a>
                     </li>
                     <li>
