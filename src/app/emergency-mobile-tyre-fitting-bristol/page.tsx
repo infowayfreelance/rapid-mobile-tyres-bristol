@@ -121,7 +121,7 @@ const faqs = [
   {
     question: "How quickly can you reach me for an emergency tyre fitting?",
     answer:
-      `We aim to reach you within 45–60 minutes anywhere in the South West and surrounding areas. Exact timing depends on traffic and your location. Call us on ${siteConfig.phone} for a real-time ETA.`,
+      `We aim to reach you within 45–60 minutes anywhere in the South West and surrounding areas. Exact timing depends on traffic and your location. Call us on $07494 247246 for a real-time ETA.`,
   },
   {
     question: "Is your emergency tyre fitting service genuinely available 24 hours a day?",
@@ -146,7 +146,7 @@ const faqs = [
   {
     question: "What does emergency mobile tyre fitting cost?",
     answer:
-      "Our pricing is transparent and quoted upfront before work begins. The final cost depends on your tyre size and vehicle type. Call us on " + siteConfig.phone + " for an immediate quote — there are no hidden charges.",
+      "Our pricing is transparent and quoted upfront before work begins. The final cost depends on your tyre size and vehicle type. Call us on 07494 247246 for an immediate quote — there are no hidden charges.",
   },
 ];
 
@@ -225,10 +225,10 @@ export default function EmergencyMobileTyreFittingBristolPage() {
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href={siteConfig.phoneHref}
+                  href="tel:+447494247246"
                   className="flex h-12 items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500"
                 >
-                  Emergency Call: {siteConfig.phone}
+                  Emergency Call: 07494 247246
                 </a>
                 <Link
                   href="/contact"
@@ -455,10 +455,10 @@ export default function EmergencyMobileTyreFittingBristolPage() {
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
-                href={siteConfig.phoneHref}
+                href="tel:+447494247246"
                 className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500 sm:w-auto"
               >
-                Call {siteConfig.phone}
+                Call 07494 247246
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
