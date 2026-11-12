@@ -86,7 +86,7 @@ const askTable = [
 const faqs = [
   {
     question: "Are emergency tyres available at night?",
-    answer: `Yes. Rapid works 24 hours a day, 7 days a week, including bank holidays, and you call Rapid directly on $07494 247246.`,
+    answer: `Yes. Rapid works 24 hours a day, 7 days a week, including bank holidays, and you call Rapid directly on 07494 247246.`,
   },
   {
     question: "What if my car has no spare wheel?",
