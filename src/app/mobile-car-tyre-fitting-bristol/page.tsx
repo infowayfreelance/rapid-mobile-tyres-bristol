@@ -147,7 +147,7 @@ const faqs = [
   {
     question: "How much does mobile car tyre fitting cost?",
     answer:
-      "Our pricing is transparent and quoted upfront before any work starts. The cost depends on the tyre size and brand you choose. Call us on "07494 247246" for an immediate quote.",
+      "Our pricing is transparent and quoted upfront before any work starts. The cost depends on the tyre size and brand you choose. Call us on 07494 247246 for an immediate quote.",
   },
 ];
 
