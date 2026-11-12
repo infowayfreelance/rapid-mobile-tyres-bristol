@@ -147,7 +147,7 @@ const faqs = [
   {
     question: "How much does mobile SUV tyre fitting cost?",
     answer:
-      "Our pricing is transparent and quoted upfront before any work begins. SUV tyre costs depend on the size and brand you choose. Call us on "07494 247246" for an immediate, no-obligation quote.",
+      "Our pricing is transparent and quoted upfront before any work begins. SUV tyre costs depend on the size and brand you choose. Call us on 07494 247246 for an immediate, no-obligation quote.",
   },
 ];
 
