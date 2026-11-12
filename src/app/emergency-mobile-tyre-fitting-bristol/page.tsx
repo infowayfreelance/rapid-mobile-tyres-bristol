@@ -143,7 +143,7 @@ const faqs = [
   {
     question: "What does emergency mobile tyre fitting cost?",
     answer:
-      "Our pricing is transparent and quoted upfront before work begins. The final cost depends on your tyre size and vehicle type. Call us on "07494 247246" for an immediate quote — there are no hidden charges.",
+      "Our pricing is transparent and quoted upfront before work begins. The final cost depends on your tyre size and vehicle type. Call us on 07494 247246 for an immediate quote — there are no hidden charges.",
   },
 ];
 
