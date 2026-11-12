@@ -16,8 +16,8 @@ export default function FloatingButtons() {
 
       {/* Phone */}
       <a
-        href={siteConfig.phoneHref}
-        aria-label={`Call ${siteConfig.phone}`}
+        href="tel:+447494247246"
+        aria-label={`Call $07494 247246`}
         className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-600 shadow-lg transition-transform hover:scale-110 hover:bg-orange-500 hover:shadow-xl"
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-white" aria-hidden>
