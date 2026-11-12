@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Rapid Mobile Tyres Bristol",
-  phone: "0117 205 5494",
-  phoneHref: "tel:+441172055494",
+  phone: "07494 247246",
+  phoneHref: "tel:+447494247246",
   whatsappHref: "/contact",
   email: "info@rapid-tyres.com",
   address: "Ryeleaze, Shirehampton, Bristol BS11 9FN, United Kingdom",
@@ -555,18 +555,18 @@ export const aboutContent = {
     "https://rapid-tyres.com/wp-content/uploads/2024/10/tire-gym-with-other-tires-background_782516-20981.jpg",
   tagline: "Stuck with a flat? We come to you — fast.",
   intro:
-    "At Rapid Mobile Tyres Ltd, we specialise in fast, reliable tyre solutions for cars, SUVs, and vans. Our mobile services ensure convenience and quality, keeping you on the road safely and efficiently.",
+    "At Rapid Mobile Tyres Bristol, we specialise in fast, reliable tyre solutions for cars, SUVs, and vans. Our mobile services ensure convenience and quality, keeping you on the road safely and efficiently.",
   trustedPartner: {
     title: "Your Trusted Partner for Mobile Tyre Solutions",
     paragraphs: [
-      "At Rapid Mobile Tyres Ltd, we take pride in being your trusted partner for all tyre-related services. Our expert team is dedicated to providing fast, reliable, and high-quality mobile tyre solutions, whether it's for cars, SUVs, or vans. With our convenient mobile service, we come directly to your location, saving you time and hassle.",
+      "At Rapid Mobile Tyres Bristol, we take pride in being your trusted partner for all tyre-related services. Our expert team is dedicated to providing fast, reliable, and high-quality mobile tyre solutions, whether it's for cars, SUVs, or vans. With our convenient mobile service, we come directly to your location, saving you time and hassle.",
       "We understand the urgency of tyre repairs and breakdowns, which is why we're available 24/7 for emergency services like jump starts and fuel delivery. Our commitment to customer satisfaction and safety means you can rely on us for exceptional service, no matter where or when you need it.",
     ],
   },
   whoWeAre: {
     title: "Who We Are",
     paragraphs: [
-      "At Rapid Mobile Tyres Ltd, we are a dedicated team of tyre specialists committed to delivering exceptional mobile tyre services. With years of experience in the industry, we have built a reputation for fast, reliable, and professional tyre solutions across the South West.",
+      "At Rapid Mobile Tyres Bristol, we are a dedicated team of tyre specialists committed to delivering exceptional mobile tyre services. With years of experience in the industry, we have built a reputation for fast, reliable, and professional tyre solutions across the South West.",
       "Whether you need a tyre repair, replacement, or emergency assistance like a jump start or fuel delivery, our goal is to provide hassle-free, on-the-spot services to keep you moving safely. Customer satisfaction and convenience are at the heart of everything we do.",
     ],
     image:
@@ -958,7 +958,7 @@ interface RefundPolicySection {
 
 export const refundPolicy: { intro: string; sections: RefundPolicySection[]; note: string } = {
   intro:
-    "Thank you for choosing Rapid Mobile Tyres Ltd for your mobile tyre fitting needs. We strive to provide you with excellent service and satisfaction. Please read our refund policy carefully to understand your rights and responsibilities.",
+    "Thank you for choosing Rapid Mobile Tyres Bristol for your mobile tyre fitting needs. We strive to provide you with excellent service and satisfaction. Please read our refund policy carefully to understand your rights and responsibilities.",
   sections: [
     {
       title: "1. Refund Eligibility",
