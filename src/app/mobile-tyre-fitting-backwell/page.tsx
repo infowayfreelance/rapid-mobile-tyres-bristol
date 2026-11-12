@@ -171,13 +171,13 @@ export default function BackwellPage() {
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href={siteConfig.phoneHref}
+                  href="tel:+447494247246"
                   className="flex h-12 items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500"
                 >
                   <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden>
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
-                  Call Now: {siteConfig.phone}
+                  Call Now: 07494 247246
                 </a>
                 <Link
                   href="/services"
@@ -263,13 +263,13 @@ export default function BackwellPage() {
               </ul>
 
               <a
-                href={siteConfig.phoneHref}
+                href="tel:+447494247246"
                 className="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500"
               >
                 <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden>
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                Call {siteConfig.phone}
+                Call 07494 247246
               </a>
             </div>
 
@@ -411,13 +411,13 @@ export default function BackwellPage() {
                 Tell us your vehicle type and postcode and we&apos;ll confirm what we can do.
               </p>
               <a
-                href={siteConfig.phoneHref}
+                href="tel:+447494247246"
                 className="mt-4 inline-flex h-11 items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500"
               >
                 <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden>
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                Call {siteConfig.phone}
+                Call 07494 247246
               </a>
             </div>
           </div>
@@ -491,13 +491,13 @@ export default function BackwellPage() {
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
-                  href={siteConfig.phoneHref}
+                  href="tel:+447494247246"
                   className="flex h-12 items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500"
                 >
                   <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden>
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
-                  Call {siteConfig.phone}
+                  Call 07494 247246
                 </a>
                 <Link
                   href="/emergency-mobile-tyre-fitting-bristol"
@@ -730,13 +730,13 @@ export default function BackwellPage() {
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
-                href={siteConfig.phoneHref}
+                href="tel:+447494247246"
                 className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500 sm:w-auto"
               >
                 <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden>
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                Call {siteConfig.phone}
+                Call 07494 247246
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}

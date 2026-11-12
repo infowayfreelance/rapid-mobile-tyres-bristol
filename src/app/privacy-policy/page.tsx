@@ -58,8 +58,8 @@ export default function PrivacyPolicyPage() {
                   </p>
                   <p>
                     <span className="font-semibold text-zinc-800">Phone: </span>
-                    <a href={siteConfig.phoneHref} className="text-orange-600 hover:underline">
-                      {siteConfig.phone}
+                    <a href="tel:+447494247246" className="text-orange-600 hover:underline">
+                      07494 247246
                     </a>
                   </p>
                   <p>
@@ -308,8 +308,8 @@ export default function PrivacyPolicyPage() {
                 {siteConfig.email}
               </a>{" "}
               or call{" "}
-              <a href={siteConfig.phoneHref} className="text-orange-600 hover:underline">
-                {siteConfig.phone}
+              <a href="tel:+447494247246" className="text-orange-600 hover:underline">
+                07494 247246
               </a>
               .
             </p>
