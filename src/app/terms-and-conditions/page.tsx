@@ -27,7 +27,7 @@ export default function TermsAndConditionsPage() {
             <p className="text-zinc-600 leading-7">
               These Terms and Conditions govern the use of the Rapid Mobile Tyres Bristol
               website and the provision of mobile tyre fitting and roadside assistance
-              services by Rapid Mobile Tyres Ltd. By contacting us, making a booking, or
+              services by Rapid Mobile Tyres Bristol. By contacting us, making a booking, or
               using our services, you agree to these Terms. Please read them carefully.
             </p>
 
@@ -42,10 +42,8 @@ export default function TermsAndConditionsPage() {
                 </h2>
                 <div className="mt-4 space-y-4 text-sm leading-7 text-zinc-600">
                   <p>
-                    Rapid Mobile Tyres Ltd (trading as{" "}
-                    <strong>Rapid Mobile Tyres Bristol</strong>) is a mobile tyre fitting
-                    and roadside assistance company operating across Bristol and the wider
-                    South West of England.
+                    Rapid Mobile Tyres Bristol is a mobile tyre fitting and roadside assistance business
+                    operating across Bristol and the wider South West of England.
                   </p>
                   <p>
                     <span className="font-semibold text-zinc-800">Address: </span>
@@ -429,7 +427,7 @@ export default function TermsAndConditionsPage() {
                 <div className="mt-4 space-y-4 text-sm leading-7 text-zinc-600">
                   <p>
                     All content on this website — including text, images, logos, and page
-                    design — is owned by or licensed to Rapid Mobile Tyres Ltd. You may
+                    design — is owned by or licensed to Rapid Mobile Tyres Bristol. You may
                     not reproduce, distribute, or use any content from this website for
                     commercial purposes without our prior written consent.
                   </p>
