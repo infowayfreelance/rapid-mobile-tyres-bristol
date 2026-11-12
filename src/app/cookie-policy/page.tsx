@@ -431,8 +431,8 @@ export default function CookiePolicyPage() {
                     </li>
                     <li>
                       <span className="font-semibold text-zinc-800">Phone: </span>
-                      <a href={siteConfig.phoneHref} className="text-orange-600 hover:underline">
-                        0117 205 5494
+                      <a href="tel:+447494247246" className="text-orange-600 hover:underline">
+                        07494 247246
                       </a>
                     </li>
                     <li>
