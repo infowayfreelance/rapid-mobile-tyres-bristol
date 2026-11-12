@@ -106,8 +106,8 @@ export default function Footer() {
           <ul className="mt-4 space-y-2 text-sm">
             <li>
               Phone Number{" "}
-              <a href={siteConfig.phoneHref} className="hover:text-orange-500">
-                {siteConfig.phone}
+              <a href="tel:+447494247246" className="hover:text-orange-500">
+                07494 247246
               </a>
             </li>
             <li>
