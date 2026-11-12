@@ -44,7 +44,7 @@ const localBusinessSchema = {
   "@type": "AutoRepair",
   name: siteConfig.name,
   url: "https://rapid-tyres.com",
-  telephone: "+441172055494",
+  telephone: "+447494247246",
   email: siteConfig.email,
   address: {
     "@type": "PostalAddress",
