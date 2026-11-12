@@ -57,10 +57,10 @@ export default async function StubPage({
           <div className="mx-auto max-w-2xl px-6 text-center sm:px-10">
             <p className="text-zinc-600">{bodyText[page.kind]}</p>
             <a
-              href={siteConfig.phoneHref}
+              href="tel:+447494247246"
               className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500"
             >
-              Call {siteConfig.phone}
+              Call 07494 247246
             </a>
           </div>
         </section>
