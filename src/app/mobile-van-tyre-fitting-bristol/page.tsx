@@ -130,7 +130,7 @@ const faqs = [
   {
     question: "How quickly can you reach my van?",
     answer:
-      `We aim to reach you within 45–60 minutes anywhere in the South West and surrounding areas. For a real-time estimate, call us directly on $07494 247246.`,
+      `We aim to reach you within 45–60 minutes anywhere in the South West and surrounding areas. For a real-time estimate, call us directly on 07494 247246.`,
   },
   {
     question: "Can you fit van tyres out of hours or at weekends?",
