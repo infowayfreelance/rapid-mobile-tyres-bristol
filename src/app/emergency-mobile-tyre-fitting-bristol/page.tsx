@@ -121,7 +121,7 @@ const faqs = [
   {
     question: "How quickly can you reach me for an emergency tyre fitting?",
     answer:
-      `We aim to reach you within 45–60 minutes anywhere in the South West and surrounding areas. Exact timing depends on traffic and your location. Call us on $07494 247246 for a real-time ETA.`,
+      `We aim to reach you within 45–60 minutes anywhere in the South West and surrounding areas. Exact timing depends on traffic and your location. Call us on 07494 247246 for a real-time ETA.`,
   },
   {
     question: "Is your emergency tyre fitting service genuinely available 24 hours a day?",
