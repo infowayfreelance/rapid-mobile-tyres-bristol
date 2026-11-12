@@ -125,7 +125,7 @@ const faqs = [
   {
     question: "How quickly can you get to my home?",
     answer:
-      `We aim to reach you within 45–60 minutes of your call for same-day bookings, anywhere in the South West and surrounding areas. For a firm ETA, call us on $07494 247246.`,
+      `We aim to reach you within 45–60 minutes of your call for same-day bookings, anywhere in the South West and surrounding areas. For a firm ETA, call us on 07494 247246.`,
   },
   {
     question: "What tyre sizes do you carry for home visits?",
