@@ -9,9 +9,9 @@ import Faq from "@/components/Faq";
 import { siteConfig } from "@/lib/data";
 
 const PAGE_URL = "https://rapid-tyres.com/mobile-tyre-fitting-almondsbury";
-const PAGE_TITLE = "Mobile Tyre Fitting Almondsbury | 24/7 Tyre Service";
+const PAGE_TITLE = "Mobile Tyre Fitting Almondsbury | Tyres Fitted 24/7";
 const PAGE_DESCRIPTION =
-  "Mobile tyre fitting in Almondsbury for flat or damaged tyres. Get convenient tyre help directly at your location.";
+  "Need new tyres in Almondsbury? Our mobile fitters come to your home, work or roadside near the M4/M5, 24/7. Usual arrival 45–60 mins. Call 07494 247246.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -320,7 +320,7 @@ export default function Page() {
           <div className="absolute inset-0">
             <Image
               src="/technician-arriving-callout-almondsbury.webp"
-              alt=""
+              alt="Rapid Mobile Tyres technician arriving for a mobile tyre fitting callout in Almondsbury"
               fill
               sizes="100vw"
               className="object-cover opacity-30"
@@ -637,7 +637,7 @@ export default function Page() {
           <div className="absolute inset-0">
             <Image
               src="/mobile-tyre-van-equipment-almondsbury.webp"
-              alt=""
+              alt="Mobile tyre fitting van with tyre-changing equipment serving Almondsbury and the M4/M5 interchange"
               fill
               sizes="100vw"
               className="object-cover opacity-20"
@@ -704,7 +704,7 @@ export default function Page() {
             <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
               <div>
                 <h2 className="mb-4 text-3xl font-extrabold text-zinc-900">
-                  Replacement Tyres for Local and Motorway Driving
+                  Replacement Tyres in Almondsbury for Local and Motorway Driving
                 </h2>
                 <p className="mb-4 text-zinc-600">
                   Almondsbury drivers may use their vehicles for very different journeys. Some
@@ -924,7 +924,7 @@ export default function Page() {
           <div className="absolute inset-0">
             <Image
               src="/technician-arriving-callout-almondsbury.webp"
-              alt=""
+              alt="Mobile tyre fitter arriving to replace a tyre in Almondsbury"
               fill
               sizes="100vw"
               className="object-cover opacity-20"
