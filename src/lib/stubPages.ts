@@ -105,6 +105,7 @@ const blogSlugs = [
   "urgently-need-a-new-tyre-call-rapid-mobile-tyres-24-hour-emergency-mobile-tyres",
   "how-much-does-mobile-tyre-fitting-cost-in-bristol-2026-honest-price-guide",
   "cheapest-tyres-in-bristol-2",
+  "how-to-choose-mobile-tyre-fitter-bristol",
 ];
 
 // Slugs that now have a dedicated page under src/app/ with a real,
@@ -134,6 +135,7 @@ const dedicatedBlogSlugs = new Set([
   "flat-tyre-puncture-repair",
   "how-to-choose-the-right-tyres-for-your-car-a-complete-guide",
   "urgently-need-a-new-tyre-call-rapid-mobile-tyres-24-hour-emergency-mobile-tyres",
+  "how-to-choose-mobile-tyre-fitter-bristol",
 ]);
 
 const blogImages: Record<string, string> = {
@@ -183,6 +185,8 @@ const blogImages: Record<string, string> = {
     "/customer-choosing-tyres-with-fitter-shop.webp",
   "urgently-need-a-new-tyre-call-rapid-mobile-tyres-24-hour-emergency-mobile-tyres":
     "/technician-walking-to-van-night-carpark-rain.webp",
+  "how-to-choose-mobile-tyre-fitter-bristol":
+    "/choose-mobile-tyre-fitter-bristol-featured.webp",
 };
 
 // Slugs with a complete, dedicated article page — used by the sitemap so
@@ -192,7 +196,7 @@ export const publishedBlogSlugs: string[] = [...dedicatedBlogSlugs];
 
 export const blogPosts: StubPage[] = blogSlugs.map((s) => ({
   path: s,
-  title: titleCase(s),
+  title: s === "how-to-choose-mobile-tyre-fitter-bristol" ? "How to Choose a Mobile Tyre Fitter in Bristol: 8 Checks Before You Book" : titleCase(s),
   kind: "blog",
   image: blogImages[s],
 }));
