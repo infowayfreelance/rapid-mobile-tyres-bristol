@@ -105,6 +105,7 @@ const blogSlugs = [
   "urgently-need-a-new-tyre-call-rapid-mobile-tyres-24-hour-emergency-mobile-tyres",
   "how-much-does-mobile-tyre-fitting-cost-in-bristol-2026-honest-price-guide",
   "cheapest-tyres-in-bristol-2",
+  "how-to-choose-mobile-tyre-fitter-bristol",
 ];
 
 // Slugs that now have a dedicated page under src/app/ with a real,
@@ -195,7 +196,7 @@ export const publishedBlogSlugs: string[] = [...dedicatedBlogSlugs];
 
 export const blogPosts: StubPage[] = blogSlugs.map((s) => ({
   path: s,
-  title: titleCase(s),
+  title: s === "how-to-choose-mobile-tyre-fitter-bristol" ? "How to Choose a Mobile Tyre Fitter in Bristol: 8 Checks Before You Book" : titleCase(s),
   kind: "blog",
   image: blogImages[s],
 }));
