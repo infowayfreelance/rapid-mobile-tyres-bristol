@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION, images: [FEATURED_IMAGE] },
 };
 
-const faqs = [
+const faqs: [string, string][] = [
   ["What are some good mobile tyre fitters in Bristol?", "Look for fitters who explain their prices, carry suitable equipment, assess punctures properly and have genuine independent reviews. Confirm that the business covers your exact location and can supply the tyre your vehicle needs."],
   ["How do I find the best mobile tyre fitting near me?", "Confirm which businesses can reach your location. Compare the complete quote, on-site balancing, availability and old-tyre arrangements. Read detailed customer feedback before booking."],
   ["Which popular mobile tyre services are worth booking in the UK?", "Compare national and local services using suitable tyres, transparent terms, safe workmanship, realistic attendance times and support if plans change. For an urgent Bristol booking, confirm who can actually attend."],
