@@ -15,6 +15,15 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+  const posts = [
+    {
+      path: "cheapest-tyres-in-bristol-2",
+      title: "Cheapest Tyres in Bristol: How to Save Money Without Cutting Corners",
+      image: "/cheapest-tyres-in-bristol-featured.webp",
+    },
+    ...blogPosts,
+  ];
+
   return (
     <>
       <Header />
@@ -28,7 +37,7 @@ export default function BlogPage() {
         <section className="bg-zinc-50 py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-6 sm:px-10">
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {blogPosts.map((post) => (
+              {posts.map((post) => (
                 <Link
                   key={post.path}
                   href={`/${post.path}`}
