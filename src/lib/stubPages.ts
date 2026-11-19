@@ -103,7 +103,6 @@ const blogSlugs = [
   "flat-tyre-puncture-repair",
   "how-to-choose-the-right-tyres-for-your-car-a-complete-guide",
   "urgently-need-a-new-tyre-call-rapid-mobile-tyres-24-hour-emergency-mobile-tyres",
-  "how-much-does-mobile-tyre-fitting-cost-in-bristol-2026-honest-price-guide",
   "how-to-choose-mobile-tyre-fitter-bristol",
   "winter-tyres-bristol",
 ];

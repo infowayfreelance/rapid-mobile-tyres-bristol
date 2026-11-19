@@ -17,6 +17,11 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = [
     {
+      path: "how-much-does-mobile-tyre-fitting-cost-in-bristol-2026-honest-price-guide",
+      title: "How Much Does Mobile Tyre Fitting Cost in Bristol? 2026 Honest Price Guide",
+      image: "/mobile-tyre-fitting-cost-bristol-featured.webp",
+    },
+    {
       path: "cheapest-tyres-in-bristol-2",
       title: "Cheapest Tyres in Bristol: How to Save Money Without Cutting Corners",
       image: "/cheapest-tyres-in-bristol-featured.webp",

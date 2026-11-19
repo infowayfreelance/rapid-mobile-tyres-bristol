@@ -80,7 +80,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
-    ...["cheapest-tyres-in-bristol-2", ...publishedBlogSlugs].map((slug) => ({
+    ...[
+      "how-much-does-mobile-tyre-fitting-cost-in-bristol-2026-honest-price-guide",
+      "cheapest-tyres-in-bristol-2",
+      ...publishedBlogSlugs,
+    ].map((slug) => ({
       url: `${BASE_URL}/${slug}`,
       changeFrequency: "monthly" as const,
       priority: 0.6,
