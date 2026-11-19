@@ -80,7 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
-    ...publishedBlogSlugs.map((slug) => ({
+    ...["cheapest-tyres-in-bristol-2", ...publishedBlogSlugs].map((slug) => ({
       url: `${BASE_URL}/${slug}`,
       changeFrequency: "monthly" as const,
       priority: 0.6,
