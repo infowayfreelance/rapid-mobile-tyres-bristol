@@ -13,7 +13,7 @@ export default function CallToAction() {
           Ready to experience the ultimate in tyre fitting convenience?
         </h2>
         <p className="mt-4 text-zinc-400">
-          Get in touch with Rapid Mobile Tyres today to book your appointment
+          Get in touch with Rapid Mobile Tyres today to request a callback
           or to learn more about our services.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -27,7 +27,7 @@ export default function CallToAction() {
             href="/contact"
             className="flex h-12 w-full items-center justify-center rounded-full border border-zinc-700 px-6 text-sm font-semibold text-zinc-200 transition-colors hover:border-zinc-500 hover:bg-zinc-900 sm:w-auto"
           >
-            Book Online
+            Request a Callback
           </Link>
         </div>
       </div>

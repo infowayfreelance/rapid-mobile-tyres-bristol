@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Refund Policy - Rapid Mobile Tyres Bristol",
   description:
     "Read the Rapid Mobile Tyres refund policy and learn about the conditions that may apply to service refunds.",
+  alternates: {
+    canonical: "https://rapid-tyres.com/refund-policy",
+  },
 };
 
 export default function RefundPolicyPage() {
@@ -41,7 +44,7 @@ export default function RefundPolicyPage() {
               {refundPolicy.note}
             </p>
 
-            <p className="mt-8 text-sm font-medium text-zinc-800">Thank you for choosing Rapid Mobile Tyres Ltd.</p>
+            <p className="mt-8 text-sm font-medium text-zinc-800">Thank you for choosing Rapid Mobile Tyres Bristol.</p>
           </div>
         </section>
         <CallToAction />

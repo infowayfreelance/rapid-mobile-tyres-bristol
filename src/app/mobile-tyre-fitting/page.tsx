@@ -10,9 +10,12 @@ import Faq from "@/components/Faq";
 import { siteConfig, mobileTyreFittingPage } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Mobile Tyre Fitting Service | 24/7 Tyre Replacement",
+  title: "Mobile Tyre Fitting Service Bristol | Highly Rated, 24/7",
   description:
-    "Get 24/7 mobile tyre fitting for flat, worn or damaged tyres. Have replacement tyres fitted at your location.",
+    "24/7 mobile tyre fitting across Bristol and the South West for flat, worn or damaged tyres — highly rated, fairly priced, fitted at home, work or roadside.",
+  alternates: {
+    canonical: "https://rapid-tyres.com/mobile-tyre-fitting",
+  },
 };
 
 const gallery = [
@@ -59,6 +62,14 @@ export default function MobileTyreFittingPage() {
 
               <p className="mt-4 max-w-xl leading-7 text-zinc-400">{mobileTyreFittingPage.intro}</p>
 
+              <p className="mt-4 max-w-xl text-sm text-zinc-500">
+                Part of the{" "}
+                <Link href="/" className="text-orange-400 hover:underline">
+                  Rapid Mobile Tyres Bristol
+                </Link>{" "}
+                network of 24/7 roadside and home tyre services.
+              </p>
+
               <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                 {mobileTyreFittingPage.benefits.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-zinc-300">
@@ -92,7 +103,7 @@ export default function MobileTyreFittingPage() {
                   href="/contact"
                   className="flex h-12 items-center justify-center rounded-full border border-zinc-700 px-6 text-sm font-semibold text-zinc-200 transition-colors hover:border-zinc-500 hover:bg-zinc-900"
                 >
-                  Book Online
+                  Request a Callback
                 </Link>
               </div>
 
@@ -104,10 +115,10 @@ export default function MobileTyreFittingPage() {
             <div className="relative mx-auto w-full max-w-lg">
               <div className="relative overflow-hidden rounded-3xl border border-zinc-800 shadow-2xl">
                 <Image
-                  src="/mobile-tyre-fitting-technician-bristol.webp"
+                  src="/mobile-tyre-fitting-bristol-hero.webp"
                   alt="Rapid Mobile Tyres technician fitting a tyre in Bristol"
-                  width={740}
-                  height={493}
+                  width={1600}
+                  height={900}
                   className="h-auto w-full"
                   preload
                 />
@@ -202,8 +213,9 @@ export default function MobileTyreFittingPage() {
                 Ready for fast, professional tyre fitting?
               </h2>
               <p className="mt-4 max-w-md text-zinc-400">
-                Call now to book a callout — our nearest technician will be with you in 45-60 minutes,
-                anywhere in the South West and surrounding areas.
+                Call now to book a callout. Our usual arrival time is around 45-60 minutes, depending
+                on your location, traffic, technician availability and tyre availability, anywhere in
+                the South West and surrounding areas.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a

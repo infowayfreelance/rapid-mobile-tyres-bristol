@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Mobile Tyre Services Bristol | 24/7 Tyre Assistance",
   description:
     "Explore mobile tyre services in Bristol for cars, vans and SUVs. Get tyre fitting and roadside help when needed.",
+  alternates: {
+    canonical: "https://rapid-tyres.com/services",
+  },
 };
 
 const allServices = [
@@ -72,7 +75,7 @@ const allServices = [
     title: "Jump Start",
     tagline: "Dead battery? No problem.",
     description:
-      "Stranded with a flat battery? Our technicians arrive with full jump-start equipment and get your engine running again within 30–60 minutes.",
+      "Stranded with a flat battery? Our technicians arrive with full jump-start equipment and usually get your engine running again within 45–60 minutes, depending on your location.",
     href: "/jumpstarts",
     image: "/jump-start-service-dead-battery-bristol.webp",
     badge: null,
@@ -111,6 +114,13 @@ export default function ServicesPage() {
               our fully-equipped mobile units come straight to you, anywhere in Bristol and beyond,
               around the clock.
             </p>
+            <p className="mx-auto mt-3 max-w-2xl text-sm text-zinc-500">
+              See why{" "}
+              <Link href="/" className="text-orange-400 hover:underline">
+                Rapid Mobile Tyres
+              </Link>{" "}
+              is Bristol&apos;s trusted 24/7 mobile tyre and roadside team.
+            </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
                 href="tel:+447494247246"
@@ -122,7 +132,7 @@ export default function ServicesPage() {
                 href="/contact"
                 className="flex h-12 items-center justify-center rounded-full border border-zinc-700 px-6 text-sm font-semibold text-zinc-200 transition-colors hover:border-zinc-500 hover:bg-zinc-900"
               >
-                Book Online
+                Request a Callback
               </Link>
             </div>
           </div>
@@ -217,7 +227,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              {["Bristol", "Bath", "Newport", "Weston-Super-Mare", "Chepstow", "Gloucestershire", "Bridgewater", "Magor"].map(
+              {["Bristol", "Bath", "Newport", "Weston-Super-Mare", "Chepstow", "Gloucestershire", "Bridgwater", "Magor"].map(
                 (area) => (
                   <div
                     key={area}
@@ -264,7 +274,7 @@ export default function ServicesPage() {
                 href="/contact"
                 className="flex h-12 w-full items-center justify-center rounded-full border border-zinc-700 px-6 text-sm font-semibold text-zinc-200 transition-colors hover:border-zinc-500 hover:bg-zinc-900 sm:w-auto"
               >
-                Book Online
+                Request a Callback
               </Link>
             </div>
           </div>

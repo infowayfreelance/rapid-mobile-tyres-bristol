@@ -11,7 +11,10 @@ import { siteConfig } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Mobile Tyre Fitting Bridgwater | 24/7 Tyre Service",
   description:
-    "Mobile tyre fitting in Bridgewater for flat or damaged tyres. Get convenient tyre replacement at your location.",
+    "Mobile tyre fitting in Bridgwater for flat or damaged tyres. Get convenient tyre replacement at your location.",
+  alternates: {
+    canonical: "https://rapid-tyres.com/mobile-tyre-fitting-bridgewater",
+  },
 };
 
 const stats = [
@@ -163,7 +166,7 @@ export default function BridgwaterPage() {
         <section className="relative bg-zinc-900 text-white overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/mobile-tyre-fitting-technician-bristol.webp"
+              src="/mobile-tyre-fitting-bridgwater-hero-v2.webp"
               alt=""
               fill
               sizes="100vw"
@@ -307,10 +310,10 @@ export default function BridgwaterPage() {
               <div className="relative">
                 <div className="overflow-hidden rounded-2xl">
                   <Image
-                    src="/mobile-tyre-fitting-technician-bristol.webp"
-                    alt="Mobile tyre fitting technician fitting a tyre at a customer's location in Bridgwater"
-                    width={600}
-                    height={450}
+                    src="/tyre-pressure-check-bridgwater.webp"
+                    alt="Rapid Mobile Tyres technician checking tyre pressure in Bridgwater"
+                    width={1448}
+                    height={1086}
                     className="w-full object-cover"
                   />
                 </div>
@@ -483,7 +486,7 @@ export default function BridgwaterPage() {
         <section className="relative bg-zinc-900 py-20 text-white overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/van-tyre-fitting-road-service-bristol.webp"
+              src="/evening-mobile-tyre-callout-bridgwater.webp"
               alt=""
               fill
               sizes="100vw"
@@ -811,7 +814,7 @@ export default function BridgwaterPage() {
         <section className="relative bg-zinc-900 py-20 text-white overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/mobile-tyre-fitting-technician-bristol.webp"
+              src="/new-and-worn-tyre-comparison-bridgwater.webp"
               alt=""
               fill
               sizes="100vw"

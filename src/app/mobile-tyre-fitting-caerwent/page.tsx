@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Mobile Tyre Fitting Caerwent | 24/7 Tyre Replacement",
   description:
     "Need mobile tyre fitting in Caerwent? Get flat or damaged tyres replaced at your home, workplace or roadside.",
+  alternates: {
+    canonical: "https://rapid-tyres.com/mobile-tyre-fitting-caerwent",
+  },
 };
 
 const stats = [
@@ -154,7 +157,7 @@ export default function Page() {
         <section className="relative bg-zinc-900 text-white overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/mobile-tyre-fitting-technician-bristol.webp"
+              src="/mobile-tyre-fitting-caerwent-hero.webp"
               alt=""
               fill
               sizes="100vw"
@@ -301,10 +304,10 @@ export default function Page() {
               <div className="relative">
                 <div className="overflow-hidden rounded-2xl">
                   <Image
-                    src="/mobile-tyre-fitting-technician-bristol.webp"
-                    alt="Mobile tyre fitting technician fitting a tyre at a customer's location"
-                    width={600}
-                    height={450}
+                    src="/mobile-tyre-jack-preparation-caerwent.webp"
+                    alt="Rapid Mobile Tyres technician preparing a jack before fitting a tyre in Caerwent"
+                    width={1448}
+                    height={1086}
                     className="w-full object-cover"
                   />
                 </div>
@@ -481,7 +484,7 @@ export default function Page() {
         <section className="relative bg-zinc-900 py-20 text-white overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/van-tyre-fitting-road-service-bristol.webp"
+              src="/mobile-tyre-service-tools-caerwent.webp"
               alt=""
               fill
               sizes="100vw"

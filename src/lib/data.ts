@@ -432,7 +432,7 @@ export const testimonials = [
 
 export const areasServed = [
   "Bristol",
-  "Bridgewater",
+  "Bridgwater",
   "Bath",
   "Chepstow",
   "Gloucestershire",
@@ -440,6 +440,18 @@ export const areasServed = [
   "Newport",
   "Weston Super Mare",
 ];
+
+// Maps a display name to its URL slug where the two differ (e.g. the
+// Somerset town's correct display spelling "Bridgwater" vs. its existing,
+// unchanged route /mobile-tyre-fitting-bridgewater). Area names not listed
+// here fall back to a plain lowercase/hyphenate of the name.
+const AREA_SLUG_OVERRIDES: Record<string, string> = {
+  Bridgwater: "bridgewater",
+};
+
+export function areaSlug(name: string): string {
+  return AREA_SLUG_OVERRIDES[name] ?? name.toLowerCase().replace(/\s+/g, "-");
+}
 
 export const servicesPageItems = [
   {
@@ -514,7 +526,7 @@ export const servicesFaqs = [
   {
     question: "How quickly can you get to me?",
     answer:
-      `We aim to reach you within 45-60 minutes across our service area including Bristol, Bath, Newport, and Weston-Super-Mare. For exact ETAs call us directly on 07494 247246.`,
+      `Our usual arrival time is around 45-60 minutes across our service area including Bristol, Bath, Newport, and Weston-Super-Mare, depending on your location, traffic, technician availability and tyre availability. For exact ETAs call us directly on 07494 247246.`,
   },
   {
     question: "How do I find the tyre size for my vehicle?",
@@ -524,7 +536,7 @@ export const servicesFaqs = [
   {
     question: "Can I book mobile tyre fitting for a company fleet or van?",
     answer:
-      `Yes, we operate 7 days a week including bank holidays. Whether it's a Sunday evening or a bank holiday, call us on 07494 247246 and we'll be with you within 45-60 minutes.`,
+      `Yes, we operate 7 days a week including bank holidays. Whether it's a Sunday evening or a bank holiday, call us on 07494 247246 and we'll usually be with you within 45-60 minutes, depending on your location and technician availability.`,
   },
   {
     question: "Are mobile tyre fitters available on weekends and holidays?",
@@ -549,28 +561,26 @@ export const servicesFaqs = [
 ];
 
 export const aboutContent = {
-  heroImage:
-    "https://rapid-tyres.com/wp-content/uploads/2024/10/tire-gym-with-other-tires-background_782516-20981.jpg",
+  heroImage: "/about-mobile-tyre-service-bristol-hero.webp",
   tagline: "Stuck with a flat? We come to you — fast.",
   intro:
-    "At Rapid Mobile Tyres Ltd, we specialise in fast, reliable tyre solutions for cars, SUVs, and vans. Our mobile services ensure convenience and quality, keeping you on the road safely and efficiently.",
+    "At Rapid Mobile Tyres Bristol, we specialise in fast, reliable tyre solutions for cars, SUVs, and vans. Our mobile services ensure convenience and quality, keeping you on the road safely and efficiently.",
   trustedPartner: {
     title: "Your Trusted Partner for Mobile Tyre Solutions",
     paragraphs: [
-      "At Rapid Mobile Tyres Ltd, we take pride in being your trusted partner for all tyre-related services. Our expert team is dedicated to providing fast, reliable, and high-quality mobile tyre solutions, whether it's for cars, SUVs, or vans. With our convenient mobile service, we come directly to your location, saving you time and hassle.",
+      "At Rapid Mobile Tyres Bristol, we take pride in being your trusted partner for all tyre-related services. Our expert team is dedicated to providing fast, reliable, and high-quality mobile tyre solutions, whether it's for cars, SUVs, or vans. With our convenient mobile service, we come directly to your location, saving you time and hassle.",
       "We understand the urgency of tyre repairs and breakdowns, which is why we're available 24/7 for emergency services like jump starts and fuel delivery. Our commitment to customer satisfaction and safety means you can rely on us for exceptional service, no matter where or when you need it.",
     ],
   },
   whoWeAre: {
     title: "Who We Are",
     paragraphs: [
-      "At Rapid Mobile Tyres Ltd, we are a dedicated team of tyre specialists committed to delivering exceptional mobile tyre services. With years of experience in the industry, we have built a reputation for fast, reliable, and professional tyre solutions across the South West.",
+      "At Rapid Mobile Tyres Bristol, we are a dedicated team of tyre specialists committed to delivering exceptional mobile tyre services. With years of experience in the industry, we have built a reputation for fast, reliable, and professional tyre solutions across the South West.",
       "Whether you need a tyre repair, replacement, or emergency assistance like a jump start or fuel delivery, our goal is to provide hassle-free, on-the-spot services to keep you moving safely. Customer satisfaction and convenience are at the heart of everything we do.",
     ],
-    image:
-      "https://rapid-tyres.com/wp-content/uploads/2024/10/vecteezy_3d-isolated-mechanic-in-grey-wearpack_10175628-1.png",
-    imageWidth: 800,
-    imageHeight: 800,
+    image: "/mobile-tyre-fitting-van-interior.webp",
+    imageWidth: 1448,
+    imageHeight: 1086,
   },
 };
 
@@ -603,9 +613,9 @@ export const areasWeCoverDetails = [
       "Our home turf — fast callouts across the city centre and all surrounding suburbs, day or night.",
   },
   {
-    name: "Bridgewater",
+    name: "Bridgwater",
     description:
-      "Emergency and scheduled mobile tyre fitting for Bridgewater and the wider Sedgemoor area.",
+      "Emergency and scheduled mobile tyre fitting for Bridgwater and the wider Sedgemoor area.",
   },
   {
     name: "Bath",
@@ -660,14 +670,14 @@ export const contactMethods = [
 ];
 
 export const mobileTyreFittingPage = {
-  tagline: "Flat tyre? We'll come to you within 30-60 minutes to fit a new one.",
+  tagline: "Flat tyre? We'll usually come to you within 45-60 minutes to fit a new one.",
   openingHours: "Monday–Sunday: 24 Hours",
   intro:
     "A flat tyre or the need for a new one can be annoying, especially if you're in a hurry. Thanks to Rapid Mobile Tyres, you don't have to waste hours at the garage — we come to you to fix your tyres. Our professional mobile tyre fitting service will get you back on the road quickly and safely, whether at home, at work, or stuck on the side of the road. With emergency help available 24 hours a day, seven days a week, you can be sure that we'll be there for you whenever you need us.",
   steps: [
     {
-      title: "Book an Appointment",
-      description: "Call us or schedule online to arrange a convenient time and location for your repair.",
+      title: "Get in Touch",
+      description: "Call us or request a callback to arrange a convenient time and location for your repair.",
     },
     {
       title: "We Come to You",
@@ -737,7 +747,7 @@ export const mobileTyreFittingPage = {
     {
       question: "How quickly do you respond to a call out?",
       answer:
-        "We usually reach most areas within about an hour, depending on traffic and weather.",
+        "Our usual arrival time is around 45-60 minutes, depending on your location, traffic, technician availability and tyre availability.",
     },
     {
       question: "What sorts of payments do you accept?",
@@ -758,9 +768,9 @@ export const fuelDeliveryPage = {
     "Running out of fuel can be disruptive, particularly if you find yourself on a busy road or somewhere unfamiliar. Even if you're caught on the motorway, in the middle of nowhere, or just running late, our team can bring the fuel you need straight to your car — so you never have to worry about running out again.",
   steps: [
     {
-      title: "Call or Book Online",
+      title: "Call or Request a Callback",
       description:
-        "Phone us or schedule our service online. Available 24/7, our team will accept your request and send a fuel delivery vehicle to your address.",
+        "Phone us or request a callback online. Available 24/7, our team will accept your request and send a fuel delivery vehicle to your address.",
     },
     {
       title: "Share Your Location",
@@ -787,14 +797,14 @@ export const fuelDeliveryPage = {
     {
       title: "Convenient",
       description:
-        "A brief phone call or online booking is all it takes — we take care of everything else.",
+        "A brief phone call or a quick online enquiry is all it takes — we take care of everything else.",
     },
   ],
   faqs: [
     {
       question: "How quickly can I get fuel delivered?",
       answer:
-        "We aim to deliver fuel to your location within 45 minutes of your request, so you're back on the road as quickly as possible.",
+        "We aim to deliver fuel to your location within 45-60 minutes of your request, so you're back on the road as quickly as possible.",
     },
     {
       question: "What types of fuel do you deliver?",
@@ -830,7 +840,8 @@ export const jumpStartPage = {
     },
     {
       title: "We come to you",
-      description: "A technician arrives with jump-start equipment, usually within 30-60 minutes.",
+      description:
+        "A technician arrives with jump-start equipment, usually within 45-60 minutes, depending on your location, traffic and technician availability.",
     },
     {
       title: "Back on the road",
@@ -929,7 +940,7 @@ export const jumpStartPage = {
     {
       question: "How long does it take to get a jump start?",
       answer:
-        "We aim to reach you within 30-60 minutes of your call, depending on your location. The jump-start itself takes just a few minutes once we arrive.",
+        "Our usual arrival time is around 45-60 minutes, depending on your location, traffic and technician availability. The jump-start itself takes just a few minutes once we arrive.",
     },
     {
       question: "What if my battery is completely dead?",
@@ -956,7 +967,7 @@ interface RefundPolicySection {
 
 export const refundPolicy: { intro: string; sections: RefundPolicySection[]; note: string } = {
   intro:
-    "Thank you for choosing Rapid Mobile Tyres Ltd for your mobile tyre fitting needs. We strive to provide you with excellent service and satisfaction. Please read our refund policy carefully to understand your rights and responsibilities.",
+    "Thank you for choosing Rapid Mobile Tyres Bristol for your mobile tyre fitting needs. We strive to provide you with excellent service and satisfaction. Please read our refund policy carefully to understand your rights and responsibilities.",
   sections: [
     {
       title: "1. Refund Eligibility",

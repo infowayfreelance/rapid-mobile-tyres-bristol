@@ -7,12 +7,24 @@ function titleCase(slug: string) {
     .join(" ");
 }
 
+// Corrects display spelling where a naive title-case of the URL slug would
+// be wrong (e.g. the route /mobile-tyre-fitting-bridgewater is unchanged,
+// but the town's correct spelling is "Bridgwater", not "Bridgewater").
+const TOWN_DISPLAY_NAME_OVERRIDES: Record<string, string> = {
+  bridgewater: "Bridgwater",
+};
+
+function townDisplayName(slug: string): string {
+  return TOWN_DISPLAY_NAME_OVERRIDES[slug] ?? titleCase(slug);
+}
+
 export type StubKind = "location" | "blog" | "category" | "service" | "legal" | "info";
 
 export interface StubPage {
   path: string;
   title: string;
   kind: StubKind;
+  image?: string;
 }
 
 const mainTowns = [
@@ -52,12 +64,12 @@ const suburbs = [
 export const locationPages: StubPage[] = [
   ...mainTowns.map((t) => ({
     path: `mobile-tyre-fitting-${t}`,
-    title: `Mobile Tyre Fitting in ${titleCase(t)}`,
+    title: `Mobile Tyre Fitting in ${townDisplayName(t)}`,
     kind: "location" as const,
   })),
   ...suburbs.map((t) => ({
     path: `mobile-tyre-fitting-${t}`,
-    title: `Mobile Tyre Fitting in ${titleCase(t)}`,
+    title: `Mobile Tyre Fitting in ${townDisplayName(t)}`,
     kind: "location" as const,
   })),
   {
@@ -89,16 +101,105 @@ const blogSlugs = [
   "the-benefits-of-24-hour-mobile-tyre-fitting-services",
   "emergency-tyres-24-7",
   "flat-tyre-puncture-repair",
-  "how-to-choose-the-right-tyres-for-your-car-a-complete-guide-2",
+  "how-to-choose-the-right-tyres-for-your-car-a-complete-guide",
   "urgently-need-a-new-tyre-call-rapid-mobile-tyres-24-hour-emergency-mobile-tyres",
-  "how-much-does-mobile-tyre-fitting-cost-in-bristol-2026-honest-price-guide",
-  "cheapest-tyres-in-bristol-2",
+  "how-to-choose-mobile-tyre-fitter-bristol",
+  "winter-tyres-bristol",
 ];
+
+// Slugs that now have a dedicated page under src/app/ with a real,
+// written article — excluded from allStubPages below so the catch-all
+// route doesn't try to generate a duplicate static path for them.
+const dedicatedBlogSlugs = new Set([
+  "mobile-tyre-fitting-in-the-uk-trends-and-insights",
+  "understanding-the-costs-of-mobile-tyre-fitting-services",
+  "how-long-can-you-drive-on-a-spare-tyre-uk-safety-rules-explained",
+  "the-future-of-tyre-services-innovations-and-how-rapid-mobile-tyres-stays-ahead",
+  "fleet-management-solutions-keeping-your-business-rolling-with-rapid-mobile-tyres",
+  "what-to-do-when-you-get-a-flat-tyre-in-bristol-step-by-step-guide",
+  "what-to-do-if-your-car-wont-start-a-step-by-step-jump-start-guide-for-drivers-in-the-uk",
+  "the-dangers-of-worn-tyres-dont-compromise-your-safety-call-rapid-mobile-tyres",
+  "mobile-tyre-fitting-for-fleet-vehicles-efficiency-and-savings",
+  "the-importance-of-regular-adas-calibration",
+  "what-you-need-to-know-about-your-cars-alternator",
+  "safety-first-the-importance-of-timely-tyre-replacements",
+  "how-to-read-your-tyre-sidewall-markings",
+  "what-are-silent-tyres",
+  "mobile-tyre-repair-services-convenience-at-your-doorstep",
+  "how-rapid-mobile-tyre-fitting-saves-you-time-and-hassle",
+  "emergency-tyre-fitting-getting-back-on-the-road-quickly",
+  "how-climate-change-is-changing-car-design",
+  "the-benefits-of-24-hour-mobile-tyre-fitting-services",
+  "emergency-tyres-24-7",
+  "flat-tyre-puncture-repair",
+  "how-to-choose-the-right-tyres-for-your-car-a-complete-guide",
+  "urgently-need-a-new-tyre-call-rapid-mobile-tyres-24-hour-emergency-mobile-tyres",
+  "how-to-choose-mobile-tyre-fitter-bristol",
+  "winter-tyres-bristol",
+]);
+
+const blogImages: Record<string, string> = {
+  "mobile-tyre-fitting-in-the-uk-trends-and-insights":
+    "/rapid-mobile-tyres-fleet-service-vans-bristol.webp",
+  "understanding-the-costs-of-mobile-tyre-fitting-services":
+    "/mobile-tyre-fitting-technician-bristol.webp",
+  "how-long-can-you-drive-on-a-spare-tyre-uk-safety-rules-explained":
+    "/emergency-flat-car-tyre-roadside.webp",
+  "the-future-of-tyre-services-innovations-and-how-rapid-mobile-tyres-stays-ahead":
+    "/mobile-tyre-fitting-van-interior.webp",
+  "fleet-management-solutions-keeping-your-business-rolling-with-rapid-mobile-tyres":
+    "/mobile-van-tyre-wheel-replacement-technician.webp",
+  "what-to-do-when-you-get-a-flat-tyre-in-bristol-step-by-step-guide":
+    "/damaged-tyre-sidewall-emergency-inspection.webp",
+  "what-to-do-if-your-car-wont-start-a-step-by-step-jump-start-guide-for-drivers-in-the-uk":
+    "/car-battery-inspection-before-jump-start.webp",
+  "the-dangers-of-worn-tyres-dont-compromise-your-safety-call-rapid-mobile-tyres":
+    "/mobile-tyre-tread-depth-inspection.webp",
+  "mobile-tyre-fitting-for-fleet-vehicles-efficiency-and-savings":
+    "/mobile-van-tyre-pressure-valve-check.webp",
+  "the-importance-of-regular-adas-calibration":
+    "/mobile-car-tyre-fitting-bmw-i3-bristol.webp",
+  "what-you-need-to-know-about-your-cars-alternator":
+    "/car-running-after-mobile-jump-start.webp",
+  "safety-first-the-importance-of-timely-tyre-replacements":
+    "/worn-cracked-tyre-tread-closeup.webp",
+  "how-to-read-your-tyre-sidewall-markings":
+    "/tyre-sidewall-markings-numbered-diagram.webp",
+  "what-are-silent-tyres":
+    "/standard-vs-foam-lined-silent-tyre-comparison.webp",
+  "mobile-tyre-repair-services-convenience-at-your-doorstep":
+    "/technician-fitting-plug-patch-tyre-repair.webp",
+  "how-rapid-mobile-tyre-fitting-saves-you-time-and-hassle":
+    "/customer-doorstep-watching-mobile-tyre-technician.webp",
+  "emergency-tyre-fitting-getting-back-on-the-road-quickly":
+    "/technician-inspecting-flat-tyre-rural-road.webp",
+  "how-climate-change-is-changing-car-design":
+    "/infrared-thermometer-check-electric-car.webp",
+  "the-benefits-of-24-hour-mobile-tyre-fitting-services":
+    "/technician-inspecting-flat-tyre-night-driveway.webp",
+  "emergency-tyres-24-7":
+    "/woman-checking-car-boot-night-car-park.webp",
+  "flat-tyre-puncture-repair":
+    "/flat-tyre-car-driveway-wide.webp",
+  "how-to-choose-the-right-tyres-for-your-car-a-complete-guide":
+    "/customer-choosing-tyres-with-fitter-shop.webp",
+  "urgently-need-a-new-tyre-call-rapid-mobile-tyres-24-hour-emergency-mobile-tyres":
+    "/technician-walking-to-van-night-carpark-rain.webp",
+  "how-to-choose-mobile-tyre-fitter-bristol":
+    "/choose-mobile-tyre-fitter-bristol-featured.webp",
+  "winter-tyres-bristol": "/winter-tyres-bristol-featured.webp",
+};
+
+// Slugs with a complete, dedicated article page — used by the sitemap so
+// only finished, indexable articles are listed (not the placeholder stubs
+// still served by the catch-all route).
+export const publishedBlogSlugs: string[] = [...dedicatedBlogSlugs];
 
 export const blogPosts: StubPage[] = blogSlugs.map((s) => ({
   path: s,
-  title: titleCase(s),
+  title: s === "how-to-choose-mobile-tyre-fitter-bristol" ? "How to Choose a Mobile Tyre Fitter in Bristol: 8 Checks Before You Book" : s === "winter-tyres-bristol" ? "Do You Need Winter Tyres in Bristol? A Practical UK Guide" : titleCase(s),
   kind: "blog",
+  image: blogImages[s],
 }));
 
 export const categoryPages: StubPage[] = [
@@ -117,6 +218,7 @@ export const miscPages: StubPage[] = [
 // a dedicated page under src/app/, so the catch-all no longer needs to (and
 // must not, to avoid a duplicate-route build conflict) generate them.
 // categoryPages and miscPages are also excluded — they are not needed.
+// blog posts in dedicatedBlogSlugs are also excluded for the same reason.
 export const allStubPages: StubPage[] = [
-  ...blogPosts,
+  ...blogPosts.filter((p) => !dedicatedBlogSlugs.has(p.path)),
 ];

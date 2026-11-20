@@ -28,7 +28,7 @@ function genericLocation(name: string, slug: string, areasServed: string[]): Loc
 export function getLocationSteps(name: string) {
   return [
     {
-      title: "Call or Book Online",
+      title: "Call or Request a Callback",
       description: `Give us your reg or tyre size and your location in ${name} — home, work, or roadside.`,
     },
     {
@@ -235,7 +235,7 @@ export const locations: LocationPageData[] = [
       "Severn Tunnel Junction",
     ],
   },
-  genericLocation("Bridgewater", "bridgewater", ["North Petherton", "Cannington", "Puriton", "Wembdon", "Chilton Trinity", "Taunton"]),
+  genericLocation("Bridgwater", "bridgewater", ["North Petherton", "Cannington", "Puriton", "Wembdon", "Chilton Trinity", "Taunton"]),
   genericLocation("Bath", "bath", ["Batheaston", "Bathampton", "Combe Down", "Odd Down", "Twerton", "Saltford", "Keynsham", "Radstock", "Midsomer Norton"]),
   genericLocation("Chepstow", "chepstow", ["Tutshill", "Sedbury", "St Arvans", "Caldicot", "Caerwent", "Shirenewton", "Tintern"]),
   genericLocation("Gloucestershire", "gloucestershire", ["Gloucester", "Cheltenham", "Stroud", "Tewkesbury", "Dursley", "Thornbury"]),

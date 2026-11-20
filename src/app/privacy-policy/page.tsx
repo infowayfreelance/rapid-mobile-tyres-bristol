@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   description:
     "Read how Rapid Mobile Tyres collects, uses and protects personal information when you use our website and services.",
   robots: { index: false, follow: true },
+  alternates: {
+    canonical: "https://rapid-tyres.com/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicyPage() {
@@ -21,8 +24,7 @@ export default function PrivacyPolicyPage() {
         <section className="bg-white py-16 sm:py-20">
           <div className="mx-auto max-w-3xl px-6 sm:px-10">
             <p className="text-zinc-600 leading-7">
-              This Privacy Policy explains how Rapid Mobile Tyres Ltd (trading as{" "}
-              <strong>Rapid Mobile Tyres Bristol</strong>) collects, uses, and protects
+              This Privacy Policy explains how Rapid Mobile Tyres Bristol collects, uses, and protects
               personal information you provide to us, or that we collect when you use our
               website or services. We are committed to handling your data in accordance with
               the UK General Data Protection Regulation (UK GDPR) and the Data Protection
@@ -41,7 +43,7 @@ export default function PrivacyPolicyPage() {
                 <div className="mt-4 space-y-4 text-sm leading-7 text-zinc-600">
                   <p>
                     <span className="font-semibold text-zinc-800">Business name: </span>
-                    Rapid Mobile Tyres Ltd (trading as Rapid Mobile Tyres Bristol)
+                    Rapid Mobile Tyres Bristol
                   </p>
                   <p>
                     <span className="font-semibold text-zinc-800">Address: </span>

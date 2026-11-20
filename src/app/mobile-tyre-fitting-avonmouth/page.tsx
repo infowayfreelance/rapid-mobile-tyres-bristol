@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Mobile Tyre Fitting Avonmouth | 24/7 Tyre Service",
   description:
     "Mobile tyre fitting in Avonmouth for cars and vans. Get flat or damaged tyres replaced at your location.",
+  alternates: {
+    canonical: "https://rapid-tyres.com/mobile-tyre-fitting-avonmouth",
+  },
 };
 
 const stats = [
@@ -175,7 +178,7 @@ export default function Page() {
         <section className="relative bg-zinc-900 text-white overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/mobile-tyre-fitting-technician-bristol.webp"
+              src="/mobile-tyre-fitting-avonmouth-hero.webp"
               alt=""
               fill
               sizes="100vw"
@@ -329,10 +332,10 @@ export default function Page() {
               <div className="relative">
                 <div className="overflow-hidden rounded-2xl">
                   <Image
-                    src="/mobile-tyre-fitting-technician-bristol.webp"
-                    alt="Mobile tyre fitting technician fitting a tyre at a customer's location"
-                    width={600}
-                    height={450}
+                    src="/mobile-tyre-changer-avonmouth.webp"
+                    alt="Rapid Mobile Tyres mobile tyre changer in use at a callout in Avonmouth"
+                    width={1448}
+                    height={1086}
                     className="w-full object-cover"
                   />
                 </div>
@@ -511,7 +514,7 @@ export default function Page() {
         <section className="relative bg-zinc-900 py-20 text-white overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/van-tyre-fitting-road-service-bristol.webp"
+              src="/van-tyre-replacement-avonmouth.webp"
               alt=""
               fill
               sizes="100vw"
@@ -867,7 +870,7 @@ export default function Page() {
         <section className="relative bg-zinc-900 py-20 text-white overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/mobile-tyre-fitting-technician-bristol.webp"
+              src="/commercial-tyre-inspection-equipment-avonmouth.webp"
               alt=""
               fill
               sizes="100vw"
