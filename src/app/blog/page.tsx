@@ -17,6 +17,11 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = [
     {
+      path: "electric-car-tyres-bristol",
+      title: "Do Electric Cars Need Special Tyres? A Practical Guide for Bristol Drivers",
+      image: "/electric-car-tyres-bristol-featured.webp",
+    },
+    {
       path: "how-much-does-mobile-tyre-fitting-cost-in-bristol-2026-honest-price-guide",
       title: "How Much Does Mobile Tyre Fitting Cost in Bristol? 2026 Honest Price Guide",
       image: "/mobile-tyre-fitting-cost-bristol-featured.webp",

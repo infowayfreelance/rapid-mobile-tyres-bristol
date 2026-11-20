@@ -81,6 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     ...[
+      "electric-car-tyres-bristol",
       "how-much-does-mobile-tyre-fitting-cost-in-bristol-2026-honest-price-guide",
       "cheapest-tyres-in-bristol-2",
       ...publishedBlogSlugs,
