@@ -715,8 +715,6 @@ export default function GloucestershirePage() {
           </div>
         </section>
 
-        <TyreBrands />
-
         {/* Why mobile */}
         <section className="bg-zinc-50 py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
