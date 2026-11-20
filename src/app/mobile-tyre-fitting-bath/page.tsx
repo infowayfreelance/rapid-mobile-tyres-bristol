@@ -6,14 +6,23 @@ import Footer from "@/components/Footer";
 import TyreBrands from "@/components/TyreBrands";
 import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
+import { BUSINESS_ID } from "@/lib/businessSchema";
 import { siteConfig } from "@/lib/data";
 
+const PAGE_URL = "https://rapid-tyres.com/mobile-tyre-fitting-bath";
+const PAGE_TITLE = "Mobile Tyre Fitting Bath | 24/7 Emergency Tyres | Rapid";
+const PAGE_DESCRIPTION =
+  "24/7 mobile tyre fitting in Bath at your home, work or roadside. Cars, vans and SUVs, usual arrival 45–60 min. Call Rapid Mobile Tyres on 07494 247246.";
+
 export const metadata: Metadata = {
-  title: "Mobile Tyre Fitting Bath | 24/7 Tyre Replacement",
-  description:
-    "Need mobile tyre fitting in Bath? Get flat or damaged tyres replaced at your home, workplace or roadside.",
-  alternates: {
-    canonical: "https://rapid-tyres.com/mobile-tyre-fitting-bath",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    type: "website",
+    images: [{ url: "/rapid-mobile-tyres-open-graph.webp" }],
   },
 };
 
@@ -152,11 +161,36 @@ const faqs = [
     answer:
       "Give us your vehicle details, complete tyre size and exact location. If the vehicle is stopped on a road rather than at an address, also provide your direction of travel, nearest junction or a shared map location.",
   },
+  {
+    question: "How much does mobile tyre fitting cost in Bath?",
+    answer:
+      "The price depends on your tyre size, load and speed rating, the brand you choose and how many tyres you need. Call 07494 247246 with the size from the sidewall or your registration and we'll confirm availability and the price for your vehicle.",
+  },
+  {
+    question: "Can you repair a puncture instead of replacing the tyre?",
+    answer:
+      "Often, yes. If the damage is in the central part of the tread and the tyre hasn't been driven on flat, a repair to British Standard BS AU 159 may be possible. Sidewall or shoulder damage, or a tyre that has been run flat, needs replacing.",
+  },
+  {
+    question: "My street in Bath is steep. Can you still fit the tyre?",
+    answer:
+      "The vehicle needs firm, reasonably level ground to be lifted safely. Tell us about the slope and the parking when you call and we'll advise whether fitting can be done where the car is or nearby.",
+  },
+  {
+    question: "Do you cover BA1 and BA2 postcodes?",
+    answer:
+      "Yes. We cover Bath across the BA1 and BA2 postcodes, including the city centre, Oldfield Park, Weston, Larkhall, Combe Down and Odd Down. For villages outside the city, call with your exact location so we can confirm coverage.",
+  },
 ];
 
 const areasServed = [
   { name: "Batheaston", href: null },
   { name: "Bathampton", href: null },
+  { name: "Bathford", href: null },
+  { name: "Oldfield Park", href: null },
+  { name: "Weston", href: null },
+  { name: "Larkhall", href: null },
+  { name: "Widcombe", href: null },
   { name: "Combe Down", href: null },
   { name: "Odd Down", href: null },
   { name: "Twerton", href: null },
@@ -181,9 +215,48 @@ const locationPinSvg = (
   </svg>
 );
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      name: "Mobile Tyre Fitting in Bath",
+      serviceType: "Mobile tyre fitting",
+      url: PAGE_URL,
+      areaServed: { "@type": "City", name: "Bath" },
+      provider: { "@id": BUSINESS_ID },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map(({ question, answer }) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://rapid-tyres.com" },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Areas We Cover",
+          item: "https://rapid-tyres.com/areas-we-cover",
+        },
+        { "@type": "ListItem", position: 3, name: "Mobile Tyre Fitting Bath", item: PAGE_URL },
+      ],
+    },
+  ],
+};
+
 export default function Page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
+      />
       <Header />
       <main>
         {/* Hero */}
@@ -552,7 +625,11 @@ export default function Page() {
                 Street on the eastern side. A tyre problem on this part of the network can affect
                 journeys across Bath as well as travel towards neighbouring areas. Our service can
                 attend suitable accessible locations around the A36, but roadside fitting must only
-                take place where the vehicle can be worked on safely and legally.
+                take place where the vehicle can be worked on safely and legally. If you are
+                travelling towards Bristol, we also provide{" "}
+                <Link href="/mobile-car-tyre-fitting-bristol" className="text-orange-400 hover:underline">
+                  mobile tyre fitting in Bristol
+                </Link>.
               </p>
               <p className="mb-4 text-zinc-300">
                 <span className="font-semibold text-white">The A367 Wells Road</span> corridor runs
@@ -565,6 +642,28 @@ export default function Page() {
                 Give us the exact road name and direction of travel rather than simply saying
                 &quot;A4 Bath&quot; or &quot;A36 Bath&quot; where possible. A postcode or shared
                 map location is even more helpful.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl space-y-4">
+              <h2 className="text-3xl font-extrabold text-zinc-900">
+                Steep Streets, Tight Parking and Level Ground in Bath
+              </h2>
+              <p className="text-zinc-600">
+                Bath is not a flat city. Roads around Lansdown, Bathwick Hill, Widcombe and Combe Down are
+                steep, and a lot of the centre and inner suburbs is residents&apos; parking or restricted space.
+                That matters for tyre fitting, because a vehicle has to be jacked up on firm, reasonably level
+                ground with enough room to work safely around the wheel.
+              </p>
+              <p className="text-zinc-600">
+                When you call, tell us if the car is on a slope, parked tight to a wall or kerb, or inside a car
+                park or private development. If the spot isn&apos;t safe to lift the vehicle, we&apos;ll talk
+                you through whether it can be moved a short distance to somewhere level before the fitter
+                arrives. Never drive any distance on a flat or badly damaged tyre to do this.
               </p>
             </div>
           </div>
@@ -649,6 +748,29 @@ export default function Page() {
           </div>
         </section>
 
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl space-y-4">
+              <h2 className="text-3xl font-extrabold text-zinc-900">
+                Puncture Repair or a New Tyre?
+              </h2>
+              <p className="text-zinc-600">
+                Not every flat needs a new tyre. A puncture can often be repaired if the damage is a small
+                object in the central part of the tread and the tyre hasn&apos;t been driven on while flat. In
+                the UK, tyre repairs follow British Standard BS AU 159. It limits repairs to the central area of
+                the tread, so damage to the sidewall or shoulder, or a tyre that has been run flat, means
+                replacement.
+              </p>
+              <p className="text-zinc-600">
+                Send us a photo or describe where the nail or cut is, and we&apos;ll tell you whether a{" "}
+                <Link href="/flat-tyre-puncture-repair" className="text-orange-500 hover:underline">
+                  puncture repair
+                </Link> is likely or whether you need a replacement tyre fitted at your Bath location.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <TyreBrands />
 
         {/* Why mobile fits Bath */}
@@ -724,6 +846,30 @@ export default function Page() {
           </div>
         </section>
 
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl space-y-4">
+              <h2 className="text-3xl font-extrabold text-zinc-900">
+                Mobile Tyre Fitting Prices in Bath
+              </h2>
+              <p className="text-zinc-600">
+                The price of mobile tyre fitting in Bath depends mainly on the tyre itself: the size, load index
+                and speed rating, the brand you choose (premium or budget), and how many tyres need replacing.
+                Emergency callouts at night or on a busy road can also affect what&apos;s involved.
+              </p>
+              <p className="text-zinc-600">
+                The quickest way to get an accurate price is to call{" "}
+                <a href="tel:+447494247246" className="text-orange-500 hover:underline">
+                  07494 247246
+                </a> with the full size from the sidewall (for example 205/55 R16) or your registration. We&apos;ll check what we have available for your vehicle. For a fuller explanation of what affects the cost, read our guide to{" "}
+                <Link href="/understanding-the-costs-of-mobile-tyre-fitting-services" className="text-orange-500 hover:underline">
+                  the costs of mobile tyre fitting
+                </Link>.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Areas Served */}
         <section className="bg-white py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -754,6 +900,10 @@ export default function Page() {
                 </Link>
                 . If you are in a surrounding village or further outside the city, call with your
                 exact location so current coverage and technician availability can be confirmed.
+              </p>
+              <p className="mt-4 max-w-2xl text-zinc-600">
+                We cover the BA1 and BA2 postcodes, including Oldfield Park, Weston, Larkhall,
+                Lansdown, Southdown, Bathwick and Widcombe.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
