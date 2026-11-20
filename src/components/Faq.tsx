@@ -7,10 +7,12 @@ type FaqItem = { question: string; answer: string };
 
 export default function Faq({
   items = defaultFaqs,
+  renderAllAnswers = false,
   className = "bg-white py-20 sm:py-28",
   title = "Frequently Asked Questions",
 }: {
   items?: FaqItem[];
+  renderAllAnswers?: boolean;
   className?: string;
   title?: string;
 }) {
@@ -58,8 +60,8 @@ export default function Faq({
                     />
                   </svg>
                 </button>
-                {isOpen && (
-                  <p className="pb-5 text-sm leading-6 text-zinc-600">
+                {(isOpen || renderAllAnswers) && (
+                  <p hidden={!isOpen} className="pb-5 text-sm leading-6 text-zinc-600">
                     {faq.answer}
                   </p>
                 )}
