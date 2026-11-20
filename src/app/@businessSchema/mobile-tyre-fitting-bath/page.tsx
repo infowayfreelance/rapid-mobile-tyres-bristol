@@ -5,7 +5,6 @@ const bathBusinessSchema = {
   priceRange: undefined,
   sameAs: undefined,
   "@id": BUSINESS_ID,
-  aggregateRating: { ...localBusinessSchema.aggregateRating, ratingValue: "5.0", reviewCount: "324" },
 };
 
 export default function BathBusinessSchema() {

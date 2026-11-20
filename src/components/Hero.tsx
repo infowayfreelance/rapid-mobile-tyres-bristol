@@ -34,7 +34,7 @@ export default function Hero() {
             href={googleReviewsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Read 311 Google reviews for Rapid Mobile Tyres Bristol"
+            aria-label="Read 324 Google reviews for Rapid Mobile Tyres Bristol"
             className="group mb-5 inline-flex flex-col gap-2 rounded-xl border border-zinc-200 bg-white px-4 py-3 shadow-sm transition hover:border-orange-300 hover:shadow-md"
           >
             <span className="text-sm font-extrabold uppercase tracking-[0.12em] text-zinc-900">
@@ -57,7 +57,7 @@ export default function Hero() {
                 ★★★★★
               </span>
               <span className="font-semibold text-zinc-600 underline decoration-zinc-300 underline-offset-2 transition group-hover:text-orange-600">
-                311 Google reviews
+                324 Google reviews
               </span>
             </span>
           </a>

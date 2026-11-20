@@ -14,7 +14,7 @@ import TyreBrandStrip from "@/components/TyreBrandStrip";
 export const metadata: Metadata = {
   title: "Mobile Tyre Fitting Bristol | 5★ Rated, 24/7 Emergency",
   description:
-    "Rated 5★ from 311+ Bristol reviews. 24/7 mobile tyre fitters for fast, fairly-priced replacement at home, work or roadside — usual arrival 45-60 min.",
+    "Rated 5★ from 324 Bristol reviews. 24/7 mobile tyre fitters for fast, fairly-priced replacement at home, work or roadside — usual arrival 45-60 min.",
   alternates: {
     canonical: "https://rapid-tyres.com",
   },
