@@ -6,14 +6,23 @@ import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
 import TyreBrands from "@/components/TyreBrands";
 import Faq from "@/components/Faq";
+import { BUSINESS_ID } from "@/lib/businessSchema";
 import { siteConfig } from "@/lib/data";
 
+const PAGE_URL = "https://rapid-tyres.com/mobile-tyre-fitting-gloucestershire";
+const PAGE_TITLE = "Mobile Tyre Fitting Gloucestershire | 24/7 Emergency | Rapid";
+const PAGE_DESCRIPTION =
+  "24/7 mobile tyre fitting in Gloucester, Cheltenham, Stroud and Cirencester, at home, work or roadside. Usual arrival 45–60 min. Call 07494 247246.";
+
 export const metadata: Metadata = {
-  title: "Mobile Tyre Fitting Gloucestershire | 24/7 Tyre Service",
-  description:
-    "Mobile tyre fitting in Gloucestershire for flat or damaged tyres. Get tyre assistance at your chosen location.",
-  alternates: {
-    canonical: "https://rapid-tyres.com/mobile-tyre-fitting-gloucestershire",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    type: "website",
+    images: [{ url: "/rapid-mobile-tyres-open-graph.webp" }],
   },
 };
 
@@ -137,6 +146,26 @@ const faqs = [
     answer:
       "Yes. Our mobile tyre service in Gloucestershire operates 24/7, including weekends, subject to technician and tyre availability.",
   },
+  {
+    question: "How much does mobile tyre fitting cost in Gloucestershire?",
+    answer:
+      "The price depends on your tyre size, load and speed rating, the brand you choose and how many tyres you need. Call 07494 247246 with the size from the sidewall or your registration and we'll confirm availability and the price for your vehicle.",
+  },
+  {
+    question: "Can you repair a puncture instead of replacing the tyre?",
+    answer:
+      "Often, yes. If the damage is in the central part of the tread and the tyre hasn't been driven on flat, a repair to British Standard BS AU 159 may be possible. Sidewall or shoulder damage, or a tyre that has been run flat, needs replacing.",
+  },
+  {
+    question: "Do you cover Cheltenham, Cirencester and Stroud as well as Gloucester?",
+    answer:
+      "Yes. We cover Gloucester, Cheltenham, Stroud, Cirencester, Tewkesbury and other towns across Gloucestershire. If you're in a village or outside those towns, call with your postcode so we can confirm coverage.",
+  },
+  {
+    question: "Which M5 junctions in Gloucestershire do you cover?",
+    answer:
+      "We cover suitable locations around the M5 through Gloucestershire, including the junctions commonly used for Tewkesbury, Cheltenham, Gloucester and Stroud (around junctions 9 to 13, and 14 towards the south of the county). Tell us your direction of travel and the nearest junction when you call.",
+  },
 ];
 
 const areasServed = [
@@ -155,6 +184,11 @@ const areasServed = [
   "Minchinhampton",
   "Winchcombe",
   "Wotton-under-Edge",
+  "Churchdown",
+  "Bishop's Cleeve",
+  "Brockworth",
+  "Bourton-on-the-Water",
+  "Newent",
 ];
 
 const locationPinSvg = (
@@ -167,9 +201,48 @@ const locationPinSvg = (
   </svg>
 );
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      name: "Mobile Tyre Fitting in Gloucestershire",
+      serviceType: "Mobile tyre fitting",
+      url: PAGE_URL,
+      areaServed: { "@type": "AdministrativeArea", name: "Gloucestershire" },
+      provider: { "@id": BUSINESS_ID },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map(({ question, answer }) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://rapid-tyres.com" },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Areas We Cover",
+          item: "https://rapid-tyres.com/areas-we-cover",
+        },
+        { "@type": "ListItem", position: 3, name: "Mobile Tyre Fitting Gloucestershire", item: PAGE_URL },
+      ],
+    },
+  ],
+};
+
 export default function GloucestershirePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
+      />
       <Header />
       <main>
 
@@ -533,6 +606,35 @@ export default function GloucestershirePage() {
           </div>
         </section>
 
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl space-y-4">
+              <h2 className="text-3xl font-extrabold text-zinc-900">
+                Mobile Tyre Fitting on the M5 Around Gloucestershire
+              </h2>
+              <p className="text-zinc-600">
+                The M5 runs through the west of the county, with the junctions most drivers use for
+                Gloucestershire including junction 9 (Ashchurch / Tewkesbury), 11 and 11A (Cheltenham and
+                Gloucester), 12 (Quedgeley / Gloucester), 13 (Stroud) and 14 towards the south of the county. If
+                you have a flat or a blowout near the M5, tell us your direction of travel, the nearest
+                junction, and the number on the nearest marker post or driver location sign.
+              </p>
+              <p className="text-zinc-600">
+                If you are on the motorway, follow{" "}
+                <Link href="https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287" className="text-orange-500 hover:underline">
+                  The Highway Code (rules 275–287)
+                </Link>. Leave at the next exit or pull into a service area if you can. Otherwise, aim for an emergency area or hard shoulder and switch on your hazards. If it is safe, leave on the side away from traffic and wait behind a safety barrier. If you cannot reach a place of relative safety and cannot safely get out, stay belted in the vehicle with your hazards on and call 999. Only arrange fitting where access is safe and permitted.
+              </p>
+              <p className="text-zinc-600">
+                For journeys towards Bristol, see our{" "}
+                <Link href="/mobile-car-tyre-fitting-bristol" className="text-orange-500 hover:underline">
+                  mobile tyre fitting in Bristol
+                </Link> service.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Replacement tyres */}
         <section className="bg-white py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -586,6 +688,29 @@ export default function GloucestershirePage() {
                   ))}
                 </ul>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl space-y-4">
+              <h2 className="text-3xl font-extrabold text-zinc-900">
+                Puncture Repair or a New Tyre?
+              </h2>
+              <p className="text-zinc-600">
+                Not every flat needs a new tyre. A puncture can often be repaired if the damage is a small
+                object in the central part of the tread and the tyre hasn&apos;t been driven on while flat. In
+                the UK, tyre repairs follow British Standard BS AU 159. It limits repairs to the central area of
+                the tread, so damage to the sidewall or shoulder, or a tyre that has been run flat, means
+                replacement.
+              </p>
+              <p className="text-zinc-600">
+                Send us a photo or describe where the nail or cut is, and we&apos;ll tell you whether a{" "}
+                <Link href="/flat-tyre-puncture-repair" className="text-orange-500 hover:underline">
+                  puncture repair
+                </Link> is likely or whether you need a replacement tyre fitted at your Gloucestershire location.
+              </p>
             </div>
           </div>
         </section>
@@ -664,6 +789,30 @@ export default function GloucestershirePage() {
           </div>
         </section>
 
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl space-y-4">
+              <h2 className="text-3xl font-extrabold text-zinc-900">
+                Mobile Tyre Fitting Prices in Gloucestershire
+              </h2>
+              <p className="text-zinc-600">
+                The price of mobile tyre fitting in Gloucestershire depends mainly on the tyre itself: the size,
+                load index and speed rating, the brand you choose (premium or budget), and how many tyres need
+                replacing. Emergency callouts at night or on a busy road can also affect what&apos;s involved.
+              </p>
+              <p className="text-zinc-600">
+                The quickest way to get an accurate price is to call{" "}
+                <a href="tel:+447494247246" className="text-orange-500 hover:underline">
+                  07494 247246
+                </a> with the full size from the sidewall (for example 205/55 R16) or your registration. We&apos;ll check what we have available for your vehicle. For a fuller explanation of what affects the cost, read our guide to{" "}
+                <Link href="/understanding-the-costs-of-mobile-tyre-fitting-services" className="text-orange-500 hover:underline">
+                  the costs of mobile tyre fitting
+                </Link>.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Areas Served */}
         <section className="bg-white py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -677,6 +826,11 @@ export default function GloucestershirePage() {
                 times can vary by location. If you are in a smaller village or outside one of the
                 main towns, call with your postcode so we can confirm whether a technician can
                 attend your exact location.
+              </p>
+              <p className="mt-4 max-w-2xl text-zinc-600">
+                We regularly cover Gloucester, Cheltenham, Stroud, Cirencester, Tewkesbury, Dursley,
+                Stonehouse, Lydney, Coleford, Cinderford, Tetbury, Nailsworth, Minchinhampton,
+                Winchcombe and Wotton-under-Edge, including the GL postcodes around those towns.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -806,7 +960,7 @@ export default function GloucestershirePage() {
 
         <TyreBrands />
 
-        <Faq items={faqs} />
+        <Faq items={faqs} renderAllAnswers />
 
         {/* Final CTA */}
         <section className="relative bg-zinc-900 py-20 text-white overflow-hidden">
