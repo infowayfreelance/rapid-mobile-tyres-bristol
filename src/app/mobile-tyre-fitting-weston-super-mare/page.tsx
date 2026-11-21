@@ -6,14 +6,23 @@ import Footer from "@/components/Footer";
 import TyreBrands from "@/components/TyreBrands";
 import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
+import { BUSINESS_ID } from "@/lib/businessSchema";
 import { siteConfig } from "@/lib/data";
 
+const PAGE_URL = "https://rapid-tyres.com/mobile-tyre-fitting-weston-super-mare";
+const PAGE_TITLE = "Mobile Tyre Fitting Weston-super-Mare | 24/7 Callout | Rapid";
+const PAGE_DESCRIPTION =
+  "24/7 mobile tyre fitting in Weston-super-Mare, Worle, Uphill and Locking, at home, work or roadside. Usual arrival 45–60 min. Call 07494 247246.";
+
 export const metadata: Metadata = {
-  title: "Mobile Tyre Fitting Weston-super-Mare | 24/7 Service",
-  description:
-    "Mobile tyre fitting in Weston-super-Mare for flat or damaged tyres. Get tyre replacement at your location.",
-  alternates: {
-    canonical: "https://rapid-tyres.com/mobile-tyre-fitting-weston-super-mare",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    type: "website",
+    images: [{ url: "/rapid-mobile-tyres-open-graph.webp" }],
   },
 };
 
@@ -137,10 +146,33 @@ const faqs = [
     answer:
       "Give us your tyre size, vehicle details and exact location. If you are stopped on the roadside, your direction of travel, nearest junction or shared map location can also help identify your position.",
   },
+  {
+    question: "How much does mobile tyre fitting cost in Weston-super-Mare?",
+    answer:
+      "The price depends on your tyre size, load and speed rating, the brand you choose and how many tyres you need. Call 07494 247246 with the size from the sidewall or your registration and we'll confirm availability and the price for your vehicle before anyone sets off.",
+  },
+  {
+    question: "Do you fit budget tyres in Weston-super-Mare?",
+    answer:
+      "Yes. As well as premium brands, we carry quality budget brands such as Nexen, Falken, Avon, Kumho and Nankang, subject to stock in your size. Tell us your tyre size and budget when you call and we'll check what's available.",
+  },
+  {
+    question: "Can you repair a puncture instead of replacing the tyre?",
+    answer:
+      "Often, yes. If the damage is a small object in the central part of the tread and the tyre hasn't been driven on while flat, a repair to British Standard BS AU 159 may be possible. Damage to the sidewall or shoulder, or a tyre that has been run flat, means it needs replacing.",
+  },
+  {
+    question: "Which Weston-super-Mare postcodes do you cover?",
+    answer:
+      "We cover Weston-super-Mare across the BS22, BS23 and BS24 postcodes, including Worle, Milton, Uphill, Oldmixon, St Georges and Locking. For villages and towns outside those postcodes, call with your postcode so we can confirm coverage.",
+  },
 ];
 
 const areasServed = [
   { name: "Worle", href: null },
+  { name: "Milton", href: null },
+  { name: "Oldmixon", href: null },
+  { name: "St Georges", href: null },
   { name: "Uphill", href: null },
   { name: "Kewstoke", href: null },
   { name: "Locking", href: null },
@@ -161,9 +193,91 @@ const locationPinSvg = (
   </svg>
 );
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": `${PAGE_URL}#faq`,
+      mainEntity: faqs.map(({ question, answer }) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rapid-tyres.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Areas We Cover",
+          "item": "https://rapid-tyres.com/areas-we-cover"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Mobile Tyre Fitting Weston-super-Mare",
+          "item": "https://rapid-tyres.com/mobile-tyre-fitting-weston-super-mare"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rapid-tyres.com/mobile-tyre-fitting-weston-super-mare#service",
+      "name": "Mobile Tyre Fitting in Weston-super-Mare",
+      "serviceType": "Mobile tyre fitting",
+      "url": "https://rapid-tyres.com/mobile-tyre-fitting-weston-super-mare",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Weston-super-Mare"
+        },
+        {
+          "@type": "Place",
+          "name": "Worle"
+        },
+        {
+          "@type": "Place",
+          "name": "Uphill"
+        },
+        {
+          "@type": "Place",
+          "name": "Locking"
+        },
+        {
+          "@type": "Place",
+          "name": "Kewstoke"
+        },
+        {
+          "@type": "Place",
+          "name": "Hutton"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "North Somerset"
+        }
+      ],
+      "provider": {
+        "@id": BUSINESS_ID
+      }
+    },
+  ],
+};
+
 export default function Page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
+      />
       <Header />
       <main>
         {/* Hero */}
@@ -535,11 +649,28 @@ export default function Page() {
                 >
                   Bridgwater
                 </Link>{" "}
-                and the wider North Somerset road network.
+                and the wider North Somerset road network. For onward journeys, we also provide{" "}
+                <Link href="/mobile-car-tyre-fitting-bristol" className="text-orange-400 hover:underline">
+                  mobile tyre fitting in Bristol
+                </Link>.
+              </p>
+              <p className="mb-4 text-zinc-300">
+                On the M5, junction 21 serves Weston-super-Mare, with junction 20 near Clevedon
+                and junction 22 near Burnham-on-Sea and Highbridge. Wherever you are, tell us your
+                direction of travel, the nearest junction and, on the motorway, the number on the
+                nearest marker post or driver location sign.
               </p>
               <p className="text-zinc-300">
-                If you are stopped on the motorway itself, follow motorway safety guidance first
-                and arrange assistance only where safe and permitted access is available. Providing
+                If you are stopped on the motorway itself, follow{" "}
+                <a
+                  href="https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287"
+                  target="_blank"
+                  rel="noopener"
+                  className="text-orange-400 hover:underline"
+                >
+                  motorway safety guidance
+                </a>{" "}
+                first and arrange assistance only where safe and permitted access is available. Providing
                 your exact road, postcode, nearest junction or shared location helps us identify
                 your position efficiently.
               </p>
@@ -631,7 +762,39 @@ export default function Page() {
           </div>
         </section>
 
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl space-y-4">
+              <h2 className="text-3xl font-extrabold text-zinc-900">
+                Puncture Repair or a New Tyre?
+              </h2>
+              <p className="text-zinc-600">
+                Not every flat tyre needs replacing. A puncture can often be repaired if the damage is a small object in the central part of the tread and the tyre hasn&apos;t been driven on while flat. In the UK, tyre repairs follow British Standard BS AU 159, which limits repairs to the central area of the tread. Damage to the sidewall or shoulder, a large cut, or a tyre that has been run flat means it has to be replaced.
+              </p>
+              <p className="text-zinc-600">
+                Send us a photo or tell us where the nail or cut is, and we&apos;ll tell you whether a <Link href="/flat-tyre-puncture-repair" className="text-orange-500 hover:underline">puncture repair</Link> is likely or whether you need a replacement tyre fitted at your Weston-super-Mare location.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <TyreBrands />
+
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl space-y-4">
+              <h2 className="text-3xl font-extrabold text-zinc-900">
+                Budget and Cheap Tyres in Weston-super-Mare
+              </h2>
+              <p className="text-zinc-600">
+                If you&apos;re looking for cheap tyres in Weston-super-Mare, you don&apos;t have to drive around tyre shops comparing stock. Alongside premium brands, we carry quality budget brands such as Nexen, Falken, Avon, Kumho and Nankang, and we fit them at your home, workplace or roadside location in Weston, Worle, Uphill or Locking.
+              </p>
+              <p className="text-zinc-600">
+                The price depends mainly on the tyre itself: the size, load index and speed rating, the brand and how many tyres you need. Call <a href="tel:+447494247246" className="text-orange-500 hover:underline">07494 247246</a> with the full size from the sidewall (for example 205/55 R16) or your registration, tell us your budget, and we&apos;ll check what we can fit for your vehicle. A cheaper tyre still has to meet your vehicle&apos;s load and speed requirements, so we won&apos;t fit one that doesn&apos;t. For more on saving safely, read our guides to <Link href="/understanding-the-costs-of-mobile-tyre-fitting-services" className="text-orange-500 hover:underline">the costs of mobile tyre fitting</Link> and <Link href="/cheapest-tyres-in-bristol-2" className="text-orange-500 hover:underline">finding the cheapest tyres without cutting corners</Link>.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Why Mobile Tyre Fitting */}
         <section className="bg-zinc-50 py-20">
@@ -724,7 +887,8 @@ export default function Page() {
                 >
                   Bridgwater
                 </Link>
-                . These locations cover a mixture of suburban, coastal and more rural driving
+                . In Weston-super-Mare itself we cover the BS22, BS23 and BS24 postcodes,
+                including Worle, Milton, Uphill, Oldmixon, St Georges and Locking. These locations cover a mixture of suburban, coastal and more rural driving
                 environments around North Somerset. If you are outside central Weston-super-Mare,
                 provide your postcode when calling so your exact coverage and current technician
                 availability can be checked.
@@ -860,7 +1024,7 @@ export default function Page() {
 
         <Testimonials />
 
-        <Faq items={faqs} />
+        <Faq items={faqs} renderAllAnswers />
 
         {/* Final CTA */}
         <section className="relative bg-zinc-900 py-20 text-white overflow-hidden">
