@@ -17,6 +17,11 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = [
     {
+      path: "performance-tyres-bristol",
+      title: "Performance Tyres in Bristol: What They Are and When They Are Worth It",
+      image: "/performance-tyres-bristol-featured.webp",
+    },
+    {
       path: "electric-car-tyres-bristol",
       title: "Do Electric Cars Need Special Tyres? A Practical Guide for Bristol Drivers",
       image: "/electric-car-tyres-bristol-featured.webp",
