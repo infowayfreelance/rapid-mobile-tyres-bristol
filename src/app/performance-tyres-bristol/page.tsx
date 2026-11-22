@@ -22,18 +22,40 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { question: "Are performance tyres worth it for everyday driving in Bristol?", answer: "On a car designed for them, yes, because they keep the handling the car maker intended. On a standard car used mainly for commuting, a good touring tyre in the correct specification is usually the more practical choice." },
-  { question: "Can I fit a lower speed rating than my current tyres?", answer: "You should not fit a lower speed rating or load index than your car's handbook or door placard specifies. Doing so can affect safety and, as Which? notes, could affect your insurance." },
-  { question: "Do performance tyres wear out faster?", answer: "Often, yes. Softer compounds that give more grip usually wear more quickly, although wear also depends on driving style, alignment and tyre pressures." },
-  { question: "Are performance tyres safe in cold weather?", answer: "Many summer performance tyres grip less well in very cold conditions. All-season tyres in performance sizes are one option for year-round driving. Check the tyre's intended use before buying." },
-  { question: "Should I replace all four performance tyres at once?", answer: "At minimum, replace tyres in pairs on the same axle so they match. Some cars, especially four-wheel-drive models, may need all four replaced together. Ask your fitter for advice on your car." },
-  { question: "Can you fit performance tyres at my home or work?", answer: "Yes. Rapid Mobile Tyres fits new tyres at home, at work or at the roadside across Bristol and surrounding areas, 24 hours a day, 7 days a week." },
-  { question: "Which brands of performance tyre can you supply?", answer: "We supply a range of premium and budget brands, including Michelin, Continental, Pirelli, Bridgestone, Goodyear and Dunlop. Availability depends on your exact size, so call with your tyre details for options." },
+  {
+    question: "Are UHP tyres a good upgrade for a daily driver?",
+    answer: "Check what the car was designed to use. A compatible performance tyre can retain the feel of a car originally fitted with one. A touring tyre can suit a daily driver that came on touring tyres.",
+  },
+  {
+    question: "Do I need to match the speed symbol on my old tyre?",
+    answer: "Check the vehicle maker’s required specification first. An old tyre may carry a higher rating than the car requires. If you are unsure what is approved, check the handbook and ask the fitter before ordering.",
+  },
+  {
+    question: "Can I buy a performance tyre that is quiet?",
+    answer: "Yes. Noise varies by model and by the road surface. Use the external rolling-noise grade as one comparison, then look at reviews or tests for cabin noise on similar cars.",
+  },
+  {
+    question: "Can I use a summer performance tyre in a Bristol winter?",
+    answer: "Check its intended operating conditions and think about the roads you use in cold weather. Look for an approved all-season or winter option if you regularly drive on cold or frosty routes.",
+  },
+  {
+    question: "Can I replace one performance tyre after a puncture?",
+    answer: "Ask the fitter to compare it with the tyre on the same axle and check the vehicle maker’s guidance. Some all-wheel-drive cars are sensitive to differences in tread depth and rolling circumference.",
+  },
+  {
+    question: "Will Rapid Mobile Tyres fit performance tyres on my driveway?",
+    answer: "Yes, if there is safe, suitable access and the tyre is available. Send your postcode and the full sidewall code so we can check the fitment and location.",
+  },
+  {
+    question: "Can you supply Pirelli or Bridgestone tyres in Bristol?",
+    answer: "Yes. Rapid Mobile Tyres supplies both brands. Call with the full size, load index, speed symbol and any approval marking so we can check what is available for your car.",
+  },
 ];
 
 const articleSchema = {
   "@context": "https://schema.org", "@type": "BlogPosting",
   headline: HEADLINE,
+  dateModified: "2026-11-23",
   description: DESCRIPTION, image: FEATURED_IMAGE,
   author: { "@type": "Organization", name: siteConfig.name },
   publisher: { "@type": "Organization", name: siteConfig.name, logo: { "@type": "ImageObject", url: "https://rapid-tyres.com/rapid-mobile-tyres-open-graph.webp" } },
@@ -47,92 +69,63 @@ const breadcrumbSchema = { "@context": "https://schema.org", "@type": "Breadcrum
 ] };
 
 const articleHtml = `
-<p>If you drive a hot hatch, a performance saloon or a powerful estate around Bristol, you have probably been told you need "performance tyres". But what does that actually mean, and is it worth paying for them if most of your driving is the school run, the M5 and the Portway?</p>
-<p>This guide explains what performance tyres are, how they differ from everyday touring tyres, which markings matter, and when they make sense. It finishes with how Rapid Mobile Tyres can fit them at your home, workplace or roadside across Bristol and the surrounding area.</p>
-<h2>Short answer: do you need performance tyres?</h2>
-<p>If your car left the factory on performance tyres, the safest choice is usually to replace them with tyres that meet the same specification: the same size, and a load index and speed rating at least as high as the car maker lists. The handling, braking and stability of these cars were developed around that kind of tyre.</p>
-<p>If your car came on standard touring tyres, you do not need performance tyres. A good-quality touring tyre that matches your car's specification will suit most everyday Bristol driving and usually lasts longer and rides more comfortably.</p>
-<p>The key rule is simple: never fit a tyre with a lower speed rating or load index than your car's handbook or door placard specifies.</p>
-<h2>What are performance tyres?</h2>
-<p>"Performance tyre" is a broad term rather than a legal category. It usually describes tyres designed to prioritise grip, steering response and stability at higher speeds. You will also see the terms <strong>high performance (HP)</strong> and <strong>ultra high performance (UHP)</strong> used for tyres at the top of that range.</p>
-<p>Performance tyres typically have:</p>
-<ul>
-<li><strong>softer rubber compounds</strong>, which grip well but can wear faster;</li>
-<li><strong>stiffer sidewalls and construction</strong>, for sharper steering response;</li>
-<li><strong>tread patterns designed for road grip and water clearance</strong> at higher speeds;</li>
-<li><strong>higher speed ratings</strong>, often V, W or Y;</li>
-<li><strong>wider, lower-profile sizes</strong>, common on cars with larger wheels.</li>
-</ul>
-<p>They are often fitted as original equipment on sports cars, hot hatches, performance saloons and some powerful SUVs. Some car makers approve specific versions of a tyre for a particular model, marked on the sidewall with a code. Your fitter can help you check whether your car has one.</p>
-<h2>Speed ratings and load index: the markings that matter</h2>
+<p>Start with the tyres your car was designed to use. If it left the factory on a performance tyre, replacing it with a compatible tyre of the same kind can help preserve the steering feel and grip you know. If it came on touring tyres and spends most of its time on the school run or the M32, a well-chosen touring tyre may be the better buy.</p>
+<p>Whether performance tyres are worth it in Bristol comes down to three things: what your car requires, how you drive it and how much cold or wet weather it sees. A low-profile tyre with a high speed rating can still be a poor match for your car. Use the specification to narrow your choices first, then compare the things you will notice on the road.</p>
+
+<h2>What makes a tyre a performance tyre?</h2>
+<p>High-performance (HP) and ultra-high-performance (UHP) are descriptions you will see in tyre ranges. They tell you what the maker has prioritised. A touring tyre usually puts more emphasis on comfort and wear, while a performance model is more likely to favour steering response and grip under braking and cornering.</p>
+<p>Manufacturers can get there in different ways. A stiffer construction can make the car feel more immediate when you turn the wheel. The rubber compound affects how much grip the tyre offers and how quickly it wears. Tread design helps determine how the tyre deals with water. None of those features on its own tells you how a particular model will behave on a wet Tuesday morning in Bristol.</p>
+<p>If you are comparing two models in the same size, look beyond the HP or UHP label. Check the season each tyre is designed for, its wet-grip grade and whether the maker offers a version approved for your car. Our <a href="/how-to-choose-the-right-tyres-for-your-car-a-complete-guide">guide to choosing the right tyres</a> explains how to compare the wider range of tyre types.</p>
+
+<h2>Read the full sidewall code before comparing brands</h2>
 <figure><img src="/performance-tyre-sidewall-speed-rating.webp" alt="Tyre sidewall showing size, load index and speed rating markings" width="1200" height="900" loading="lazy" /></figure>
-<p>Every tyre sidewall carries a size code followed by a load index and a speed rating, for example <strong>225/40 R18 92Y</strong>. In that example:</p>
-<ul>
-<li><strong>225</strong> is the width in millimetres;</li>
-<li><strong>40</strong> is the sidewall height as a percentage of the width;</li>
-<li><strong>R18</strong> means radial construction for an 18-inch wheel;</li>
-<li><strong>92</strong> is the load index, a code for the maximum weight each tyre can carry;</li>
-<li><strong>Y</strong> is the speed rating.</li>
-</ul>
-<p>Common speed ratings you will see on performance tyres include:</p>
-<table><thead><tr><th>Speed rating</th><th>Maximum speed</th></tr></thead><tbody><tr><td>V</td><td>149 mph</td></tr><tr><td>W</td><td>168 mph</td></tr><tr><td>Y</td><td>186 mph</td></tr></tbody></table>
-<p>These figures come from published tyre industry tables, such as those listed by Which? and Pirelli. Pirelli explains that the speed rating reflects how well a tyre withstands heat at speed while carrying its rated load. It is not an invitation to drive faster than the speed limit, and it is not a measure of overall quality.</p>
-<p>Which? also notes that fitting a tyre that does not meet the car maker's recommendations could affect your insurance. If you are unsure what your car needs, check the handbook or the sticker inside the driver's door, or read our guide on <a href="https://rapid-tyres.com/how-to-read-your-tyre-sidewall-markings">how to read your tyre sidewall markings</a>.</p>
-<h2>The benefits of performance tyres</h2>
-<p>On a car designed for them, performance tyres can offer:</p>
-<ul>
-<li><strong>More grip</strong> in dry and many wet conditions, helping acceleration, cornering and braking;</li>
-<li><strong>Sharper steering response</strong> and clearer feedback through the wheel;</li>
-<li><strong>Better stability</strong> at motorway speeds and when changing direction;</li>
-<li><strong>Handling as the manufacturer intended</strong>, because the car's suspension and safety systems were set up on similar tyres.</li>
-</ul>
-<p>For drivers who enjoy their car, the difference in feel can be noticeable. For drivers who simply want their car to behave predictably, keeping the original type of tyre avoids surprises.</p>
-<h2>The trade-offs</h2>
-<p>Performance tyres are not the right answer for every car. The common downsides are:</p>
-<ul>
-<li><strong>Faster wear.</strong> Softer compounds generally wear more quickly, so you may replace them sooner.</li>
-<li><strong>Higher cost.</strong> Performance and UHP tyres usually cost more than touring tyres in the same size. Ask for a quote for your exact size and car.</li>
-<li><strong>Firmer ride and more noise.</strong> Stiffer construction can make the ride feel harder on rough roads, and some patterns are louder. If cabin noise matters to you, our guide to <a href="https://rapid-tyres.com/what-are-silent-tyres">silent tyres</a> explains noise ratings.</li>
-<li><strong>Cold-weather limits.</strong> Many summer performance tyres are designed for warmer conditions and can grip less well when it is very cold. This matters for year-round UK driving.</li>
-<li><strong>Availability.</strong> Some large or manufacturer-approved sizes are less common, which can affect how quickly a replacement can be sourced.</li>
-</ul>
-<h2>Performance tyres in Bristol winters</h2>
+<p>Two tyres can fit the same wheel and have different load and speed ratings. In <strong>225/40 R18 92Y</strong>, 225 is the width in millimetres, 40 is the sidewall height relative to the width, and R18 means a radial tyre for an 18-inch wheel. The 92 is the load index and the Y is the speed symbol. Record the whole code, including any extra markings, and check it against the handbook.</p>
+<p>The load index represents how much weight one tyre is rated to carry. The speed symbol identifies the tyre's speed capability under specified conditions. These are common examples, drawn from <a href="https://www.pirelli.com/tires/en-us/car/driving-and-tire-tips/how-to-read/tire-speed-rating">Pirelli's speed-rating table</a>.</p>
+<table>
+  <thead><tr><th scope="col">Speed symbol</th><th scope="col">Rated speed</th></tr></thead>
+  <tbody>
+    <tr><td>V</td><td>149 mph</td></tr>
+    <tr><td>W</td><td>168 mph</td></tr>
+    <tr><td>Y</td><td>186 mph</td></tr>
+  </tbody>
+</table>
+<p>Use the figures to identify a suitable tyre and follow the road's speed limit. A higher letter on its own gives you little information about wet braking, comfort or tread life. Check the required rating before ordering, even if the tyres already on the car carry a different marking. If you are considering a change from the maker's recommendation, check with the manufacturer and your insurer first. Our <a href="/how-to-read-your-tyre-sidewall-markings">sidewall markings guide</a> helps you find the details a fitter will need.</p>
+
+<h2>Where you will feel the difference</h2>
+<p>A driver replacing the tyres on a hot hatch might notice that the car responds more directly on a bend or feels more settled when changing direction. On a car set up around that tyre, these are good reasons to stay close to the original fitment. They matter more than whatever happens to be printed in large letters on the sidewall.</p>
+<p>For a car making steady commutes and short trips around Bristol, consider what you would give up for that sharper response. A firmer tyre can make patched surfaces and potholes more noticeable. A softer tread compound may wear sooner. Wide, low-profile or manufacturer-approved sizes can also narrow the choice when you need a replacement. Ask what is available in your exact specification before deciding on a model.</p>
+<p>Compare the wet-grip, fuel-efficiency and external rolling-noise grades on the tyre label. The noise grade describes sound measured outside the vehicle. Our guide to <a href="/what-are-silent-tyres">what silent tyres are</a> explains tyre noise and why cabin comfort can vary between models.</p>
+
+<p>If most of your driving is at low speeds and you cover a lot of miles, compare the touring options available for your car before paying for a more specialised tyre. If you spend weekends on winding roads and like how your car feels on its current set, look for an approved replacement with similar characteristics. In either case, compare actual tyre models. The broad category helps narrow the shortlist, but a tyre test or the manufacturer’s fitment information is more useful than the category name alone.</p>
+
+<h2>Think about the coldest journeys you make</h2>
 <figure><img src="/performance-tyre-tread-wet-road.webp" alt="Performance tyre tread on a wet road with autumn leaves" width="1200" height="900" loading="lazy" /></figure>
-<p>Bristol winters are usually mild and wet rather than snowy, but cold mornings, wet leaves and occasional frost are common, especially on higher routes out of the city. If your car runs summer performance tyres all year, consider how they behave in cold, wet weather.</p>
-<p>Some drivers choose an all-season tyre in a suitable performance size, which is designed to work across a wider temperature range. Others keep summer tyres and take more care in cold spells. Our guide to <a href="https://rapid-tyres.com/winter-tyres-bristol">winter tyres in Bristol</a> covers the options in more detail. Whatever you choose, it must still match your car's required size, load index and speed rating.</p>
-<h2>Performance tyres on SUVs and electric cars</h2>
-<p>Powerful SUVs and electric cars can be heavy and deliver strong acceleration, which puts extra demands on tyres. Many need a high load index, and some use tyres marked XL (extra load) or HL (high load).</p>
-<ul>
-<li>For electric cars, read our guide on whether <a href="https://rapid-tyres.com/electric-car-tyres-bristol">electric cars need special tyres</a>.</li>
-<li>For SUVs, see our <a href="https://rapid-tyres.com/suv-tyre-fitting-bristol">SUV tyre fitting in Bristol</a> page.</li>
-</ul>
-<p>In both cases, match or exceed the specification the car maker lists, and do not rely on size alone.</p>
-<h2>Run-flat performance tyres</h2>
-<p>Some performance cars, particularly certain premium saloons and coupés, leave the factory on run-flat tyres and may not carry a spare wheel. Run-flats have reinforced sidewalls that let you keep driving for a limited distance at reduced speed after a puncture, within the limits set by the tyre and car maker.</p>
-<p>If your car uses run-flats, check the sidewall marking and your handbook before choosing replacements. Swapping to conventional tyres can change how the car handles and leaves you without that get-you-home ability, so it is a decision to make deliberately rather than by accident. Tyre makers generally advise against repairing a run-flat after it has been driven on while deflated, so a puncture often means a replacement tyre. Rapid Mobile Tyres can replace run-flat tyres on-site.</p>
-<h2>How to choose the right performance tyre</h2>
+<p>A summer performance tyre can make sense for a car that mostly goes out on warmer days. If you use that car every morning through winter, think about the roads you actually drive. A sheltered city route and an exposed road over higher ground can feel very different on the same day. Wet leaves, standing water and frost all reduce the grip available, regardless of the tyre's speed symbol.</p>
+<p>Check whether a suitable all-season tyre is available if you want one set for the whole year. If you regularly drive in colder conditions, a separate winter set may be worth discussing. Both choices still need to suit the car's approved fitment. Our <a href="/winter-tyres-bristol">Bristol winter tyre guide</a> explains what to look for when choosing between summer, all-season and winter tyres.</p>
+
+<h2>Check the vehicle's requirements for SUVs, EVs and run-flats</h2>
+<p>A high-powered SUV or electric car may put more weight on its tyres than a smaller hatchback. Look for any extra-load or high-load marking specified by the manufacturer as well as the load index. If your car uses different sizes front and rear, write down both sets of markings. You can read more about <a href="/electric-car-tyres-bristol">choosing tyres for an electric car</a> or check our <a href="/suv-tyre-fitting-bristol">SUV tyre fitting service in Bristol</a>.</p>
+<p>Check for a run-flat marking before you order. If a run-flat has lost pressure, follow the distance and speed limits in the handbook and ask for an inspection before relying on it again. Damage inside a tyre may be hard to see, especially after it has been driven while deflated. Ask the fitter whether replacement is needed and whether a matching run-flat is available. Before switching to a conventional tyre, check the manufacturer's advice and how you would deal with a puncture if the car has no spare.</p>
+
+<h2>Decide whether to replace one tyre, a pair or the set</h2>
+<p>Start by checking why the tyre needs changing. If it has worn on one edge, ask the fitter to look at the pattern and consider whether pressure or wheel alignment needs attention. If the car has picked up a cut or a bulge, arrange an inspection and avoid driving on a visibly damaged tyre. For cars, the <a href="https://www.gov.uk/guidance/the-highway-code/annex-6-vehicle-maintenance-safety-and-security">Highway Code</a> gives a legal tread minimum of 1.6 mm across the central three-quarters of the tread and around the whole circumference. See our guide to <a href="/the-dangers-of-worn-tyres-dont-compromise-your-safety-call-rapid-mobile-tyres">the dangers of worn tyres</a> for what to check between fittings.</p>
+<p>With a single damaged tyre, the best replacement depends on the condition and tread depth of the tyre on the other side. Ask the fitter to check whether they can match it. Some all-wheel-drive systems have tighter limits on differences in rolling circumference, so the handbook may call for more than one replacement. Have those checks done before ordering, especially on a car with staggered front and rear sizes.</p>
+
+<p>Once the new tyres are fitted, use the cold pressures in your handbook or on the vehicle placard. Check whether the recommended pressure changes when you carry passengers and luggage. The maximum pressure moulded into the tyre is a tyre limit, so look to the vehicle maker for the pressure to use day to day. Checking regularly helps you spot a slow loss of pressure before the next longer journey.</p>
+
+<h2>What to check before you order</h2>
 <ol>
-<li><strong>Check your car's specification.</strong> Use the handbook or door placard for size, load index and speed rating. Note any manufacturer approval marking on your current tyres.</li>
-<li><strong>Decide how you drive.</strong> Mostly city and motorway? A comfortable, long-wearing tyre in the right specification may suit you. Regular spirited driving? A dedicated performance tyre may be worth it.</li>
-<li><strong>Think about the seasons.</strong> Summer, all-season or a winter set, depending on how and when you use the car.</li>
-<li><strong>Read the tyre label.</strong> The UK tyre label shows grades for wet grip, fuel efficiency (rolling resistance) and external noise, which helps you compare models.</li>
-<li><strong>Replace in pairs at least.</strong> Fitting matching tyres on the same axle helps keep handling balanced. Your fitter can advise whether all four should be replaced together.</li>
-<li><strong>Ask for a clear quote.</strong> Confirm the tyre brand and model, fitting, balancing and disposal of old tyres before work begins.</li>
+  <li><strong>Pull up the handbook or placard.</strong> Write down the size and ratings approved for your car. On some cars, the front and rear wheels take different tyres.</li>
+  <li><strong>Check the current fitment.</strong> Photograph the full sidewall on each axle, including any run-flat or manufacturer approval mark. If it differs from the handbook, ask about the difference before ordering.</li>
+  <li><strong>Describe a normal week.</strong> Tell the fitter whether the car mainly sees short town trips, longer motorway runs or regular winter use. That gives them a better basis for comparing suitable models.</li>
+  <li><strong>Compare the model and the work.</strong> Ask what tyre they can supply and whether the fitting includes wheel balancing and taking away the old tyres. If only one tyre is damaged, ask what can be matched and whether the other tyres should be changed too.</li>
 </ol>
-<p>For a step-by-step overview, read our <a href="https://rapid-tyres.com/how-to-choose-the-right-tyres-for-your-car-a-complete-guide">complete guide to choosing the right tyres</a>.</p>
-<h2>When to replace performance tyres</h2>
-<p>Because performance tyres can wear faster, check them regularly:</p>
-<ul>
-<li><strong>Tread depth.</strong> The UK legal minimum for cars is 1.6mm across the central three-quarters of the tread, around the whole circumference. Many drivers choose to replace well before that point.</li>
-<li><strong>Uneven wear.</strong> Wear on one edge can point to alignment or pressure problems.</li>
-<li><strong>Damage.</strong> Bulges, cuts and cracks in the sidewall mean the tyre should be inspected straight away.</li>
-<li><strong>Pressures.</strong> Check them when the tyres are cold, using the figures in your handbook.</li>
-</ul>
-<p>Our guide to the <a href="https://rapid-tyres.com/the-dangers-of-worn-tyres-dont-compromise-your-safety-call-rapid-mobile-tyres">dangers of worn tyres</a> explains the warning signs.</p>
-<h2>Mobile performance tyre fitting in Bristol</h2>
+
+<h2>Arrange mobile fitting in Bristol</h2>
 <figure><img src="/mobile-wheel-balancing-van.webp" alt="Wheel balancer in a mobile tyre van balancing a performance tyre" width="1200" height="900" loading="lazy" /></figure>
-<p>Rapid Mobile Tyres fits new tyres at your home, workplace or the roadside. Our vans carry fitting and balancing equipment, so the work can be done where your car is parked. We supply a range of brands, including premium names such as Michelin, Continental, Pirelli, Bridgestone, Goodyear and Dunlop, as well as quality budget options. Tell us your car, tyre size and how you drive when you call, and we will talk you through suitable options for your car.</p>
-<p>We also handle run-flat replacements on-site. Find out more about our <a href="https://rapid-tyres.com/mobile-tyre-fitting">mobile tyre fitting</a> and <a href="https://rapid-tyres.com/mobile-car-tyre-fitting-bristol">mobile car tyre fitting in Bristol</a> services, or check the <a href="https://rapid-tyres.com/areas-we-cover">areas we cover</a>.</p>
+<p>Rapid Mobile Tyres fits new tyres at home, at work or at a suitable roadside location. Our vans carry tyre-changing and wheel-balancing equipment. We supply brands including Michelin, Continental, Pirelli, Bridgestone, Goodyear and Dunlop. We also supply budget brands such as Nexen, Falken, Avon, Kumho and Nankang. Ask for options that meet your car’s requirements, since availability depends on the size and version you need.</p>
+<p>Before you call, take a photo of the sidewall on the axle that needs attention. Have your registration, postcode and preferred fitting location to hand. Tell us if the car uses run-flats, if front and rear sizes differ or if access is tight. We can then check which tyres are available in the right fitment and confirm what the job includes.</p>
+<p>See how <a href="/mobile-tyre-fitting">mobile tyre fitting</a> works, check our <a href="/mobile-car-tyre-fitting-bristol">mobile car tyre fitting in Bristol</a> service or find your postcode on our <a href="/areas-we-cover">coverage page</a>.</p>
 `;
 
 export default function PerformanceTyresBristolPage() {
@@ -160,8 +153,11 @@ export default function PerformanceTyresBristolPage() {
           </article>
           <div className="mt-8 rounded-2xl bg-zinc-900 p-8 text-center text-zinc-50 sm:p-10">
             <h2 className="text-2xl font-bold">Book performance tyre fitting in Bristol</h2>
-            <p className="mx-auto mt-3 max-w-xl text-zinc-300" dangerouslySetInnerHTML={{ __html: "If your performance tyres are worn, damaged or due for replacement, Rapid Mobile Tyres can come to you. We are based at Ryeleaze, Shirehampton, Bristol BS11 9FN, and work across Bristol and the surrounding South West." }} />
-            <p className="mx-auto mt-3 max-w-xl text-zinc-300" dangerouslySetInnerHTML={{ __html: "Call <strong><a class=\"underline\" href=\"tel:+447494247246\">07494 247246</a></strong>, email <a class=\"underline\" href=\"mailto:info@rapid-tyres.com\">info@rapid-tyres.com</a> or use our <a class=\"underline\" href=\"https://rapid-tyres.com/contact\">contact page</a>. For more tyre advice, visit the <a class=\"underline\" href=\"https://rapid-tyres.com/blog\">Rapid Mobile Tyres blog</a>." }} />
+            <p className="mx-auto mt-3 max-w-xl text-zinc-300">
+              Have your tyre details to hand and call <a className="underline" href="tel:+447494247246">07494 247246</a>,
+              email <a className="underline" href="mailto:info@rapid-tyres.com">info@rapid-tyres.com</a> or use the{" "}
+              <a className="underline" href="/contact">contact page</a> to check fitting options.
+            </p>
             <a href="tel:+447494247246" className="mt-6 inline-flex h-12 items-center justify-center rounded-full bg-orange-600 px-7 text-sm font-semibold text-white hover:bg-orange-500">Call 07494 247246</a>
           </div>
           <p className="mt-8 text-center"><a href="/blog" className="text-sm font-semibold text-orange-600 hover:underline">← Back to all articles</a></p>
