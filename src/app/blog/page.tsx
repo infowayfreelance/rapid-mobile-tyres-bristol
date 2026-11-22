@@ -17,6 +17,11 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = [
     {
+      path: "tyre-pressure-warning-light-bristol",
+      title: "Tyre Pressure Warning Light On? What It Means and What to Do (Bristol Drivers' Guide)",
+      image: "/tyre-pressure-warning-light-bristol-featured.webp",
+    },
+    {
       path: "performance-tyres-bristol",
       title: "Performance Tyres in Bristol: What They Are and When They Are Worth It",
       image: "/performance-tyres-bristol-featured.webp",
