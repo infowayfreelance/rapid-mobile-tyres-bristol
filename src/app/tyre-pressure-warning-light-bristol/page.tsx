@@ -21,13 +21,34 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { question: "What does the tyre pressure warning light look like?", answer: "It is usually an amber or yellow symbol shaped like the cross-section of a tyre, a horseshoe shape, with an exclamation mark in the middle. Some cars also show which tyre is low." },
-  { question: "Can I drive with the tyre pressure light on?", answer: "Only as far as you need to reach a safe place to check the tyres. The RAC says it is not illegal, but it does not recommend driving far with the light on because you may have a puncture or a tyre fault. Do not drive on a flat or visibly damaged tyre." },
-  { question: "Why is my tyre pressure light on when the tyres look fine?", answer: "A tyre can lose a lot of pressure before it looks flat, so always check with a gauge. If the pressures are correct, the system may need resetting, or there may be a sensor fault, especially if the light flashed when you started the car." },
-  { question: "Why does the tyre pressure light come on when it is cold?", answer: "Cold air lowers tyre pressures. If your tyres were already slightly low, a frosty morning can push them below the warning level. Check and correct the pressures when the tyres are cold." },
-  { question: "How do I reset the tyre pressure warning light?", answer: "Inflate all tyres to the correct pressures first, then follow your handbook. Many cars use a reset button or a menu option, and some reset themselves after a short drive." },
-  { question: "Will the tyre pressure light fail my MOT?", answer: "It can. For passenger cars first used from 1 January 2012, the MOT checks the tyre pressure monitoring system, and a warning that shows a malfunction can lead to a fail." },
-  { question: "Can you come to me if my tyre pressure light is on in Bristol?", answer: "Yes. If a tyre is flat, damaged or keeps losing air, Rapid Mobile Tyres can come to your home, workplace or roadside location in Bristol and the surrounding area, 24 hours a day, 7 days a week." },
+  {
+    question: "Which symbol is the tyre pressure warning?",
+    answer: "Look for an amber or yellow tyre-shaped symbol, usually open at the top with an exclamation mark in the middle. Some dashboards also identify the wheel. Check the handbook if you are unsure.",
+  },
+  {
+    question: "Should I carry on driving when the warning appears?",
+    answer: "Get to a safe place to stop, then check the tyres and their pressures. Leave the car parked if a tyre is flat, visibly damaged or unable to hold the recommended pressure.",
+  },
+  {
+    question: "Why does the light stay on when the tyres look normal?",
+    answer: "A tyre can look normal while it is low. Check every tyre with a gauge. If the readings are correct and stable, follow the handbook’s reset procedure and arrange a system check if the warning persists.",
+  },
+  {
+    question: "Why do I only see the warning on cold mornings?",
+    answer: "Pressure falls as the tyre cools. A tyre close to the warning threshold may trigger the light when cold. Check and adjust the cold pressures, then watch for any wheel that keeps losing air.",
+  },
+  {
+    question: "When should I reset the tyre pressure monitor?",
+    answer: "Reset it only after you have checked the tyres and corrected their pressures. Use the procedure in your handbook. Some cars recalibrate while driving and others require a button or menu step.",
+  },
+  {
+    question: "Can a TPMS fault cause an MOT failure?",
+    answer: "Yes. For passenger cars in scope first used on or after 1 January 2012, a malfunctioning or obviously inoperative TPMS can be marked as a major defect. Low pressure alone is distinct from a system malfunction.",
+  },
+  {
+    question: "Can Rapid Mobile Tyres help if one wheel keeps losing air?",
+    answer: "Yes. We can inspect a tyre at a suitable home, workplace or roadside location in Bristol and check whether it can be repaired or needs a new replacement. Tell us where you are and which wheel is losing air.",
+  },
 ];
 
 const articleSchema = {
@@ -37,7 +58,7 @@ const articleSchema = {
   "description": "What the tyre pressure (TPMS) warning light means, solid vs flashing, whether it is safe to drive, how to check and reset it, and when to call a Bristol fitter.",
   "image": "https://rapid-tyres.com/tyre-pressure-warning-light-bristol-featured.webp",
   "datePublished": "2026-11-22",
-  "dateModified": "2026-11-22",
+  "dateModified": "2026-11-23",
   "author": {
     "@type": "Organization",
     "name": "Rapid Mobile Tyres",
@@ -83,88 +104,74 @@ const breadcrumbSchema = {
 };
 
 const articleHtml = `
-<p>The amber symbol that looks like a horseshoe with an exclamation mark in the middle is your car's tyre pressure warning light. It often pops up on the first cold morning of winter, just as you pull out of the drive or join the A4 or the M32. It might just mean a tyre needs air, or it might be the first sign of a puncture.</p>
-<p>This guide explains what the light means, the difference between a solid and a flashing light, whether you can keep driving, how to check and reset it, and when it is time to call a mobile tyre fitter in Bristol.</p>
-<h2>Short answer: what to do when the tyre pressure light comes on</h2>
+<p>A tyre pressure warning light can appear as you set off on a cold morning in Bristol, or halfway through a journey when everything feels normal. Either way, find somewhere safe to stop and check the tyres before you decide whether to carry on. A tyre can be short of air by the time you see a warning and still look round from the kerb.</p>
+
+<h2>The first few minutes after the light comes on</h2>
 <ol>
-<li><strong>Slow down and drive smoothly.</strong> Avoid hard braking and sharp steering.</li>
-<li><strong>Pull over somewhere safe</strong> as soon as you reasonably can, such as a car park, a fuel station or a quiet side road. Never stop on a motorway hard shoulder just to look at the tyres unless you have to.</li>
-<li><strong>Look at all four tyres.</strong> If one is visibly flat, bulging or damaged, do not drive on it.</li>
-<li><strong>Check the pressures with a gauge</strong> and inflate to the figures in your handbook or on the sticker inside the driver's door or fuel filler flap.</li>
-<li><strong>Reset the system if your car needs it</strong>, then drive normally and see if the light goes out.</li>
-<li><strong>If the light stays on, comes back or flashes</strong>, have the tyres and system checked.</li>
+<li>Ease off the accelerator, steer smoothly and avoid sudden braking where possible. If you are on a fast road, concentrate on getting to a safe stopping place.</li>
+<li>Once parked safely, look at all four tyres. A flat tyre, bulge, visible cut or exposed cords means you should leave the car parked and arrange help.</li>
+<li>If there is no visible damage and you can safely reach each wheel, use a gauge. Compare each reading with the figures the vehicle maker gives for that axle and load.</li>
+<li>Correct the pressures before attempting any reset. If a tyre loses air again or the light keeps flashing, get the cause checked.</li>
 </ol>
-<p>If a tyre is flat or damaged, call <strong><a href="tel:+447494247246">07494 247246</a></strong> and we can come to you rather than you driving on it.</p>
-<h2>What is the tyre pressure warning light?</h2>
-<p>The light comes from your car's <strong>tyre pressure monitoring system (TPMS)</strong>. Pirelli explains that TPMS has been required on new cars in the UK since November 2014, to warn drivers when tyre pressures fall below a level set by the car maker. Many earlier cars have it too.</p>
-<p>The RAC says the warning is typically triggered only when one or more tyres are well below their recommended pressure. That is a big drop, so by the time the light comes on, the tyre is already well below where it should be.</p>
-<p>The symbol is usually amber or yellow and shows the cross-section of a tyre with an exclamation mark. Some cars also show which tyre is low, or display the pressure of each tyre on the dashboard screen.</p>
-<h3>Direct and indirect TPMS</h3>
+<p>On a motorway, do not stop in a live lane to look at a tyre. Follow the <a href="https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287">Highway Code breakdown guidance</a> if you cannot continue safely. A place where you can stop is not always a place where a fitter can safely work.</p>
+
+<h2>What the symbol is telling you</h2>
+<p>The warning generally looks like a yellow or amber horseshoe with an exclamation mark. It comes from the tyre pressure monitoring system, or TPMS. Some dashboards show one warning for the whole car. Others name the affected wheel or show a pressure reading. The owner's handbook explains how your particular dashboard uses the light.</p>
+<h3>Direct and indirect monitoring</h3>
 <figure><img src="/tpms-sensor-valve-wheel.webp" alt="TPMS sensor fitted to the back of a tyre valve inside an alloy wheel" width="1200" height="900" loading="lazy" /></figure>
-<p>There are two main types, and knowing which one your car has helps you understand the warning:</p>
-<ul>
-<li><strong>Direct TPMS</strong> uses a small battery-powered sensor in each wheel, usually attached to the back of the valve. It measures the actual pressure and sends it to the car.</li>
-<li><strong>Indirect TPMS</strong> has no sensors in the wheels. It uses the ABS wheel-speed sensors to spot a tyre that is rotating at a different speed, which happens when a tyre loses pressure.</li>
-</ul>
-<p>Your handbook will tell you which type you have. As a rough guide, if your dashboard can show the pressure of each individual tyre, it is likely to be a direct system.</p>
-<h2>Solid, flashing or coming and going: what each light usually means</h2>
-<div class="overflow-x-auto"><table><thead><tr><th>What you see</th><th>What it usually means</th><th>What to do</th></tr></thead><tbody><tr><td>Light comes on and stays on</td><td>One or more tyres is low on pressure, possibly from a puncture</td><td>Stop safely, check all four tyres and pressures</td></tr><tr><td>Light flashes for a while when you start the car, then stays on</td><td>Usually a fault with the TPMS itself, such as a sensor</td><td>Check pressures anyway, then have the system checked</td></tr><tr><td>Light comes on during cold mornings and goes off later</td><td>Cold air lowering pressures that were already borderline</td><td>Check and top up the pressures when tyres are cold</td></tr><tr><td>Light comes back soon after you inflate the tyres</td><td>A slow puncture, a leaking valve or damage to the tyre or wheel</td><td>Have the tyre inspected before driving far</td></tr></tbody></table></div>
-<p>The RAC notes that a flashing light usually points to a problem with the system rather than the pressure itself, while a constant light means there may be a serious loss of pressure or a puncture. Whatever the pattern, the safest first step is always the same: check the actual pressures with a gauge.</p>
-<h2>Is it safe to drive with the tyre pressure light on?</h2>
-<p>Not for long, and not until you know why it is on. The RAC says it is not illegal to drive with the light showing, but it does not recommend travelling far with it lit, because you may have a puncture or a fault with the wheel or tyre. If the cause is a dangerous tyre, the car is not roadworthy.</p>
-<p>An under-inflated tyre:</p>
-<ul>
-<li>takes longer to stop the car, especially in the wet;</li>
-<li>makes steering feel vague and less stable;</li>
-<li>flexes more and builds up heat, which can damage the tyre's internal structure where you cannot see it;</li>
-<li>wears faster at the edges.</li>
-</ul>
-<p>Pirelli advises assuming the tyre is under-inflated whenever the light is on, and checking it as soon as possible. If you must drive a short distance to a safe place to check it, keep your speed down and drive gently.</p>
-<p><strong>Do not drive on a tyre that is flat, has a visible bulge, a cut in the sidewall or exposed cords.</strong> Driving on a flat can ruin a tyre that might otherwise have been repairable, and can damage the wheel.</p>
-<h2>How to check your tyre pressures properly</h2>
+<p>A direct system uses pressure sensors in the wheels. The sensor is often attached to the valve inside the rim, where you cannot see it during a routine pressure check. It sends a reading to the car. A fault with a sensor or its battery can stop the dashboard getting a reliable reading.</p>
+<p>An indirect system uses the car's wheel-speed information to look for changes consistent with a loss of pressure. It does not have a pressure sensor inside each wheel. After inflating or replacing a tyre, follow the handbook's calibration procedure so the car starts with the correct baseline. Both systems leave you with the same first check: measure the pressure at the valve.</p>
+
+<h2>Steady, flashing or intermittent warnings</h2>
+<div class="overflow-x-auto">
+<table>
+<thead><tr><th scope="col">What you see</th><th scope="col">What to check</th><th scope="col">What to do</th></tr></thead>
+<tbody>
+<tr><td>Steady light</td><td>One or more tyres may be underinflated.</td><td>Stop somewhere safe, inspect the tyres and check each pressure with a gauge.</td></tr>
+<tr><td>Flashes after start-up, then stays on</td><td>This can indicate a fault with the monitoring system. Check the handbook for your car.</td><td>Check the actual pressures and arrange a system check if the warning persists.</td></tr>
+<tr><td>Comes on in the cold, then goes out</td><td>One or more tyres may be close to the warning threshold when cold.</td><td>Take fresh readings before your next journey, while the tyres are cold.</td></tr>
+<tr><td>Returns shortly after a top-up</td><td>Look for a tyre that keeps losing air, including a possible puncture or valve leak.</td><td>Arrange an inspection before depending on the tyre again.</td></tr>
+</tbody>
+</table>
+</div>
+<p>A light that goes out partway through a drive can still be telling you something about the cold pressures. Likewise, a flashing warning does not rule out a puncture. Use the pattern to explain what happened when you call a fitter, and use your gauge to decide whether each tyre is holding the right pressure. See the <a href="https://www.rac.co.uk/drive/advice/car-maintenance/tyre-pressure-monitoring-system-TPMS-guide/">RAC's guide to TPMS warnings</a> for more on the common display patterns.</p>
+
+<h2>Can you keep driving?</h2>
+<p>If the car starts pulling to one side, the steering feels different or you hear a tyre flapping, slow down smoothly and stop as soon as you can do so safely. Do the same if the warning comes on while you are driving and you have no way of knowing the pressure. Do not drive on a flat or visibly damaged tyre. Continuing can damage the tyre internally and can also damage the wheel.</p>
+<p>Once you have checked the pressures, consider whether they are holding and whether the tyre shows any damage. If you cannot get a tyre up to the recommended figure, or it drops again straight away, arrange help where you are parked. If the tyres are sound but you still have a persistent system warning, get the TPMS checked. Until then, use a gauge rather than relying on the dashboard to warn you of a new loss.</p>
+
+<h2>How to check the pressures while the tyres are cold</h2>
 <figure><img src="/tyre-pressure-gauge-check.webp" alt="Checking a car tyre pressure with a digital gauge on a driveway" width="1200" height="900" loading="lazy" /></figure>
-<h3>1. Find the right figures</h3>
-<p>The correct pressures are in your handbook and usually on a sticker inside the driver's door frame or the fuel filler flap. Front, rear and full-load figures can differ, so use the ones for your tyre size and load.</p>
-<h3>2. Check when the tyres are cold</h3>
-<p>Ford advises checking pressures when the tyres are cool, ideally after the car has been parked for at least three hours or driven less than two miles. Warm tyres read higher, which can hide a low tyre.</p>
-<h3>3. Use a reliable gauge</h3>
-<p>A digital or dial gauge from a motor factor is fine, or use the air machine at a fuel station. Remove the valve cap, press the gauge firmly onto the valve and read the pressure. Add air if it is low; if you overfill, release a little and check again. Refit the valve caps to keep dirt and moisture out.</p>
-<h3>4. Check all four tyres, not just the one that looks low</h3>
-<p>Indirect systems in particular cannot always tell you which tyre is low, and two tyres can lose pressure at the same rate. If your car has a spare with a sensor, Tyres.co.uk points out that a low spare can trigger the warning too.</p>
-<h3>5. Look at the tyres while you are there</h3>
-<p>While you are crouched by each wheel, look for nails or screws in the tread, cuts, cracks or bulges in the sidewalls, and uneven wear. Our guide on <a href="https://rapid-tyres.com/how-to-read-your-tyre-sidewall-markings">how to read your tyre sidewall markings</a> explains what the codes on the side of the tyre mean.</p>
-<h2>How to reset the tyre pressure warning light</h2>
-<p>Once the pressures are correct, some cars clear the warning on their own after a short drive. Others need you to reset the system. The method depends on the make and model, so check your handbook, but common approaches are:</p>
-<ul>
-<li><strong>A reset button</strong>, often low on the dashboard or in the glovebox, held for a few seconds;</li>
-<li><strong>A menu option</strong> in the car's settings or infotainment screen, usually called something like "tyre pressure" or "TPMS calibration";</li>
-<li><strong>A short drive</strong>: Tyres.co.uk says some systems reset after around 10 to 15 minutes of driving at 30 mph or more once the pressures are right.</li>
-</ul>
-<p>Indirect systems in particular must be reset after you adjust the pressures, because they learn the "correct" rolling speed of each tyre from that moment. If you reset an indirect system while a tyre is still low, it can learn the wrong baseline and fail to warn you later.</p>
-<h2>Why the light keeps coming back</h2>
-<p>If the warning returns hours or days after you top the tyres up, something is letting air out or the system has a fault. The common causes are:</p>
+<ol>
+<li><strong>Find the vehicle's figures.</strong> Look in the handbook or on the label inside the driver's door or fuel flap. The front and rear figures may differ. Check the figures for your tyre size and the load you plan to carry.</li>
+<li><strong>Check before a journey.</strong> Tyre pressures rise as the tyres warm during driving. A reading taken after a long journey can hide a low cold pressure. If you have already been driving, recheck the tyres after they cool and follow the manufacturer's advice.</li>
+<li><strong>Use the same gauge for each wheel.</strong> Unscrew the valve cap and seat the gauge squarely on the valve. A persistent hiss can mean the gauge is not sealing. Read the pressure in the correct units, add or release air as needed, recheck and refit the cap.</li>
+<li><strong>Write the readings down.</strong> Check every road tyre, including the opposite tyre on the same axle. If the handbook says the spare is monitored, check it too. Record which wheel needs air so you can compare it with the next set of readings.</li>
+<li><strong>Check the visible tread and sidewall.</strong> Look for a screw, a cut, a bulge or an area of unusual wear. Leave embedded objects in place for the fitter to assess. If you need to give a fitter the size, use our <a href="/how-to-read-your-tyre-sidewall-markings">guide to tyre sidewall markings</a> to find the full code.</li>
+</ol>
+<p>Use the recommended cold pressures for the vehicle, rather than the maximum pressure marked on the tyre. If your gauge shows bar and the sticker shows PSI, switch to the same unit before comparing them. Follow the car maker's guidance if you need to adjust pressures away from home. Ford's <a href="https://www.ford.co.uk/support/how-tos/tyres-and-wheels/tyre-replacement-and-maintenance/how-to-check-your-tyre-pressure">pressure-check guide</a> shows where to look and how to take a reading.</p>
+
+<h2>How to reset the tyre pressure light</h2>
+<p>Start by confirming the tyres are sound and set to the correct pressures. Then look up the reset procedure for your vehicle. Some cars clear the light after driving normally once pressures are corrected. Others use a dedicated button or a calibration option in the dashboard menu. Follow the conditions in the handbook, including whether the car needs to be stationary when you start the reset.</p>
+<p>If you have an indirect system, calibration tells the car what to expect from the tyres at their current inflation and fitment. Resetting with one tyre still low can give the system the wrong starting point. If a reset fails or the light returns, note the display and recheck the pressures. Repeated resets can delay finding a leak or a fault.</p>
+
+<h2>Why the warning comes back after you add air</h2>
 <h3>A slow puncture</h3>
-<p>A nail or screw in the tread can let air out slowly over days. Many punctures in the central part of the tread can be repaired, depending on the size and position of the damage. Our <a href="https://rapid-tyres.com/flat-tyre-puncture-repair">puncture repair guide</a> explains what a fitter checks first.</p>
-<h3>A leaking valve or wheel rim</h3>
-<p>Valves age and can leak, and corrosion on an alloy wheel can stop the tyre sealing properly against the rim.</p>
-<h3>Cold weather</h3>
-<p>As the air gets colder, tyre pressures drop. Pirelli notes that if the light is going on and off, temperature changes may be pushing pressures across the limit. In a Bristol winter that can mean the light appears on a frosty morning and disappears by the afternoon. The fix is to check and correct the pressures when the tyres are cold, not to ignore the light. For more on cold-weather driving, see our guide to <a href="https://rapid-tyres.com/winter-tyres-bristol">winter tyres in Bristol</a>.</p>
-<h3>A faulty or damaged sensor</h3>
-<p>On a direct system, each sensor has its own battery. Tyres.co.uk says these batteries typically last 5 to 10 years, and sensors can also be damaged when a tyre is changed. A sensor fault often shows as a light that flashes when you start the car and then stays on. Diagnosing and reprogramming sensors needs TPMS diagnostic equipment, so tell us about any flashing light when you call and we will advise on the next step.</p>
-<h2>Does the tyre pressure light affect your MOT?</h2>
-<p>It can. The official MOT inspection manual includes the tyre pressure monitoring system for passenger cars first used from 1 January 2012. If the TPMS warning shows a malfunction, or the system is obviously not working, the car can fail. So if the light is on before an MOT, get the cause sorted first.</p>
-<h2>When to call a mobile tyre fitter in Bristol</h2>
+<p>A small object can let air out gradually. You may only spot the problem when you compare readings taken on consecutive cold mornings. A fitter needs to check the location and extent of the damage and inspect the tyre for damage from driving underinflated. Read what happens during a <a href="/flat-tyre-puncture-repair">puncture repair inspection</a>.</p>
+<h3>A leaking valve or rim</h3>
+<p>Air can escape around the valve or where the tyre seals against the wheel. If the same wheel keeps needing a top-up and you cannot see anything in the tread, tell the fitter. Mention any recent kerb strike or pothole impact as well. A leak between the tyre and wheel can be hard to distinguish from a tread puncture by looking from the outside.</p>
+<h3>A drop in temperature</h3>
+<p>A cold Bristol morning can bring a borderline pressure low enough to trigger the light. Later, as the tyre warms, the warning may clear. Correct the cold pressures and compare them again the next morning. If one tyre keeps dropping while the others hold, look into a leak. For seasonal tyre choices, see our guide to <a href="/winter-tyres-bristol">winter tyres in Bristol</a>.</p>
+<h3>A fault with a sensor or the monitoring system</h3>
+<p>If the pressures hold but the light flashes at start-up or appears after a wheel change, check the warning in the handbook. Make a note of any wheel or tyre work done just before the problem started. A workshop with TPMS diagnostic equipment can check whether a sensor is responding or the system needs attention.</p>
+
+<h2>Does a TPMS warning affect the MOT?</h2>
+<p>It can. The <a href="https://www.gov.uk/guidance/mot-inspection-manual-for-private-passenger-and-light-commercial-vehicles/5-axles-wheels-tyres-and-suspension#section-5-2-3">DVSA MOT manual</a> applies the TPMS inspection to M1 vehicles, generally passenger cars, first used on or after 1 January 2012. A system that is malfunctioning or obviously inoperative can be a major defect. The manual distinguishes a malfunction from a warning caused by low pressure, so have the cause checked before the test instead of assuming the warning itself tells you the result.</p>
+
+<h2>When to call a Bristol mobile tyre fitter</h2>
 <figure><img src="/mobile-technician-puncture-check.webp" alt="Mobile technician inspecting a tyre for a puncture beside a car in Bristol" width="1200" height="900" loading="lazy" /></figure>
-<p>Check the pressures yourself first if it is safe to do so. Call a fitter if:</p>
-<ul>
-<li>a tyre is flat or visibly damaged;</li>
-<li>you have found a nail, screw or cut in the tyre;</li>
-<li>the light comes back soon after you inflate the tyres;</li>
-<li>one tyre keeps losing pressure faster than the others;</li>
-<li>you are not comfortable checking or driving on the tyre.</li>
-</ul>
-<p>Rapid Mobile Tyres comes to you at home, at work or at the roadside across Bristol and the surrounding area, 24 hours a day, 7 days a week. Our technician can find the leak, check the valve, inspect the tyre inside and out, and either repair it where it is safe to do so or fit a new tyre. For urgent call-outs, see our <a href="https://rapid-tyres.com/emergency-mobile-tyre-fitting-bristol">emergency mobile tyre fitting in Bristol</a> page, or read more about our <a href="https://rapid-tyres.com/mobile-tyre-fitting">mobile tyre fitting service</a>.</p>
-<p>If you are running on a space-saver spare while you wait for a replacement, read <a href="https://rapid-tyres.com/how-long-can-you-drive-on-a-spare-tyre-uk-safety-rules-explained">how long you can drive on a spare tyre</a>.</p>
+<p>Call if a tyre is visibly flat or damaged, you cannot get it up to pressure, or the same wheel repeatedly loses air. Rapid Mobile Tyres can inspect the tyre at a suitable Bristol location, repair it where appropriate or fit a new replacement. Let us know the full tyre size and where the car is parked. If you are roadside, tell us whether there is room to work safely around the vehicle.</p>
+<p>Tell us which wheel is affected, whether the light is steady or flashing, and what you measured if you have checked the pressure. If you are using a spare, follow its limits and see our guide on <a href="/how-long-can-you-drive-on-a-spare-tyre-uk-safety-rules-explained">driving on a spare tyre</a>. For a tyre that needs attention now, see our <a href="/emergency-mobile-tyre-fitting-bristol">emergency mobile fitting in Bristol</a>. For a booked replacement, read how our <a href="/mobile-tyre-fitting">mobile tyre fitting service</a> works.</p>
 `;
 
 export default function TyrePressureWarningLightBristolPage() {
@@ -192,8 +199,12 @@ export default function TyrePressureWarningLightBristolPage() {
           </article>
           <div className="mt-8 rounded-2xl bg-zinc-900 p-8 text-center text-zinc-50 sm:p-10">
             <h2 className="text-2xl font-bold">Need help with a tyre pressure warning in Bristol?</h2>
-            <p className="mx-auto mt-3 max-w-xl text-zinc-300" dangerouslySetInnerHTML={{ __html: "If your tyre pressure light will not go out, or you have found a puncture or a damaged tyre, Rapid Mobile Tyres can come to you. We are based at Ryeleaze, Shirehampton, Bristol BS11 9FN, and work across Bristol and the surrounding South West." }} />
-            <p className="mx-auto mt-3 max-w-xl text-zinc-300" dangerouslySetInnerHTML={{ __html: "Call <strong><a class=\"underline\" href=\"tel:+447494247246\">07494 247246</a></strong>, email <a class=\"underline\" href=\"mailto:info@rapid-tyres.com\">info@rapid-tyres.com</a> or use our <a class=\"underline\" href=\"https://rapid-tyres.com/contact\">contact page</a>. For more tyre advice, visit the <a class=\"underline\" href=\"https://rapid-tyres.com/blog\">Rapid Mobile Tyres blog</a>." }} />
+            <p className="mx-auto mt-3 max-w-xl text-zinc-300">
+              Share your location, tyre size and what the warning is doing. Call{" "}
+              <a className="underline" href="tel:+447494247246">07494 247246</a>, email{" "}
+              <a className="underline" href="mailto:info@rapid-tyres.com">info@rapid-tyres.com</a> or use our{" "}
+              <a className="underline" href="/contact">contact page</a>.
+            </p>
             <a href="tel:+447494247246" className="mt-6 inline-flex h-12 items-center justify-center rounded-full bg-orange-600 px-7 text-sm font-semibold text-white hover:bg-orange-500">Call 07494 247246</a>
           </div>
           <p className="mt-8 text-center"><a href="/blog" className="text-sm font-semibold text-orange-600 hover:underline">← Back to all articles</a></p>
