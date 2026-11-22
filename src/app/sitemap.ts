@@ -81,6 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     ...[
+      "tyre-pressure-warning-light-bristol",
       "performance-tyres-bristol",
       "electric-car-tyres-bristol",
       "how-much-does-mobile-tyre-fitting-cost-in-bristol-2026-honest-price-guide",
