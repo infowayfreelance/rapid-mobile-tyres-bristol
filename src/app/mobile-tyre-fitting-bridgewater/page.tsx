@@ -6,14 +6,25 @@ import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
 import TyreBrands from "@/components/TyreBrands";
 import Faq from "@/components/Faq";
+import { BUSINESS_ID } from "@/lib/businessSchema";
 import { siteConfig } from "@/lib/data";
 
+const PAGE_URL = "https://rapid-tyres.com/mobile-tyre-fitting-bridgewater";
+const PAGE_TITLE = "Mobile Tyre Fitting Bridgwater | 24/7 Callout | Rapid";
+const PAGE_DESCRIPTION =
+  "24/7 mobile tyre fitting in Bridgwater, Wembdon, North Petherton and Puriton, at home, work or roadside. Usual arrival 45–60 min. Call 07494 247246.";
+const HIGHWAY_CODE_URL =
+  "https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287";
+
 export const metadata: Metadata = {
-  title: "Mobile Tyre Fitting Bridgwater | 24/7 Tyre Service",
-  description:
-    "Mobile tyre fitting in Bridgwater for flat or damaged tyres. Get convenient tyre replacement at your location.",
-  alternates: {
-    canonical: "https://rapid-tyres.com/mobile-tyre-fitting-bridgewater",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    type: "website",
+    images: [{ url: "/rapid-mobile-tyres-open-graph.webp" }],
   },
 };
 
@@ -132,6 +143,26 @@ const faqs = [
     answer:
       "Yes. Our wider mobile tyre service covers Bridgwater and surrounding parts of Somerset, subject to technician availability. Call with your postcode to confirm coverage for your exact location.",
   },
+  {
+    question: "How much does mobile tyre fitting cost in Bridgwater?",
+    answer:
+      "The price depends on your tyre size, load and speed rating, the brand you choose and how many tyres you need. Call 07494 247246 with the size from the sidewall or your registration and we'll confirm availability and the price for your vehicle before anyone sets off.",
+  },
+  {
+    question: "Do you fit budget tyres in Bridgwater?",
+    answer:
+      "Yes. As well as premium brands, we carry quality budget brands such as Nexen, Falken, Avon, Kumho and Nankang, subject to stock in your size. Tell us your tyre size and budget when you call and we'll check what's available.",
+  },
+  {
+    question: "Can you repair a puncture instead of replacing the tyre?",
+    answer:
+      "Often, yes. If the damage is a small object in the central part of the tread and the tyre hasn't been driven on while flat, a repair to British Standard BS AU 159 may be possible. Damage to the sidewall or shoulder, or a tyre that has been run flat, means it needs replacing.",
+  },
+  {
+    question: "Which Bridgwater postcodes do you cover?",
+    answer:
+      "Bridgwater addresses use the TA5, TA6 and TA7 postcodes, which include Wembdon, North Petherton, Cannington and Puriton. Call with your postcode or share your location so we can confirm coverage and arrival time for your exact spot.",
+  },
 ];
 
 const areasServed = [
@@ -156,9 +187,109 @@ const locationPinSvg = (
   </svg>
 );
 
+const safetyLinkText = "motorway safety guidance";
+const faqItems = faqs.map((item) => {
+  if (!item.answer.includes(safetyLinkText)) return item;
+  const [before, after] = item.answer.split(safetyLinkText);
+  return {
+    ...item,
+    answerContent: (
+      <>
+        {before}
+        <a href={HIGHWAY_CODE_URL} target="_blank" rel="noopener" className="text-orange-500 hover:underline">
+          {safetyLinkText}
+        </a>
+        {after}
+      </>
+    ),
+  };
+});
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": `${PAGE_URL}#faq`,
+      mainEntity: faqs.map(({ question, answer }) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rapid-tyres.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Areas We Cover",
+          "item": "https://rapid-tyres.com/areas-we-cover"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Mobile Tyre Fitting Bridgwater",
+          "item": "https://rapid-tyres.com/mobile-tyre-fitting-bridgewater"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rapid-tyres.com/mobile-tyre-fitting-bridgewater#service",
+      "name": "Mobile Tyre Fitting in Bridgwater",
+      "serviceType": "Mobile tyre fitting",
+      "url": "https://rapid-tyres.com/mobile-tyre-fitting-bridgewater",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Bridgwater"
+        },
+        {
+          "@type": "Place",
+          "name": "Wembdon"
+        },
+        {
+          "@type": "Place",
+          "name": "North Petherton"
+        },
+        {
+          "@type": "Place",
+          "name": "Puriton"
+        },
+        {
+          "@type": "Place",
+          "name": "Dunball"
+        },
+        {
+          "@type": "Place",
+          "name": "Cannington"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Somerset"
+        }
+      ],
+      "provider": {
+        "@id": BUSINESS_ID
+      }
+    },
+  ],
+};
+
 export default function BridgwaterPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
+      />
       <Header />
       <main>
 
@@ -300,7 +431,10 @@ export default function BridgwaterPage() {
                         driving. Our roadside tyre assistance in Bridgwater is available at suitable
                         locations where there is enough safe and permitted access for the technician
                         to work. If your vehicle is stopped somewhere hazardous or on a high-speed
-                        road, follow the relevant roadside safety guidance before arranging
+                        road, follow the relevant{" "}
+                        <a href={HIGHWAY_CODE_URL} target="_blank" rel="noopener" className="text-orange-500 hover:underline">
+                          roadside safety guidance
+                        </a>{" "}before arranging
                         assistance.
                       </p>
                     </div>
@@ -431,7 +565,12 @@ export default function BridgwaterPage() {
                     <h3 className="mb-2 text-lg font-bold text-zinc-900 group-hover:text-orange-500 transition-colors">
                       {v.title}
                     </h3>
-                    <p className="text-sm text-zinc-600">{v.description}</p>
+                    <p className="text-sm text-zinc-600">
+                      {v.description}
+                      {v.href === "/mobile-van-tyre-fitting-bristol" && (
+                        <> See our <span className="text-orange-500 underline">mobile van tyre fitting</span> page for tradespeople and small fleets.</>
+                      )}
+                    </p>
                   </div>
                 </Link>
               ))}
@@ -517,6 +656,12 @@ export default function BridgwaterPage() {
                 If you are stopped near the motorway or another busy route, provide your direction
                 of travel, nearest junction or accurate shared location when requesting assistance.
               </p>
+              <p className="mt-4 text-zinc-300">
+                Junction 22 on the M5 serves Burnham-on-Sea and Highbridge, and junction 24 at
+                Huntworth serves the south side of Bridgwater and North Petherton. On the motorway,
+                tell us which carriageway you are on and the number on the nearest marker post or
+                driver location sign, as well as the nearest junction.
+              </p>
             </div>
           </div>
         </section>
@@ -575,7 +720,37 @@ export default function BridgwaterPage() {
           </div>
         </section>
 
-        <TyreBrands />
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl space-y-4">
+              <h2 className="text-3xl font-extrabold text-zinc-900">
+                Puncture Repair or a New Tyre?
+              </h2>
+              <p className="text-zinc-600">
+                Not every flat tyre needs replacing. A puncture can often be repaired if the damage is a small object in the central part of the tread and the tyre hasn&apos;t been driven on while flat. In the UK, tyre repairs follow British Standard BS AU 159, which limits repairs to the central area of the tread. Damage to the sidewall or shoulder, a large cut, or a tyre that has been run flat means it has to be replaced.
+              </p>
+              <p className="text-zinc-600">
+                Send us a photo or tell us where the nail or cut is, and we&apos;ll tell you whether a <Link href="/flat-tyre-puncture-repair" className="text-orange-500 hover:underline">puncture repair</Link> is likely or whether you need a replacement tyre fitted at your Bridgwater location.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl space-y-4">
+              <h2 className="text-3xl font-extrabold text-zinc-900">
+                Budget and Cheap Tyres in Bridgwater
+              </h2>
+              <p className="text-zinc-600">
+                If you&apos;re looking for cheap tyres in Bridgwater, you don&apos;t have to drive around tyre shops comparing stock. Alongside premium brands, we carry quality budget brands such as Nexen, Falken, Avon, Kumho and Nankang, and we fit them at your home, workplace or roadside location in Bridgwater, Wembdon, North Petherton or Puriton.
+              </p>
+              <p className="text-zinc-600">
+                The price depends mainly on the tyre itself: the size, load index and speed rating, the brand and how many tyres you need. Call <a href="tel:+447494247246" className="text-orange-500 hover:underline">07494 247246</a> with the full size from the sidewall (for example 205/55 R16) or your registration, tell us your budget, and we&apos;ll check what we can fit for your car or van. A cheaper tyre still has to meet your vehicle&apos;s load and speed requirements, so we won&apos;t fit one that doesn&apos;t. For more on saving safely, read our guides to <Link href="/understanding-the-costs-of-mobile-tyre-fitting-services" className="text-orange-500 hover:underline">the costs of mobile tyre fitting</Link> and <Link href="/cheapest-tyres-in-bristol-2" className="text-orange-500 hover:underline">finding the cheapest tyres without cutting corners</Link>.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Why mobile / benefits */}
         <section className="bg-zinc-50 py-20">
@@ -659,7 +834,9 @@ export default function BridgwaterPage() {
               <p className="max-w-2xl text-zinc-600">
                 Bridgwater is closely connected with surrounding communities including Dunball,
                 Puriton and the wider Sedgemoor area, with Junction 23 of the M5 providing an
-                important connection north and south. Our mobile tyre service can also assist
+                important connection north and south. Bridgwater addresses use the TA5, TA6 and TA7
+                postcodes, covering the town itself plus places such as Wembdon, North Petherton,
+                Cannington and Puriton. Our mobile tyre service can also assist
                 drivers in surrounding locations — including{" "}
                 <Link href="/mobile-tyre-fitting-weston-super-mare" className="text-orange-500 hover:underline">
                   Weston-super-Mare
@@ -808,7 +985,7 @@ export default function BridgwaterPage() {
 
         <TyreBrands />
 
-        <Faq items={faqs} />
+        <Faq items={faqItems} renderAllAnswers />
 
         {/* Final CTA */}
         <section className="relative bg-zinc-900 py-20 text-white overflow-hidden">

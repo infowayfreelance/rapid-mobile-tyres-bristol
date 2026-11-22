@@ -1,9 +1,10 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { useState } from "react";
 import { faqs as defaultFaqs } from "@/lib/data";
 
-type FaqItem = { question: string; answer: string };
+type FaqItem = { question: string; answer: string; answerContent?: ReactNode };
 
 export default function Faq({
   items = defaultFaqs,
@@ -62,7 +63,7 @@ export default function Faq({
                 </button>
                 {(isOpen || renderAllAnswers) && (
                   <p hidden={!isOpen} className="pb-5 text-sm leading-6 text-zinc-600">
-                    {faq.answer}
+                    {faq.answerContent ?? faq.answer}
                   </p>
                 )}
               </div>
