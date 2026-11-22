@@ -89,6 +89,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ...publishedBlogSlugs,
     ].map((slug) => ({
       url: `${BASE_URL}/${slug}`,
+      ...(slug === "performance-tyres-bristol" ? { lastModified: "2026-11-23" } : {}),
       changeFrequency: "monthly" as const,
       priority: 0.6,
     })),
