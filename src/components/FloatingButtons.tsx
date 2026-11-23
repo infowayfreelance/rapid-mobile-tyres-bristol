@@ -1,8 +1,28 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { siteConfig } from "@/lib/data";
 
 export default function FloatingButtons() {
+  const pathname = usePathname();
+  const [inlineContactsVisible, setInlineContactsVisible] = useState(false);
+
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    const inlineContacts = document.getElementById("home-contact-actions");
+    if (!inlineContacts || !("IntersectionObserver" in window)) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      setInlineContactsVisible(entry.isIntersecting);
+    });
+    observer.observe(inlineContacts);
+    return () => observer.disconnect();
+  }, [pathname]);
+
   return (
-    <div className="fixed bottom-6 right-6 z-[200] flex flex-col items-center gap-3">
+    <div className={`fixed bottom-6 right-6 z-[200] flex flex-col items-center gap-3 ${pathname === "/" && inlineContactsVisible ? "max-sm:not-focus-within:hidden" : ""}`}>
       {/* WhatsApp */}
       <a
         href={siteConfig.whatsappHref}
