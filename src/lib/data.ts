@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Rapid Mobile Tyres Bristol",
-  whatsappHref: "/contact",
+  whatsappHref: "https://wa.me/447494247246",
   email: "info@rapid-tyres.com",
   address: "Ryeleaze, Shirehampton, Bristol BS11 9FN, United Kingdom",
   facebook: "https://www.facebook.com/rapidmobiletyresltd",
