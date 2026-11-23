@@ -34,12 +34,12 @@ export default function Hero() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Read 324 Google reviews for Rapid Mobile Tyres Bristol"
-          className="group inline-flex flex-col gap-0.5 justify-self-start rounded-xl border border-zinc-200 bg-white px-2.5 py-1.5 shadow-sm transition hover:border-orange-300 hover:shadow-md sm:gap-2 sm:px-4 sm:py-3 lg:col-start-1 lg:row-start-2 lg:mb-5"
+          className="group flex flex-col items-center gap-1 justify-self-stretch rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-center shadow-sm transition hover:border-orange-300 hover:shadow-md sm:inline-flex sm:items-start sm:gap-2 sm:justify-self-start sm:py-3 sm:text-left lg:col-start-1 lg:row-start-2 lg:mb-5"
         >
-          <span className="text-[11px]/4 font-extrabold uppercase tracking-[0.12em] text-zinc-900 sm:text-sm">
+          <span className="text-xs/4 font-extrabold uppercase tracking-[0.12em] text-zinc-900 sm:text-sm">
             {siteConfig.name}
           </span>
-          <span className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs/4 sm:text-sm">
+          <span className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm sm:justify-start">
             <span className="font-bold" aria-label="Google">
               <span className="text-blue-500">G</span>
               <span className="text-red-500">o</span>
@@ -71,7 +71,7 @@ export default function Hero() {
               width={1206}
               height={899}
               sizes="(max-width: 543px) calc(100vw - 32px), 512px"
-              className="h-[clamp(8.25rem,22svh,11rem)] w-full object-cover object-[center_42%] sm:h-auto"
+              className="h-auto w-full"
               preload
             />
             <p id="home-hero-image-description" className="sr-only">
