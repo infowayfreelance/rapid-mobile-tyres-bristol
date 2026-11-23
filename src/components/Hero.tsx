@@ -86,8 +86,9 @@ export default function Hero() {
 
         <div className="lg:col-start-1 lg:row-start-3">
           <h1 className="text-2xl/7 font-bold tracking-tight text-balance min-[400px]:text-[1.75rem]/8 sm:text-5xl">
-            24/7 Mobile Tyre Fitting &amp; Replacement In{" "}
-            <span className="text-orange-600">Bristol</span>
+            24/7 Emergency Mobile Tyre Fitting{" "}
+            <span className="text-orange-600">Bristol</span>{" "}
+            &amp; Surroundings
           </h1>
 
           <p className="mt-2 max-w-xl text-sm/5 text-zinc-600 sm:mt-6 sm:text-lg/8">
