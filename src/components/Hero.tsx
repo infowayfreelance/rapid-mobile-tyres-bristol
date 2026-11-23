@@ -96,7 +96,7 @@ export default function Hero() {
             and the surrounding areas.
           </p>
 
-          <div id="home-contact-actions" className="mt-4 grid grid-cols-2 gap-3 sm:hidden">
+          <div id="home-contact-actions" className="mt-4 grid grid-cols-1 gap-3 sm:hidden">
             <a
               href="tel:+447494247246"
               className="flex min-h-14 items-center justify-center rounded-xl bg-orange-700 px-3 py-2 text-center text-base font-bold text-white transition-colors hover:bg-orange-800"
