@@ -28,19 +28,19 @@ export default function Hero() {
         className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-red-600/20 blur-3xl"
       />
 
-      <div className="relative mx-auto grid max-w-7xl gap-8 px-6 pt-6 pb-20 sm:gap-12 sm:px-10 lg:grid-cols-2 lg:items-center lg:py-28">
+      <div className="relative mx-auto grid max-w-7xl gap-3 px-4 pt-3 pb-4 sm:gap-12 sm:px-10 sm:pt-6 sm:pb-20 lg:grid-cols-2 lg:items-center lg:py-28">
         <div>
           <a
             href={googleReviewsUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Read 324 Google reviews for Rapid Mobile Tyres Bristol"
-            className="group mb-5 inline-flex flex-col gap-2 rounded-xl border border-zinc-200 bg-white px-4 py-3 shadow-sm transition hover:border-orange-300 hover:shadow-md"
+            className="group mb-2 inline-flex flex-col gap-0.5 rounded-xl border border-zinc-200 bg-white px-2.5 py-1.5 shadow-sm transition hover:border-orange-300 hover:shadow-md sm:mb-5 sm:gap-2 sm:px-4 sm:py-3"
           >
-            <span className="text-sm font-extrabold uppercase tracking-[0.12em] text-zinc-900">
+            <span className="text-[11px]/4 font-extrabold uppercase tracking-[0.12em] text-zinc-900 sm:text-sm">
               {siteConfig.name}
             </span>
-            <span className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
+            <span className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs/4 sm:text-sm">
               <span className="font-bold" aria-label="Google">
                 <span className="text-blue-500">G</span>
                 <span className="text-red-500">o</span>
@@ -62,39 +62,39 @@ export default function Hero() {
             </span>
           </a>
 
-          <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl">
+          <h1 className="text-2xl/7 font-bold tracking-tight text-balance min-[400px]:text-[1.75rem]/8 sm:text-5xl">
             24/7 Mobile Tyre Fitting &amp; Replacement In Bristol
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-600">
+          <p className="mt-2 max-w-xl text-sm/5 text-zinc-600 sm:mt-6 sm:text-lg/8">
             <strong>Mobile tyre fitting and replacement in Bristol</strong> with
             45–60 minute arrival for roadside tyre changes. Fast, reliable
             mobile tyre fitting that comes straight to you, anywhere in Bristol
             and the surrounding areas.
           </p>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-3 grid grid-cols-[minmax(0,3fr)_minmax(0,2fr)] gap-2 max-sm:[@media(max-height:44rem)]:pr-[4.25rem] sm:mt-8 sm:flex sm:gap-4">
             <a
               href="tel:+447494247246"
-              className="flex h-12 items-center justify-center gap-2 rounded-full bg-orange-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-orange-500"
+              className="flex min-h-11 items-center justify-center gap-2 rounded-full bg-orange-600 px-2 py-1.5 text-center text-[13px]/4 font-semibold text-white transition-colors hover:bg-orange-500 sm:h-12 sm:px-6 sm:py-0 sm:text-sm"
             >
               Emergency Call: 07494 247246
             </a>
             <Link
               href="/services"
-              className="flex h-12 items-center justify-center rounded-full border border-zinc-300 px-6 text-sm font-semibold text-zinc-700 transition-colors hover:border-zinc-400 hover:bg-zinc-50"
+              className="flex min-h-11 items-center justify-center rounded-full border border-zinc-300 px-2 py-1.5 text-center text-[13px]/4 font-semibold text-zinc-700 transition-colors hover:border-zinc-400 hover:bg-zinc-50 sm:h-12 sm:px-6 sm:py-0 sm:text-sm"
             >
               Our Services
             </Link>
           </div>
 
-          <ul className="mt-10 grid gap-3 sm:grid-cols-2">
+          <ul className="mt-3 grid grid-cols-2 gap-x-3 gap-y-1.5 max-sm:[@media(max-height:44rem)]:pr-[4.25rem] sm:mt-10 sm:gap-3">
             {highlights.map((item) => (
-              <li key={item} className="flex items-start gap-2 text-sm text-zinc-700">
+              <li key={item} className="flex items-start gap-1 text-[13px]/4 text-zinc-700 sm:gap-2 sm:text-sm">
                 <svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  className="mt-0.5 h-4 w-4 shrink-0 text-orange-500"
+                  className="mt-0.5 size-3 shrink-0 text-orange-500 sm:size-4"
                   aria-hidden
                 >
                   <path
@@ -120,8 +120,8 @@ export default function Hero() {
               aria-describedby="home-hero-image-description"
               width={1206}
               height={899}
-              sizes="(max-width: 559px) calc(100vw - 48px), 512px"
-              className="h-auto w-full"
+              sizes="(max-width: 543px) calc(100vw - 32px), 512px"
+              className="h-[clamp(8.25rem,22svh,11rem)] w-full object-cover object-[center_42%] sm:h-auto"
               preload
             />
             <p id="home-hero-image-description" className="sr-only">
