@@ -28,7 +28,7 @@ export default function Hero() {
         className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-red-600/20 blur-3xl"
       />
 
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 sm:px-10 lg:grid-cols-2 lg:items-center lg:py-28">
+      <div className="relative mx-auto grid max-w-7xl gap-8 px-6 pt-6 pb-20 sm:gap-12 sm:px-10 lg:grid-cols-2 lg:items-center lg:py-28">
         <div>
           <a
             href={googleReviewsUrl}
@@ -111,16 +111,22 @@ export default function Hero() {
           </ul>
         </div>
 
-        <div className="relative mx-auto w-full max-w-lg">
+        <div className="relative order-first mx-auto w-full max-w-lg lg:order-none">
           <div className="relative overflow-hidden rounded-3xl border border-zinc-200 shadow-2xl">
             <Image
-              src="/rapid-mobile-tyres-service-van-bristol.webp"
-              alt="Rapid Mobile Tyres 24/7 mobile service van in Bristol"
-              width={672}
-              height={307}
+              src="/rapid-mobile-tyres-bristol-range-rover-hero.webp"
+              alt="Grey Range Rover beside the Rapid Mobile Tyres Bristol van during a tyre change"
+              title="Rapid Mobile Tyres Bristol fitting a Range Rover tyre"
+              aria-describedby="home-hero-image-description"
+              width={1206}
+              height={899}
+              sizes="(max-width: 559px) calc(100vw - 48px), 512px"
               className="h-auto w-full"
               preload
             />
+            <p id="home-hero-image-description" className="sr-only">
+              The Range Rover is raised on a jack, with a replacement tyre ready beside the front wheel.
+            </p>
           </div>
           <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-zinc-200 bg-white px-6 py-4 shadow-xl sm:block">
             <p className="text-2xl font-bold text-orange-500">45-60 min</p>
