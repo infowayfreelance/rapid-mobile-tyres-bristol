@@ -34,7 +34,7 @@ export default function Hero() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Read 324 Google reviews for Rapid Mobile Tyres Bristol"
-          className="group flex flex-col items-center gap-1 justify-self-stretch rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-center shadow-sm transition hover:border-orange-300 hover:shadow-md sm:inline-flex sm:items-start sm:gap-2 sm:justify-self-start sm:py-3 sm:text-left lg:col-start-1 lg:row-start-2 lg:mb-5"
+          className="group flex flex-col items-center gap-0.5 justify-self-stretch rounded-xl border border-zinc-200 bg-white px-4 py-1.5 text-center shadow-sm transition hover:border-orange-300 hover:shadow-md sm:inline-flex sm:items-start sm:gap-2 sm:justify-self-start sm:py-3 sm:text-left lg:col-start-1 lg:row-start-2 lg:mb-5"
         >
           <span className="text-xs/4 font-extrabold uppercase tracking-[0.12em] text-zinc-900 sm:text-sm">
             {siteConfig.name}
@@ -64,18 +64,18 @@ export default function Hero() {
         <div className="relative mx-auto w-full max-w-lg lg:col-start-2 lg:row-span-4 lg:row-start-1 lg:self-center">
           <div className="relative overflow-hidden rounded-3xl border border-zinc-200 shadow-2xl">
             <Image
-              src="/rapid-mobile-tyres-bristol-range-rover-hero.webp"
-              alt="Grey Range Rover beside the Rapid Mobile Tyres Bristol van during a tyre change"
-              title="Rapid Mobile Tyres Bristol fitting a Range Rover tyre"
+              src="/rapid-mobile-tyres-bristol-car-tyre-change-hero.webp"
+              alt="Grey car during a tyre change in front of the Rapid Mobile Tyres Bristol van"
+              title="Mobile tyre change by Rapid Mobile Tyres Bristol"
               aria-describedby="home-hero-image-description"
               width={1206}
-              height={899}
+              height={924}
               sizes="(max-width: 543px) calc(100vw - 32px), 512px"
               className="h-auto w-full"
               preload
             />
             <p id="home-hero-image-description" className="sr-only">
-              The Range Rover is raised on a jack, with a replacement tyre ready beside the front wheel.
+              A replacement tyre and jack are beside the front wheel, with the service van parked behind the car.
             </p>
           </div>
           <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-zinc-200 bg-white px-6 py-4 shadow-xl sm:block">
@@ -86,7 +86,8 @@ export default function Hero() {
 
         <div className="lg:col-start-1 lg:row-start-3">
           <h1 className="text-2xl/7 font-bold tracking-tight text-balance min-[400px]:text-[1.75rem]/8 sm:text-5xl">
-            24/7 Mobile Tyre Fitting &amp; Replacement In Bristol
+            24/7 Mobile Tyre Fitting &amp; Replacement In{" "}
+            <span className="text-orange-600">Bristol</span>
           </h1>
 
           <p className="mt-2 max-w-xl text-sm/5 text-zinc-600 sm:mt-6 sm:text-lg/8">
