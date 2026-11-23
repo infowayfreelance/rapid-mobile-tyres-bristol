@@ -8,7 +8,6 @@ import Faq from "@/components/Faq";
 import MapAndLocations from "@/components/MapAndLocations";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
-import TyreBrands from "@/components/TyreBrands";
 import TyreBrandStrip from "@/components/TyreBrandStrip";
 
 export const metadata: Metadata = {
@@ -102,7 +101,6 @@ export default function Home() {
         <Hero />
         <TyreBrandStrip />
         <Services />
-        <TyreBrands />
         <WhyChooseUs />
         <Testimonials visibleCount={8} columns={4} className="bg-zinc-50 py-14 sm:py-20" />
         <MapAndLocations />
