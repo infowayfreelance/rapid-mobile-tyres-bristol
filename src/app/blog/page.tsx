@@ -17,6 +17,11 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = [
     {
+      path: "mobile-tyre-fitting-vs-garage-bristol",
+      title: "Mobile Tyre Fitting vs a Tyre Garage: Which Is Better for Bristol Drivers?",
+      image: "/mobile-tyre-fitting-vs-garage-bristol-featured.webp",
+    },
+    {
       path: "tyre-pressure-warning-light-bristol",
       title: "Tyre Pressure Warning Light On? What It Means and What to Do (Bristol Drivers' Guide)",
       image: "/tyre-pressure-warning-light-bristol-featured.webp",
