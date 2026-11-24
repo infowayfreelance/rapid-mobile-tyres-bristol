@@ -6,13 +6,27 @@ import Footer from "@/components/Footer";
 import TyreBrands from "@/components/TyreBrands";
 import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
+import { BUSINESS_ID } from "@/lib/businessSchema";
 import { siteConfig } from "@/lib/data";
 
+const SITE_URL = "https://rapid-tyres.com";
+const PAGE_URL = SITE_URL + "/mobile-tyre-fitting-bradley-stoke";
+const TITLE = "Mobile Tyre Fitting Bradley Stoke, BS32 | 24/7 | Rapid";
+const DESCRIPTION =
+  "24/7 mobile tyre fitting in Bradley Stoke, Stoke Gifford, Patchway and Filton, at home, work or roadside. Usual arrival 45–60 min. Call 07494 247246.";
+const BREAKDOWN_GUIDANCE =
+  "https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287";
+
 export const metadata: Metadata = {
-  title: "Mobile Tyre Fitting Bradley Stoke | 24/7 Tyre Service",
-  description:
-    "Mobile tyre fitting in Bradley Stoke for flat or damaged tyres. Get convenient tyre replacement at your location.",
-  alternates: { canonical: "https://rapid-tyres.com/mobile-tyre-fitting-bradley-stoke" },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    type: "website",
+    images: [{ url: "/rapid-mobile-tyres-open-graph.webp" }],
+  },
 };
 
 const stats = [
@@ -33,6 +47,7 @@ const vehicleServices = [
   {
     title: "Mobile Van Tyre Fitting",
     href: "/mobile-van-tyre-fitting-bristol",
+    showVanServiceLink: true,
     description:
       "For drivers who use vans for business or daily work in Bradley Stoke, a tyre problem can quickly cause lost time. Our mobile van tyre fitting brings the replacement service to the vehicle, helping avoid an unnecessary journey to a tyre depot. Van tyres may have specific load requirements, so providing the full tyre specification when calling is useful.",
     image: "/van-tyre-fitting-road-service-bristol.webp",
@@ -94,6 +109,15 @@ const faqs = [
     question: "Can you help with a flat tyre near the A38 or M5?",
     answer:
       "We provide roadside tyre assistance near Bradley Stoke for vehicles in a safe and accessible position. If you are stopped somewhere hazardous, follow appropriate roadside safety guidance first before requesting assistance.",
+    answerContent: (
+      <>
+        We provide roadside tyre assistance near Bradley Stoke for vehicles in a safe and accessible position. If you are stopped somewhere hazardous, follow appropriate{" "}
+        <a href={BREAKDOWN_GUIDANCE} target="_blank" rel="noopener" className="text-orange-500 hover:underline">
+          roadside safety guidance
+        </a>{" "}
+        first before requesting assistance.
+      </>
+    ),
   },
   {
     question: "Do you provide mobile car tyre fitting in Bradley Stoke?",
@@ -125,7 +149,67 @@ const faqs = [
     answer:
       "Please provide your vehicle make and model, full tyre size, the tyre problem and your exact location in Bradley Stoke, including a postcode or road name to help us reach you quickly.",
   },
+  {
+    question: "Can you repair a puncture instead of fitting a new tyre?",
+    answer:
+      "Sometimes. A repair may be possible when a small nail or screw has gone into the central part of the tread and the tyre has not been driven on while flat. UK repairs follow British Standard BS AU 159, which does not allow repairs to the sidewall or shoulder. Tell us where the damage is when you call and we'll say whether a repair or a replacement tyre is the likely answer.",
+  },
+  {
+    question: "Which postcodes around Bradley Stoke do you cover?",
+    answer:
+      "Bradley Stoke is in the BS32 postcode district, which also takes in Almondsbury and Aztec West. Patchway, Little Stoke, Filton and Stoke Gifford are in BS34. Give us your full postcode when you call so we can confirm coverage and technician availability for your exact address.",
+  },
+  {
+    question: "Can you fit a tyre in my work car park at Aztec West?",
+    answer:
+      "Yes, where there is a safe, level space around the vehicle and the site allows work in its car park. It's worth checking with your site or building management before the technician arrives.",
+  },
+  {
+    question: "How much does mobile tyre fitting cost in Bradley Stoke?",
+    answer:
+      "The price depends on your tyre size, load index and speed rating, the brand and how many tyres you need. Call 07494 247246 with the size from the sidewall or your registration and we'll confirm availability and the price before anyone sets off.",
+  },
 ];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": PAGE_URL + "#faq",
+      mainEntity: faqs.map(({ question, answer }) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Areas We Cover", item: SITE_URL + "/areas-we-cover" },
+        { "@type": "ListItem", position: 3, name: "Mobile Tyre Fitting Bradley Stoke", item: PAGE_URL },
+      ],
+    },
+    {
+      "@type": "Service",
+      "@id": PAGE_URL + "#service",
+      name: "Mobile Tyre Fitting in Bradley Stoke",
+      serviceType: "Mobile tyre fitting",
+      url: PAGE_URL,
+      areaServed: [
+        { "@type": "City", name: "Bradley Stoke" },
+        { "@type": "Place", name: "Stoke Gifford" },
+        { "@type": "Place", name: "Patchway" },
+        { "@type": "Place", name: "Little Stoke" },
+        { "@type": "Place", name: "Filton" },
+        { "@type": "Place", name: "Almondsbury" },
+        { "@type": "AdministrativeArea", name: "South Gloucestershire" },
+      ],
+      provider: { "@id": BUSINESS_ID },
+    },
+  ],
+};
 
 const areasServed = [
   { name: "Almondsbury", href: "/mobile-tyre-fitting-almondsbury" },
@@ -148,6 +232,10 @@ const locationPinSvg = (
 export default function Page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema).replace(/</g, "\\u003c") }}
+      />
       <Header />
       <main>
         {/* Hero */}
@@ -269,7 +357,9 @@ export default function Page() {
                         tyre problem during the working day does not always mean stopping
                         everything to find a nearby garage. Where there is safe working space, our
                         mobile tyre service can attend and replace the tyre while the vehicle is
-                        parked.
+                        parked. If you work at Aztec West or another business park, check that
+                        the site is happy for work to be done in its car park before the technician
+                        arrives.
                       </p>
                     </div>
                   </div>
@@ -405,10 +495,9 @@ export default function Page() {
             </div>
             <div className="grid gap-8 sm:grid-cols-3">
               {vehicleServices.map((v) => (
-                <Link
+                <div
                   key={v.title}
-                  href={v.href}
-                  className="group rounded-2xl overflow-hidden ring-1 ring-zinc-100 shadow-sm hover:shadow-md transition-shadow"
+                  className="group relative rounded-2xl overflow-hidden ring-1 ring-zinc-100 shadow-sm hover:shadow-md transition-shadow"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <Image
@@ -421,11 +510,24 @@ export default function Page() {
                   </div>
                   <div className="p-6">
                     <h3 className="mb-2 text-lg font-bold text-zinc-900 group-hover:text-orange-500 transition-colors">
-                      {v.title}
+                      <Link href={v.href} className="after:absolute after:inset-0">
+                        {v.title}
+                      </Link>
                     </h3>
-                    <p className="text-sm text-zinc-600">{v.description}</p>
+                    <p className="text-sm text-zinc-600">
+                      {v.description}
+                      {v.showVanServiceLink && (
+                        <>
+                          {" "}See our{" "}
+                          <Link href={v.href} className="relative z-10 text-orange-500 hover:underline">
+                            mobile van tyre fitting
+                          </Link>{" "}
+                          page for tradespeople and small fleets.
+                        </>
+                      )}
+                    </p>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
             <div className="mt-12 rounded-2xl bg-orange-500 px-8 py-10 text-center text-white">
@@ -509,6 +611,16 @@ export default function Page() {
                 more easily, particularly in the business park areas where roads can be less
                 familiar.
               </p>
+              <p className="mt-4 text-zinc-300">
+                The M4/M5 Almondsbury Interchange sits just beside Junction 16, close to Aztec West
+                and the northern edge of Bradley Stoke. If you are on the motorway itself, get
+                yourself and any passengers to a place of safety first and follow the{" "}
+                <a href={BREAKDOWN_GUIDANCE} target="_blank" rel="noopener" className="text-orange-400 hover:underline">
+                  Highway Code guidance on breakdowns
+                </a>
+                . When you call, tell us which motorway and carriageway you are on, the nearest
+                junction and the number on the nearest marker post or driver location sign.
+              </p>
             </div>
           </div>
         </section>
@@ -583,6 +695,53 @@ export default function Page() {
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Puncture repair */}
+        <section className="bg-zinc-50 py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl">
+              <h2 className="mb-4 text-3xl font-extrabold text-zinc-900">
+                Puncture Repair or Replacement in Bradley Stoke?
+              </h2>
+              <p className="mb-4 text-zinc-600">
+                A flat tyre doesn&apos;t always mean a new one. If a nail or screw has gone into
+                the middle part of the tread and you stopped before driving on the tyre while
+                flat, it may be repairable. In the UK, repairs follow British Standard BS AU 159,
+                which keeps repairs to the central area of the tread. A cut or bulge in the
+                sidewall, damage near the shoulder, or a tyre that has been driven on while flat
+                has to be replaced.
+              </p>
+              <p className="mb-4 text-zinc-600">
+                Worn tyres are different: the legal minimum tread depth for a car is 1.6 mm across
+                the central three-quarters of the tread and around the whole circumference (see
+                the{" "}
+                <a
+                  href="https://www.gov.uk/guidance/the-highway-code/annex-6-vehicle-maintenance-safety-and-security"
+                  target="_blank"
+                  rel="noopener"
+                  className="text-orange-500 hover:underline"
+                >
+                  Highway Code, Annex 6
+                </a>
+                ). If yours is close to that, a planned replacement on your driveway or at work
+                in Bradley Stoke saves an emergency later.
+              </p>
+              <p className="text-zinc-600">
+                Tell us where the damage is when you call, or send a photo, and we&apos;ll say
+                whether a{" "}
+                <Link href="/flat-tyre-puncture-repair" className="text-orange-500 hover:underline">
+                  puncture repair
+                </Link>{" "}
+                is likely or whether you need a new tyre fitted. Not sure what the numbers on the
+                sidewall mean? Our guide to{" "}
+                <Link href="/how-to-read-your-tyre-sidewall-markings" className="text-orange-500 hover:underline">
+                  reading your tyre sidewall markings
+                </Link>{" "}
+                explains them.
+              </p>
             </div>
           </div>
         </section>
@@ -673,8 +832,13 @@ export default function Page() {
                 <Link href="/mobile-tyre-fitting-almondsbury" className="text-orange-500 hover:underline">
                   Almondsbury
                 </Link>{" "}
-                and the Patchway, Stoke Gifford and Filton areas. Our wider service area covers
-                these and many other parts of North Bristol and South Gloucestershire. If you are
+                and the Patchway, Stoke Gifford and Filton areas. Bradley Stoke itself is in the
+                BS32 postcode district, along with Almondsbury and Aztec West, while Patchway,
+                Little Stoke, Filton and Stoke Gifford are in BS34. Whether you&apos;re parked
+                near the Willow Brook Centre, on an estate off Bradley Stoke Way or at a business
+                park to the north of the town, give us the postcode and we&apos;ll confirm
+                coverage. Our wider service area covers these and many other parts of North
+                Bristol and South Gloucestershire. If you are
                 outside Bradley Stoke itself, provide your postcode or current location when
                 calling so coverage and technician availability can be confirmed.
               </p>
@@ -807,7 +971,9 @@ export default function Page() {
 
         <Testimonials />
 
-        <Faq items={faqs} />
+        <div id="faq">
+          <Faq items={faqs} renderAllAnswers />
+        </div>
 
         {/* Final CTA */}
         <section className="relative bg-zinc-900 py-20 text-white overflow-hidden">
