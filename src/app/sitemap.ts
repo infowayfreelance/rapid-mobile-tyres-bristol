@@ -81,6 +81,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE_URL}/tyre-checks-before-a-long-journey-bristol`,
+      lastModified: "2026-11-24",
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
       url: `${BASE_URL}/mobile-tyre-fitting-vs-garage-bristol`,
       lastModified: "2026-11-23",
       changeFrequency: "monthly",

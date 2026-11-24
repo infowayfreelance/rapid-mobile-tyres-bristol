@@ -17,6 +17,11 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = [
     {
+      path: "tyre-checks-before-a-long-journey-bristol",
+      title: "Tyre Checks Before a Long Winter Journey: A Bristol Driver's Checklist",
+      image: "/tyre-checks-before-long-journey-bristol-featured.webp",
+    },
+    {
       path: "mobile-tyre-fitting-vs-garage-bristol",
       title: "Mobile Tyre Fitting vs a Tyre Garage: Which Is Better for Bristol Drivers?",
       image: "/mobile-tyre-fitting-vs-garage-bristol-featured.webp",
