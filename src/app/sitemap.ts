@@ -80,6 +80,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
+    {
+      url: `${BASE_URL}/mobile-tyre-fitting-vs-garage-bristol`,
+      lastModified: "2026-11-23",
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
     ...[
       "tyre-pressure-warning-light-bristol",
       "performance-tyres-bristol",
