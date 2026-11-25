@@ -17,6 +17,11 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = [
     {
+      path: "pothole-tyre-damage-bristol",
+      title: "Hit a Pothole in Bristol? How to Check Your Tyres and When to Get Them Replaced",
+      image: "/pothole-tyre-damage-bristol-featured.webp",
+    },
+    {
       path: "tyre-checks-before-a-long-journey-bristol",
       title: "Tyre Checks Before a Long Winter Journey: A Bristol Driver's Checklist",
       image: "/tyre-checks-before-long-journey-bristol-featured.webp",
