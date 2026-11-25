@@ -6,14 +6,25 @@ import Footer from "@/components/Footer";
 import TyreBrands from "@/components/TyreBrands";
 import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
-import { siteConfig } from "@/lib/data";
+import { BUSINESS_ID } from "@/lib/businessSchema";
+
+const PAGE_URL = "https://rapid-tyres.com/mobile-tyre-fitting-chepstow";
+const TITLE = "Mobile Tyre Fitting Chepstow NP16 | Rapid Mobile Tyres";
+const DESCRIPTION =
+  "Mobile tyre fitting in Chepstow, NP16: flat, worn or damaged tyres fitted at home, work or roadside near the A48 and M48. Call 07494 247246.";
+const BREAKDOWN_GUIDANCE =
+  "https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287";
 
 export const metadata: Metadata = {
-  title: "Mobile Tyre Fitting Chepstow | 24/7 Tyre Assistance",
-  description:
-    "Mobile tyre fitting in Chepstow for flat or damaged tyres. Get convenient tyre replacement at your location.",
-  alternates: {
-    canonical: "https://rapid-tyres.com/mobile-tyre-fitting-chepstow",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
+    images: [{ url: "/rapid-mobile-tyres-open-graph.webp" }],
+    type: "website",
   },
 };
 
@@ -102,7 +113,131 @@ const faqs = [
     answer:
       "Yes, the mobile tyre service covers a range of cars, vans and SUVs. Provide your tyre size or vehicle details when calling so the team can check the appropriate tyre availability.",
   },
+  {
+    question: "Can you repair a puncture instead of fitting a new tyre?",
+    answer:
+      "Sometimes. A repair may be possible when a small nail or screw has gone into the central part of the tread and the tyre hasn't been driven on while flat. A cut or bulge in the sidewall, damage near the shoulder, or a tyre that has run flat has to be replaced. Tell us where the damage is when you call and we'll say whether puncture repair or a new tyre is the likely answer.",
+    answerContent: (
+      <>
+        Sometimes. A repair may be possible when a small nail or screw has gone into the central part of
+        the tread and the tyre hasn&apos;t been driven on while flat. A cut or bulge in the sidewall,
+        damage near the shoulder, or a tyre that has run flat has to be replaced. Tell us where the
+        damage is when you call and we&apos;ll say whether{" "}
+        <Link href="/flat-tyre-puncture-repair" className="text-orange-600 hover:underline">
+          puncture repair
+        </Link>
+        {" "}or a new tyre is the likely answer.
+      </>
+    ),
+  },
+  {
+    question: "What should I do if I get a flat tyre on the M48 or the Severn Bridge?",
+    answer:
+      "Put your own safety first. Follow the Highway Code's breakdown and incident rules, leave the vehicle by the side furthest from traffic if it is safe and possible, wait well away from the traffic, and don't try to change the tyre yourself. If you're stuck in a live lane and can't get out safely, keep your seat belt on, switch on your hazard lights and contact the emergency services. Once you're somewhere safe, call us on 07494 247246 with your direction of travel and the nearest marker post or junction so we can check whether we can attend safely.",
+    answerContent: (
+      <>
+        Put your own safety first. Follow the Highway Code&apos;s{" "}
+        <a href={BREAKDOWN_GUIDANCE} target="_blank" rel="noopener" className="text-orange-600 hover:underline">
+          breakdown and incident rules
+        </a>,
+        {" "}leave the vehicle by the side furthest from traffic if it is safe and possible, wait well away
+        from the traffic, and don&apos;t try to change the tyre yourself. If you&apos;re stuck in a live
+        lane and can&apos;t get out safely, keep your seat belt on, switch on your hazard lights and
+        contact the emergency services. Once you&apos;re somewhere safe, call us on 07494 247246 with
+        your direction of travel and the nearest marker post or junction so we can check whether we can
+        attend safely.
+      </>
+    ),
+  },
+  {
+    question: "Which postcode do you cover around Chepstow?",
+    answer:
+      "We cover Chepstow and the NP16 area, along with nearby places such as Bulwark, Thornwell, Hardwick, Larkfield, Mathern, St Arvans and Shirenewton. Tutshill and Sedbury are across the River Wye in England, so tell us which side of the river you're on. Give us your full postcode when you call so we can confirm coverage for your exact address.",
+  },
+  {
+    question: "Can you fit a tyre if I'm parked on a steep or narrow street in the town centre?",
+    answer:
+      "Often, yes, but the technician needs enough safe, level space around the vehicle to work. If your car is on a steep or narrow street, tell us when you call. It may be easier to move it a short distance to a flatter spot, such as a car park or driveway, where it's safe to work.",
+  },
+  {
+    question: "Do you also cover Newport, Caldicot and Magor?",
+    answer:
+      "Yes. The same mobile tyre service covers Newport, Caldicot, Magor and Caerwent, subject to technician availability. Each has its own page with local details.",
+    answerContent: (
+      <>
+        Yes. The same mobile tyre service covers{" "}
+        <Link href="/mobile-tyre-fitting-newport" className="text-orange-600 hover:underline">
+          Newport
+        </Link>,
+        {" "}
+        <Link href="/mobile-tyre-fitting-caldicot" className="text-orange-600 hover:underline">
+          Caldicot
+        </Link>,
+        {" "}
+        <Link href="/mobile-tyre-fitting-magor" className="text-orange-600 hover:underline">
+          Magor
+        </Link>
+        {" "}and{" "}
+        <Link href="/mobile-tyre-fitting-caerwent" className="text-orange-600 hover:underline">
+          Caerwent
+        </Link>,
+        {" "}subject to technician availability. Each has its own page with local details.
+      </>
+    ),
+  },
+  {
+    question: "How much does mobile tyre fitting cost in Chepstow?",
+    answer:
+      "The price depends on your tyre size, load index and speed rating, the brand and how many tyres you need. Call 07494 247246 with the size from the sidewall or your registration and we'll confirm availability and the price before anyone sets off.",
+  },
 ];
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": PAGE_URL + "#service",
+  name: "Mobile Tyre Fitting in Chepstow",
+  serviceType: "Mobile tyre fitting",
+  url: PAGE_URL,
+  description:
+    "Mobile tyre fitting and emergency tyre replacement in Chepstow and NP16 for cars, vans and SUVs, at home, at work or at a safe roadside location near the A48 and M48.",
+  provider: { "@id": BUSINESS_ID },
+  areaServed: [
+    { "@type": "City", name: "Chepstow" },
+    { "@type": "Place", name: "Tutshill" },
+    { "@type": "Place", name: "Sedbury" },
+    { "@type": "Place", name: "Caldicot" },
+  ],
+  availableChannel: {
+    "@type": "ServiceChannel",
+    servicePhone: {
+      "@type": "ContactPoint",
+      telephone: "+447494247246",
+      contactType: "customer service",
+    },
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": PAGE_URL + "#faq",
+  mainEntity: faqs.map(({ question, answer }) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: { "@type": "Answer", text: answer },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://rapid-tyres.com" },
+    { "@type": "ListItem", position: 2, name: "Areas We Serve", item: "https://rapid-tyres.com/areas-we-cover" },
+    { "@type": "ListItem", position: 3, name: "Chepstow", item: PAGE_URL },
+  ],
+};
 
 const areasServed = [
   { name: "Tutshill", href: null },
@@ -124,6 +259,13 @@ const locationPin = (
 export default function ChepstowPage() {
   return (
     <>
+      {[serviceSchema, faqSchema, breadcrumbSchema].map((schema) => (
+        <script
+          key={schema["@type"]}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }}
+        />
+      ))}
       <Header />
       <main className="flex-1">
         {/* Hero */}
@@ -151,7 +293,7 @@ export default function ChepstowPage() {
               <p className="mt-6 text-lg leading-8 text-zinc-300">
                 Need mobile tyre fitting in Chepstow without the hassle of getting your vehicle to a
                 garage? Whether you&apos;re dealing with a flat tyre in town, need a replacement at home,
-                or have tyre trouble near the A48 or M48 — our mobile service comes directly to you
+                or have tyre trouble near the A48, the M48 or the Severn Bridge — our mobile service comes directly to you
                 for cars, vans and SUVs, 24/7.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -311,7 +453,7 @@ export default function ChepstowPage() {
                     <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82zM7 7H5v2h2V7z" />
                   ),
                   title: "Right Tyre on the Van",
-                  body: "We carry a range of tyre sizes so we can fit the correct tyre at your location — no second trip to a garage needed.",
+                  body: "We carry a range of tyre sizes and confirm the right one for your vehicle before we set off, so there's no need to travel to a garage.",
                 },
               ].map((card) => (
                 <div
@@ -407,6 +549,27 @@ export default function ChepstowPage() {
           </div>
         </section>
 
+        <section className="bg-white py-20 sm:py-28">
+          <div className="mx-auto max-w-5xl px-6 sm:px-10">
+            <h2 className="text-3xl font-extrabold tracking-tight text-zinc-950 sm:text-4xl">
+              Mobile Tyre Fitting Around Chepstow Town, Bulwark and the Wye
+            </h2>
+            <p className="mt-4 text-zinc-600">
+              Chepstow sits where the River Wye meets the Severn estuary, and its town centre drops
+              steeply from the castle to the river through narrow streets. That matters for tyre fitting:
+              the technician needs a safe, level space around the vehicle, so if you&apos;re parked on a
+              steep or tight street, tell us when you call. A flatter spot nearby, such as a car park or
+              driveway, is often an easy fix.
+            </p>
+            <p className="mt-4 text-zinc-600">
+              We cover the town centre and neighbourhoods such as Bulwark, Thornwell, Hardwick, Larkfield
+              and Mathern, and nearby places like St Arvans and Shirenewton. The houses at Tutshill and
+              Sedbury are across the Wye in England, so please say which bank you&apos;re on. Give us
+              your postcode and we&apos;ll confirm coverage for your exact address.
+            </p>
+          </div>
+        </section>
+
         {/* How it works */}
         <section className="bg-zinc-50 py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-6 sm:px-10">
@@ -468,6 +631,13 @@ export default function ChepstowPage() {
                 and M48, subject to safe access. If you&apos;ve stopped on a motorway or other high-speed
                 road, prioritise your safety and provide your exact location when requesting assistance.
               </p>
+              <p className="mt-4 text-zinc-400">
+                If you&apos;ve broken down on a motorway, the Highway Code&apos;s{" "}
+                <a href={BREAKDOWN_GUIDANCE} target="_blank" rel="noopener" className="text-orange-400 hover:underline">
+                  breakdown and incident rules
+                </a>{" "}
+                explain what to do before you call us.
+              </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
                   href="tel:+447494247246"
@@ -489,6 +659,71 @@ export default function ChepstowPage() {
           </div>
         </section>
 
+        <section className="bg-white py-20 sm:py-28">
+          <div className="mx-auto max-w-5xl px-6 sm:px-10">
+            <h2 className="text-3xl font-extrabold tracking-tight text-zinc-950 sm:text-4xl">
+              Flat Tyre on the M48, the Severn Bridge or the A48?
+            </h2>
+            <p className="mt-4 text-zinc-600">
+              The M48 carries traffic across the Severn between Wales and England, and the A48 links
+              Chepstow with Newport and Gloucester, so a flat tyre can leave you somewhere busy. If
+              you&apos;re on a motorway, safety comes first: leave the vehicle by the side furthest from
+              traffic if it&apos;s safe and possible, wait well away from the traffic and don&apos;t try
+              to change the tyre yourself. If you&apos;re stuck in a live lane and can&apos;t get out
+              safely, keep your seat belt on, switch on your hazard lights and contact the emergency
+              services. Once you&apos;re somewhere safe, call 07494 247246 and tell us your direction of
+              travel and the nearest marker post or junction. We attend subject to safe and permitted
+              access, and we&apos;ll tell you if we can&apos;t reach you where you are.
+            </p>
+          </div>
+        </section>
+
+        <section className="bg-white py-20 sm:py-28">
+          <div className="mx-auto max-w-5xl px-6 sm:px-10">
+            <h2 className="text-3xl font-extrabold tracking-tight text-zinc-950 sm:text-4xl">
+              Puncture Repair or Replacement in Chepstow?
+            </h2>
+            <p className="mt-4 text-zinc-600">
+              A flat tyre doesn&apos;t always need replacing. A small nail or screw in the central part
+              of the tread can sometimes be repaired if the tyre wasn&apos;t driven on while flat. A cut
+              or bulge in the sidewall, damage near the shoulder, or a tyre that has run flat needs
+              replacing. Tell us where the damage is and your tyre size, and we&apos;ll say whether{" "}
+              <Link href="/flat-tyre-puncture-repair" className="text-orange-600 hover:underline">
+                puncture repair
+              </Link>
+              {" "}or a new tyre is likely. Not sure what the numbers on the sidewall mean? Our guide
+              to{" "}
+              <Link href="/how-to-read-your-tyre-sidewall-markings" className="text-orange-600 hover:underline">
+                reading your tyre sidewall markings
+              </Link>
+              {" "}explains them.
+            </p>
+          </div>
+        </section>
+
+        <section className="bg-white py-20 sm:py-28">
+          <div className="mx-auto max-w-5xl px-6 sm:px-10">
+            <h2 className="text-3xl font-extrabold tracking-tight text-zinc-950 sm:text-4xl">
+              Planned Tyre Changes for Chepstow Commuters
+            </h2>
+            <p className="mt-4 text-zinc-600">
+              Chepstow is well placed for journeys to Bristol, Newport and Cardiff, and a worn tyre is
+              easier to deal with before a long commute than on the side of the M48. If you need new
+              tyres, we can fit them on your driveway or at your workplace, so you don&apos;t have to
+              give up time at a garage. Planning ahead also means we can confirm the right tyre for your
+              vehicle first. For an urgent fix, see our{" "}
+              <Link href="/emergency-mobile-tyre-fitting-bristol" className="text-orange-600 hover:underline">
+                emergency mobile tyre fitting
+              </Link>;
+              {" "}for vans, our{" "}
+              <Link href="/mobile-van-tyre-fitting-bristol" className="text-orange-600 hover:underline">
+                mobile van tyre fitting
+              </Link>
+              {" "}page.
+            </p>
+          </div>
+        </section>
+
         {/* Areas served */}
         <section className="bg-white py-20 sm:py-28">
           <div className="mx-auto max-w-5xl px-6 text-center sm:px-10">
@@ -497,7 +732,12 @@ export default function ChepstowPage() {
               Areas We Cover Around Chepstow
             </h2>
             <p className="mt-4 text-zinc-600">
-              Our mobile tyre service covers Chepstow and surrounding communities. If you&apos;re unsure
+              Our mobile tyre service covers Chepstow and surrounding communities. Chepstow is in
+              the{" "}
+              <a href="https://en.wikipedia.org/wiki/Chepstow" target="_blank" rel="noopener" className="text-orange-600 hover:underline">
+                NP16 postcode district
+              </a>; Tutshill and Sedbury sit across the River Wye in England, so tell us which side of
+              the river you&apos;re on when you call. If you&apos;re unsure
               whether we cover your location, call us with your postcode or current location and we can
               confirm availability.
             </p>
@@ -614,7 +854,9 @@ export default function ChepstowPage() {
 
         <TyreBrands />
 
-        <Faq items={faqs} />
+        <div id="faq">
+          <Faq items={faqs} renderAllAnswers />
+        </div>
 
         {/* Final CTA */}
         <section className="relative overflow-hidden bg-zinc-950 py-24 text-zinc-50 sm:py-28">
