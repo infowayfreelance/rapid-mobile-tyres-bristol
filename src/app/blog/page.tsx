@@ -17,6 +17,11 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = [
     {
+      path: "can-a-tyre-puncture-be-repaired-bristol",
+      title: "Can a Tyre Puncture Be Repaired? A Bristol Driver’s Guide",
+      image: "/can-a-tyre-puncture-be-repaired-featured.webp",
+    },
+    {
       path: "pothole-tyre-damage-bristol",
       title: "Hit a Pothole in Bristol? How to Check Your Tyres and When to Get Them Replaced",
       image: "/pothole-tyre-damage-bristol-featured.webp",
