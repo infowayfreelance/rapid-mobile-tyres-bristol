@@ -81,6 +81,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE_URL}/can-a-tyre-puncture-be-repaired-bristol`,
+      lastModified: "2026-11-26",
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
       url: `${BASE_URL}/pothole-tyre-damage-bristol`,
       lastModified: "2026-11-25",
       changeFrequency: "monthly",
