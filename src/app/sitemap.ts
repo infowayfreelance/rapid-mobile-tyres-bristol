@@ -81,6 +81,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE_URL}/van-tyres-bristol-fitting-guide`,
+      lastModified: "2026-11-27",
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
       url: `${BASE_URL}/can-a-tyre-puncture-be-repaired-bristol`,
       lastModified: "2026-11-26",
       changeFrequency: "monthly",

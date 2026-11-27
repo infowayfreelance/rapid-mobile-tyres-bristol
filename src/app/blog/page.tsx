@@ -17,6 +17,11 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = [
     {
+      path: "van-tyres-bristol-fitting-guide",
+      title: "Van Tyres in Bristol: Why They're Different and How Mobile Fitting Works",
+      image: "/van-tyres-bristol-fitting-guide-featured.webp",
+    },
+    {
       path: "can-a-tyre-puncture-be-repaired-bristol",
       title: "Can a Tyre Puncture Be Repaired? A Bristol Driver’s Guide",
       image: "/can-a-tyre-puncture-be-repaired-featured.webp",
