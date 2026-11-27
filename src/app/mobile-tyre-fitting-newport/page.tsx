@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -8,12 +9,26 @@ import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
 import { siteConfig } from "@/lib/data";
 
+import { BUSINESS_ID } from "@/lib/businessSchema";
+
+const PAGE_URL = "https://rapid-tyres.com/mobile-tyre-fitting-newport";
+const TITLE = "Mobile Tyre Fitting Newport 24/7 | Rapid Mobile Tyres";
+const DESCRIPTION =
+  "24/7 mobile tyre fitting in Newport: flat, worn or damaged tyres fitted at home, work or roadside near the M4 and A48. Call 07494 247246.";
+const BREAKDOWN_GUIDANCE =
+  "https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287";
+const NEWPORT_REFERENCE = "https://en.wikipedia.org/wiki/Newport,_Wales";
+
 export const metadata: Metadata = {
-  title: "Mobile Tyre Fitting Newport | 24/7 Tyre Replacement",
-  description:
-    "Need mobile tyre fitting in Newport? Get replacement tyres fitted at your home, workplace or roadside location.",
-  alternates: {
-    canonical: "https://rapid-tyres.com/mobile-tyre-fitting-newport",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
+    images: [{ url: "/rapid-mobile-tyres-open-graph.webp" }],
+    type: "website",
   },
 };
 
@@ -117,6 +132,56 @@ const faqs = [
     answer:
       "Yes. Our 24/7 mobile tyre service is available day and night, subject to technician availability and safe access to your location.",
   },
+  {
+    question: "What should I do if I get a flat tyre on the M4 near Newport?",
+    answer:
+      "Put your own safety first. Follow the Highway Code's breakdown and incident rules, leave the vehicle by the door away from traffic if it is safe to do so, wait well away from the carriageway and don't try to change the tyre yourself. If you can't get to safety or leave the vehicle safely, stay inside with your seat belt fastened and your hazard lights on. Contact the emergency services and ask for the police. Once you're safe, call us on 07494 247246 with your direction of travel and the nearest junction or marker post so we can check whether we can attend safely.",
+    answerContent: (
+      <>
+        Put your own safety first. Follow the Highway Code&#x27;s <a href={BREAKDOWN_GUIDANCE} target="_blank" rel="noopener" className="text-orange-600 hover:underline">breakdown and incident rules</a>, leave the vehicle by the door away from traffic if it is safe to do so, wait well away from the carriageway and don&#x27;t try to change the tyre yourself. If you can&#x27;t get to safety or leave the vehicle safely, stay inside with your seat belt fastened and your hazard lights on. Contact the emergency services and ask for the police. Once you&#x27;re safe, call us on 07494 247246 with your direction of travel and the nearest junction or marker post so we can check whether we can attend safely.
+      </>
+    ),
+  },
+  {
+    question: "Can you repair a puncture instead of fitting a new tyre?",
+    answer:
+      "Sometimes. A small puncture in the central part of the tread may be repairable if the tyre was not driven on while flat. Damage to the sidewall or the edge of the tread, or a tyre that has been driven on flat, usually means replacement. Tell us where the damage is when you call and we'll say whether puncture repair or a new tyre is the likely answer.",
+    answerContent: (
+      <>
+        Sometimes. A small puncture in the central part of the tread may be repairable if the tyre was not driven on while flat. Damage to the sidewall or the edge of the tread, or a tyre that has been driven on flat, usually means replacement. Tell us where the damage is when you call and we&#x27;ll say whether <Link href="/flat-tyre-puncture-repair" className="text-orange-600 hover:underline">puncture repair</Link> or a new tyre is the likely answer.
+      </>
+    ),
+  },
+  {
+    question: "What should I tell you when I call from Newport?",
+    answer:
+      "Your exact location (street, car park or road name, or the nearest M4 junction), your postcode if you know it, whether the vehicle is at home, at work or at the roadside, the make and model, and the tyre size printed on the sidewall. If you can't find the size, our guide to reading your tyre sidewall markings explains it, or give us your registration.",
+    answerContent: (
+      <>
+        Your exact location (street, car park or road name, or the nearest M4 junction), your postcode if you know it, whether the vehicle is at home, at work or at the roadside, the make and model, and the tyre size printed on the sidewall. If you can&#x27;t find the size, our guide to <Link href="/how-to-read-your-tyre-sidewall-markings" className="text-orange-600 hover:underline">reading your tyre sidewall markings</Link> explains it, or give us your registration.
+      </>
+    ),
+  },
+  {
+    question: "Can you fit a tyre if I'm parked on the street or in a car park in Newport?",
+    answer:
+      "Often, yes, as long as it is safe and permitted for the technician to work and there is enough room around the vehicle. Tell us where you are parked, and about any barriers, permits or tight spaces, when you call. If there isn't room to work, only move the car if it's safe to drive. If the tyre is flat, leave the car parked and tell us.",
+  },
+  {
+    question: "Do you also cover Chepstow, Caldicot and Magor?",
+    answer:
+      "Yes. The same mobile tyre service covers Chepstow, Caldicot, Magor and Caerwent, subject to technician availability. Each has its own page with local details.",
+    answerContent: (
+      <>
+        Yes. The same mobile tyre service covers <Link href="/mobile-tyre-fitting-chepstow" className="text-orange-600 hover:underline">Chepstow</Link>, <Link href="/mobile-tyre-fitting-caldicot" className="text-orange-600 hover:underline">Caldicot</Link>, <Link href="/mobile-tyre-fitting-magor" className="text-orange-600 hover:underline">Magor</Link> and <Link href="/mobile-tyre-fitting-caerwent" className="text-orange-600 hover:underline">Caerwent</Link>, subject to technician availability. Each has its own page with local details.
+      </>
+    ),
+  },
+  {
+    question: "How much does mobile tyre fitting cost in Newport?",
+    answer:
+      "The price depends on your tyre size, load index and speed rating, the brand and how many tyres you need. Call 07494 247246 with the size from the sidewall or your registration and we'll confirm availability and the price before anyone sets off.",
+  },
 ];
 
 const areasServed = [
@@ -130,6 +195,54 @@ const areasServed = [
   { name: "Magor", href: "/mobile-tyre-fitting-magor" },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": PAGE_URL + "#service",
+  name: "Mobile Tyre Fitting in Newport",
+  serviceType: "Mobile tyre fitting",
+  url: PAGE_URL,
+  description:
+    "Mobile tyre fitting for cars, vans and SUVs in Newport and nearby areas, including Caerleon, Malpas, Rogerstone, Duffryn, Bettws, Risca, Cwmbran and Magor. Flat, worn and damaged tyres are replaced at your home, workplace or a suitable roadside location where access is safe and permitted.",
+  provider: { "@id": BUSINESS_ID },
+  areaServed: [
+    { "@type": "City", name: "Newport" },
+    ...areasServed.map((area) => ({ "@type": "Place", name: area.name })),
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": PAGE_URL + "#faq",
+  mainEntity: faqs.map(({ question, answer }) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: { "@type": "Answer", text: answer },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://rapid-tyres.com" },
+    { "@type": "ListItem", position: 2, name: "Areas We Serve", item: "https://rapid-tyres.com/areas-we-cover" },
+    { "@type": "ListItem", position: 3, name: "Newport", item: PAGE_URL },
+  ],
+};
+
+function NewportInfoSection({ title, children }: { title: string; children: ReactNode }) {
+  return (
+    <section className="bg-white py-20 sm:py-28">
+      <div className="mx-auto max-w-3xl px-6 sm:px-10">
+        <h2 className="mb-4 text-3xl font-extrabold text-zinc-900">{title}</h2>
+        {children}
+      </div>
+    </section>
+  );
+}
+
 const locationPin = (
   <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4 shrink-0 text-orange-600" aria-hidden>
     <path d="M10 18s6-5.3 6-10a6 6 0 10-12 0c0 4.7 6 10 6 10z" stroke="currentColor" strokeWidth="1.6" />
@@ -140,6 +253,13 @@ const locationPin = (
 export default function NewportPage() {
   return (
     <>
+      {[serviceSchema, faqSchema, breadcrumbSchema].map((schema) => (
+        <script
+          key={schema["@type"]}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }}
+        />
+      ))}
       <Header />
       <main className="flex-1">
         {/* Hero */}
@@ -329,7 +449,7 @@ export default function NewportPage() {
                     <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82zM7 7H5v2h2V7z" />
                   ),
                   title: "Right Tyre on the Van",
-                  body: "We carry a range of tyre sizes so we can fit the correct tyre at your location in Newport — no second trip to a garage needed.",
+                  body: "We carry a range of tyre sizes and confirm the right one for your vehicle before we set off, so there's no need to travel to a garage.",
                 },
               ].map((card) => (
                 <div
@@ -489,6 +609,9 @@ export default function NewportPage() {
                 follow motorway and roadside safety guidance if you are stranded on a high-speed road, and
                 provide your exact location or nearest junction when requesting assistance.
               </p>
+              <p className="mt-4 text-zinc-400">
+                If you&#x27;ve broken down on a motorway, the Highway Code&#x27;s <a href={BREAKDOWN_GUIDANCE} target="_blank" rel="noopener" className="text-orange-400 hover:underline">breakdown and incident rules</a> explain what to do before you call us.
+              </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
                   href="tel:+447494247246"
@@ -510,6 +633,12 @@ export default function NewportPage() {
           </div>
         </section>
 
+        <NewportInfoSection title="Flat Tyre on the M4 Near Newport?">
+          <p className="leading-7 text-zinc-600">
+            The M4 passes Newport between junctions 24 and 28, so tyre damage on it can leave you in busy traffic. If you stop on a motorway, safety comes first: switch on your hazard lights, leave the vehicle by the door away from the traffic if it&#x27;s safe, wait well away from the carriageway and don&#x27;t try to change the tyre yourself. If you can&#x27;t get to safety or leave the vehicle safely, stay inside with your seat belt fastened and your hazard lights on. Contact the emergency services and ask for the police. Once you&#x27;re safe, call 07494 247246 and tell us your direction of travel and the nearest junction or marker post. We attend where access is safe and permitted, and we&#x27;ll tell you if we can&#x27;t reach you where you are.
+          </p>
+        </NewportInfoSection>
+
         {/* Areas served */}
         <section className="bg-white py-20 sm:py-28">
           <div className="mx-auto max-w-5xl px-6 text-center sm:px-10">
@@ -521,7 +650,7 @@ export default function NewportPage() {
               Our mobile tyre fitters in Newport cover the city and several surrounding communities,
               helping drivers access tyre assistance without travelling far. If you are unsure whether
               your address or current location is covered, contact us with your postcode and we can
-              confirm availability.
+              confirm availability. Newport is in the NP postcode area, so give us your full postcode when you call.
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -548,6 +677,12 @@ export default function NewportPage() {
             </div>
           </div>
         </section>
+
+        <NewportInfoSection title="Telling Us Where You Are in Newport">
+          <p className="leading-7 text-zinc-600">
+            Newport is a city on the River Usk, and a landmark helps us find you quickly on a long street or a big car park: the Transporter Bridge, Rodney Parade, the railway station or a named retail park are all useful (<a href={NEWPORT_REFERENCE} target="_blank" rel="noopener" className="text-orange-600 hover:underline">Newport – Wikipedia</a>). Give us the street and your postcode if you know it, or the car park name and the level. If you are on the road network, tell us whether you are on the A48 Southern Distributor Road, the A467 or the M4, and which direction you were travelling.
+          </p>
+        </NewportInfoSection>
 
         {/* More than tyre fitting */}
         <section className="bg-zinc-50 py-20 sm:py-28">
@@ -625,11 +760,29 @@ export default function NewportPage() {
           </div>
         </section>
 
+        <NewportInfoSection title="What to Have Ready When You Call">
+          <ul className="list-disc space-y-3 pl-5 text-zinc-600">
+            <li><strong>Where you are:</strong> the street, car park or road, and a postcode if you have one.</li>
+            <li><strong>The vehicle:</strong> make, model and registration, and whether it&#x27;s a car, van or SUV.</li>
+            <li><strong>The tyre size:</strong> the numbers on the sidewall, for example 205/55 R16. Our guide to <Link href="/how-to-read-your-tyre-sidewall-markings" className="text-orange-600 hover:underline">reading your tyre sidewall markings</Link> shows where to find them.</li>
+            <li><strong>What happened:</strong> a slow leak, a puncture, a burst or a tyre that looks worn or damaged, and whether you&#x27;ve driven on it.</li>
+            <li><strong>Where it&#x27;s parked:</strong> a driveway, a street, a workplace or a car park, and anything that limits access.</li>
+          </ul>
+        </NewportInfoSection>
+
+        <NewportInfoSection title="Planned Tyre Changes at Home or Work in Newport">
+          <p className="leading-7 text-zinc-600">
+            You don&#x27;t have to wait for an emergency. If a tyre is wearing down, you can book new tyres to be fitted at your home or workplace, which saves a trip to a garage. Planning ahead also means we can confirm the right tyre for your vehicle first. For an urgent fix, see our <Link href="/emergency-mobile-tyre-fitting-bristol" className="text-orange-600 hover:underline">emergency mobile tyre fitting</Link>; for vans, our <Link href="/mobile-van-tyre-fitting-bristol" className="text-orange-600 hover:underline">mobile van tyre fitting</Link> page; for larger vehicles, <Link href="/suv-tyre-fitting-bristol" className="text-orange-600 hover:underline">SUV and 4x4 tyre fitting</Link>; and for new tyres at your address, <Link href="/tyre-replacement-at-home-bristol" className="text-orange-600 hover:underline">tyre replacement at home</Link>.
+          </p>
+        </NewportInfoSection>
+
         <Testimonials />
 
         <TyreBrands />
 
-        <Faq items={faqs} />
+        <div id="faq">
+          <Faq items={faqs} renderAllAnswers />
+        </div>
 
         {/* Final CTA */}
         <section className="relative overflow-hidden bg-zinc-950 py-24 text-zinc-50 sm:py-28">
