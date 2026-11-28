@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -8,12 +9,27 @@ import TyreBrands from "@/components/TyreBrands";
 import Faq from "@/components/Faq";
 import { siteConfig } from "@/lib/data";
 
+import { BUSINESS_ID } from "@/lib/businessSchema";
+
+const PAGE_URL = "https://rapid-tyres.com/mobile-tyre-fitting-chewton-keynsham";
+const TITLE = "Mobile Tyre Fitting Chewton Keynsham | Rapid Mobile Tyres";
+const DESCRIPTION =
+  "24/7 mobile tyre fitting in Chewton Keynsham and Keynsham: flat, worn or damaged tyres fitted at home, work or roadside. Call 07494 247246.";
+const CHEWTON_KEYNSHAM_REFERENCE = "https://en.wikipedia.org/wiki/Chewton_Keynsham";
+const KEYNSHAM_REFERENCE = "https://en.wikipedia.org/wiki/Keynsham";
+const HIGHWAY_CODE_ANNEX =
+  "https://www.gov.uk/guidance/the-highway-code/annex-6-vehicle-maintenance-safety-and-security";
+
 export const metadata: Metadata = {
-  title: "Mobile Tyre Fitting Chewton Keynsham | 24/7 Service",
-  description:
-    "Mobile tyre fitting in Chewton Keynsham for flat or damaged tyres. Get tyre assistance directly at your location.",
-  alternates: {
-    canonical: "https://rapid-tyres.com/mobile-tyre-fitting-chewton-keynsham",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
+    images: [{ url: "/rapid-mobile-tyres-open-graph.webp" }],
+    type: "website",
   },
 };
 
@@ -127,6 +143,46 @@ const faqs = [
     answer:
       "Your exact location is particularly useful. Give us the road name, postcode, nearby junction or shared map location together with your tyre size and vehicle details.",
   },
+  {
+    question: "Is Chewton Keynsham the same as Keynsham?",
+    answer:
+      "No. Chewton Keynsham is a small hamlet on the River Chew about two miles south of Keynsham town centre (Chewton Keynsham – Wikipedia, Keynsham – Wikipedia). Both places have BS31 addresses. We cover both, so just tell us which one you are in and give us the full postcode.",
+    answerContent: (
+      <>
+        No. Chewton Keynsham is a small hamlet on the River Chew about two miles south of Keynsham
+        town centre (
+        <a href={CHEWTON_KEYNSHAM_REFERENCE} target="_blank" rel="noopener" className="text-orange-600 hover:underline">
+          Chewton Keynsham – Wikipedia
+        </a>
+        ,{" "}
+        <a href={KEYNSHAM_REFERENCE} target="_blank" rel="noopener" className="text-orange-600 hover:underline">
+          Keynsham – Wikipedia
+        </a>
+        ). Both places have BS31 addresses. We cover both, so just tell us which one you are in and
+        give us the full postcode.
+      </>
+    ),
+  },
+  {
+    question: "Do you fit tyres in Keynsham town as well?",
+    answer:
+      "Yes. Keynsham is in the coverage list on this page, so we can fit tyres at homes, workplaces and suitable roadside spots in the town, subject to technician and tyre availability. Call 07494 247246 with your postcode and tyre size.",
+  },
+  {
+    question: "My tyre is losing air slowly. Should I keep driving on it?",
+    answer:
+      "It is safer not to. A tyre that keeps losing pressure can fail completely, and driving on a very soft tyre can damage it beyond use. Park somewhere safe and call us; if the tyre is worn or damaged we can arrange a replacement where the car is parked.",
+  },
+  {
+    question: "Can you fit a tyre if the car is on a narrow lane with no pavement?",
+    answer:
+      "Only if the technician can work safely with enough room around the wheel. If the car is on a bend or a narrow stretch, tell us when you call. We may suggest a safer meeting point, but don't drive on a flat tyre to reach it.",
+  },
+  {
+    question: "How much does mobile tyre fitting cost in Chewton Keynsham?",
+    answer:
+      "It depends on the tyre size, load and speed rating, the brand you choose and how many tyres you need. Call 07494 247246 with the size from the sidewall or your registration, and we'll confirm availability and the price before anyone sets off.",
+  },
 ];
 
 const areasServed = [
@@ -141,6 +197,56 @@ const areasServed = [
   { name: "Bath", href: "/mobile-tyre-fitting-bath" },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": PAGE_URL + "#service",
+  name: "Mobile Tyre Fitting in Chewton Keynsham",
+  serviceType: "Mobile tyre fitting",
+  url: PAGE_URL,
+  description:
+    "Mobile tyre fitting for cars, vans and SUVs in Chewton Keynsham and nearby areas, including Keynsham, Compton Dando, Queen Charlton, Bitton, Chew Magna, Chew Stoke, Brislington and Bath. Flat, worn and damaged tyres are replaced at your home, workplace or a suitable roadside location where access is safe.",
+  provider: { "@id": BUSINESS_ID },
+  areaServed: areasServed.map(({ name }) => ({
+    "@type": name === "Keynsham" || name === "Bath" ? "City" : "Place",
+    name,
+  })),
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": PAGE_URL + "#faq",
+  mainEntity: faqs.map(({ question, answer }) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: { "@type": "Answer", text: answer },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://rapid-tyres.com" },
+    { "@type": "ListItem", position: 2, name: "Areas We Serve", item: "https://rapid-tyres.com/areas-we-cover" },
+    { "@type": "ListItem", position: 3, name: "Chewton Keynsham", item: PAGE_URL },
+  ],
+};
+
+function ChewtonInfoSection({ title, children }: { title: string; children: ReactNode }) {
+  return (
+    <section className="bg-white py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="max-w-2xl space-y-4 text-zinc-600">
+          <h2 className="text-3xl font-extrabold text-zinc-900">{title}</h2>
+          {children}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const locationPinSvg = (
   <svg viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5" aria-hidden>
     <path
@@ -154,6 +260,13 @@ const locationPinSvg = (
 export default function ChewtonKeynshamPage() {
   return (
     <>
+      {[serviceSchema, faqSchema, breadcrumbSchema].map((schema) => (
+        <script
+          key={schema["@type"]}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }}
+        />
+      ))}
       <Header />
       <main>
 
@@ -520,6 +633,17 @@ export default function ChewtonKeynshamPage() {
           </div>
         </section>
 
+        <ChewtonInfoSection title="Flat Tyre on a Narrow Lane Around Chewton Keynsham">
+          <p>Many of the lanes around Chewton Keynsham, Compton Dando and Queen Charlton are narrow, with hedges, verges and no pavement. If a tyre goes on one of them:</p>
+          <ul className="list-disc space-y-3 pl-5">
+            <li><strong>Stop where you can be seen:</strong> put your hazard lights on and avoid stopping just after a bend or the brow of a hill if you can.</li>
+            <li><strong>Get out on the side away from traffic</strong> if it&#x27;s safe, and wait off the road, not behind the car.</li>
+            <li><strong>Don&#x27;t keep driving to find a better spot</strong> if the tyre is flat or shredded: it can damage the wheel and make the car harder to control.</li>
+            <li><strong>Tell us what&#x27;s around you:</strong> the lane name, the last junction or farm you passed and whether the car is on a verge, in a gateway or on the road, so we know whether there is room to work.</li>
+          </ul>
+          <p>We fit tyres on lanes where there is enough safe space around the wheel. If there isn&#x27;t, we&#x27;ll talk you through a safer option before anyone sets off.</p>
+        </ChewtonInfoSection>
+
         {/* Replacement tyres / tyre details */}
         <section className="bg-white py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -581,7 +705,11 @@ export default function ChewtonKeynshamPage() {
           </div>
         </section>
 
-        <TyreBrands />
+        <ChewtonInfoSection title="Slow Puncture or Worn Tyre? Book Before It Goes Flat">
+          <p>
+            A tyre that needs air every few days, has a bulge or cut in the sidewall, or is worn close to the legal limit is better replaced on your driveway than at the roadside. For cars and light vans, the legal minimum tread depth is 1.6 mm across the central three-quarters of the tread, all the way round (<a href={HIGHWAY_CODE_ANNEX} target="_blank" rel="noopener" className="text-orange-600 hover:underline">Highway Code, Annex 6</a>). Call with the tyre size from the sidewall and we can arrange a replacement at your home in Chewton Keynsham or Keynsham, or at your workplace. See <Link href="/tyre-replacement-at-home-bristol" className="text-orange-600 hover:underline">tyre replacement at home</Link> and, for vans, <Link href="/mobile-van-tyre-fitting-bristol" className="text-orange-600 hover:underline">mobile van tyre fitting</Link>.
+          </p>
+        </ChewtonInfoSection>
 
         {/* Why mobile / benefits */}
         <section className="bg-zinc-50 py-20">
@@ -591,8 +719,8 @@ export default function ChewtonKeynshamPage() {
                 Why Mobile Tyre Fitting Works Well in Chewton Keynsham
               </h2>
               <p className="max-w-2xl text-zinc-600">
-                Chewton Keynsham combines residential properties with quieter roads and rural
-                surroundings, so getting a vehicle with an unusable tyre to a garage is not always
+                Chewton Keynsham is a linear hamlet along the River Chew, with farms on the valley
+                slopes and quiet lanes around it, so getting a vehicle with an unusable tyre to a garage is not always
                 straightforward. Mobile fitting reverses the normal process by bringing the tyre
                 technician to the vehicle.
               </p>
@@ -681,6 +809,9 @@ export default function ChewtonKeynshamPage() {
                 </Link>
                 , subject to technician availability.
               </p>
+              <p className="mt-4 max-w-2xl text-zinc-600">
+                Chewton Keynsham is a small hamlet on the River Chew, about two miles south of Keynsham town centre (<a href={CHEWTON_KEYNSHAM_REFERENCE} target="_blank" rel="noopener" className="text-orange-600 hover:underline">Chewton Keynsham – Wikipedia</a>). If you are in Keynsham itself, we cover the town too. Both places have BS31 addresses, so give us your full postcode when you call.
+              </p>
             </div>
             <div className="flex flex-wrap gap-3">
               {areasServed.map((area) =>
@@ -708,6 +839,12 @@ export default function ChewtonKeynshamPage() {
             </p>
           </div>
         </section>
+
+        <ChewtonInfoSection title="Chewton Keynsham or Keynsham Town? Getting the Postcode Right">
+          <p>
+            People often say &quot;Keynsham&quot; for both places, but they are different. Chewton Keynsham is the hamlet on the River Chew south of the town, with an 18th-century bridge over the river (<a href={CHEWTON_KEYNSHAM_REFERENCE} target="_blank" rel="noopener" className="text-orange-600 hover:underline">Chewton Keynsham – Wikipedia</a>, <a href={KEYNSHAM_REFERENCE} target="_blank" rel="noopener" className="text-orange-600 hover:underline">Keynsham – Wikipedia</a>). Both places have BS31 addresses. We cover both. When you call 07494 247246, tell us which one you are in, the street or lane name and the full postcode, so the technician heads to the right side of the valley first time.
+          </p>
+        </ChewtonInfoSection>
 
         {/* More Services */}
         <section className="bg-zinc-50 py-20">
@@ -822,7 +959,9 @@ export default function ChewtonKeynshamPage() {
 
         <TyreBrands />
 
-        <Faq items={faqs} />
+        <div id="faq">
+          <Faq items={faqs} renderAllAnswers />
+        </div>
 
         {/* Final CTA */}
         <section className="relative bg-zinc-900 py-20 text-white overflow-hidden">
